@@ -1,71 +1,50 @@
-<!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no"><title>第一单元 · 认识更大的数</title>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no"><title>第一单元 · 认识更大的数</title>
 <style>
 *{box-sizing:border-box}body{margin:0;font-family:Arial,"Microsoft YaHei",sans-serif;color:#51465d;background:linear-gradient(180deg,#faf8ff,#fffafd)}
-.wrap{max-width:900px;margin:auto;padding:16px 14px 60px}.hero,.card{background:#fff;border:2px solid #eee3f4;border-radius:24px;padding:18px;margin-bottom:14px}.hero{background:linear-gradient(135deg,#efeaff,#ffe7f1)}
+.wrap{max-width:900px;margin:auto;padding:16px 14px 70px}.hero,.card{background:#fff;border:2px solid #eee3f4;border-radius:24px;padding:18px;margin-bottom:14px}.hero{background:linear-gradient(135deg,#efeaff,#ffe7f1)}
 h1{font-size:30px;margin:8px 0}h2{font-size:22px;line-height:1.55;margin:8px 0}.sub{color:#84778e;line-height:1.65}.num{display:inline-block;background:#f0ebff;color:#6a59d8;border-radius:999px;padding:5px 9px;font-weight:bold}
-.opts{display:grid;gap:9px;margin:12px 0}.opt{display:flex;align-items:center;gap:10px;border:2px solid #e9def0;border-radius:15px;padding:12px;background:#fff;font-weight:bold;cursor:pointer}
-.opt input{width:24px;height:24px;accent-color:#8e7fff}.opt:has(input:checked){background:#f1edff;border-color:#9f91ff}.opt span{flex:1}
-.textans{width:100%;border:3px solid #e5dbed;border-radius:16px;padding:14px;text-align:center;font-size:22px;font-weight:bold;outline:none;margin:12px 0}.textans:focus{border-color:#9c8dff}
-details{margin-top:10px;border:2px solid #eee3f4;border-radius:14px;padding:10px;background:#fff}summary{font-weight:bold;cursor:pointer}.hint{padding:10px 2px 2px;color:#8a6e20;line-height:1.6}.answer{border-color:#cfeedd;background:#f7fffb}.ans{font-size:22px;font-weight:bold;padding:10px 2px 2px;color:#2f7f52}
+.opts{display:grid;gap:9px;margin:12px 0}.opt{display:block;width:100%;border:2px solid #e9def0;border-radius:15px;padding:13px;background:#fff;font-weight:bold;color:#51465d;text-align:left}.opt.correct{background:#e3f8eb;border-color:#75ce9a}.opt.wrong{background:#ffe7e7;border-color:#ef9999}
+.textrow{display:flex;gap:8px;margin:12px 0}.textans{flex:1;min-width:0;border:3px solid #e5dbed;border-radius:16px;padding:14px;text-align:center;font-size:21px;font-weight:bold}.checkbtn{border:0;border-radius:15px;padding:0 16px;background:#9182ff;color:#fff;font-weight:bold}
+.feedback{display:none;margin:9px 0;padding:10px;border-radius:13px;font-weight:bold;text-align:center}.feedback.good{display:block;background:#e3f8eb;color:#2f7f52}.feedback.bad{display:block;background:#ffe7e7;color:#bd4e4e}
+details{margin-top:10px;border:2px solid #eee3f4;border-radius:14px;padding:10px;background:#fff}summary{font-weight:bold}.hint{padding:10px 2px 2px;color:#8a6e20;line-height:1.6}
+.animalbox{display:flex;align-items:center;gap:14px;background:#fff7fc;border:2px solid #f3ddea;border-radius:18px;padding:12px;margin-top:12px}.animal{font-size:54px}.growtext{font-weight:bold;color:#7b65e8}
+.scorebar{position:sticky;top:8px;z-index:5;background:#fff;border:2px solid #e9def0;border-radius:18px;padding:10px 12px;margin-bottom:12px;display:flex;justify-content:space-between;gap:10px;font-weight:bold}
 a.btn{display:block;text-decoration:none;text-align:center;border-radius:16px;padding:13px 16px;font-size:18px;font-weight:bold;background:#fff;border:2px solid #e9dff1;color:#51465d}
-.note{margin-top:10px;padding:10px;border-radius:14px;background:#fffaf0;color:#8e7025;border:2px dashed #ffdb9d}
+@media(max-width:680px){.textrow{flex-direction:column}.checkbtn{padding:13px}}
 </style></head><body><main class="wrap">
-<section class="hero"><a class="btn" href="./math.html">← 返回数学首页</a><h1>第一单元 · 认识更大的数</h1><div class="sub">先做基础，再看变式。遇到综合题不要急着看答案，按提示一层层想。</div><div class="note">先选/写自己的答案，再决定要不要展开提示。最后才看绿色答案。</div></section>
-
-<section class="card">
-<div class="num">第 1 题</div>
-<h2>10 个一万是多少？</h2>
-<div class="opts"><label class="opt"><input type="radio" name="q0" value="A. 十万"><span>A. 十万</span></label><label class="opt"><input type="radio" name="q0" value="B. 一百万"><span>B. 一百万</span></label><label class="opt"><input type="radio" name="q0" value="C. 一亿"><span>C. 一亿</span></label></div>
+<section class="hero"><a class="btn" href="./math.html?v=6">← 返回数学首页</a><h1>第一单元 · 认识更大的数</h1><div class="sub">选择或输入答案后，会立刻告诉你对不对。</div><div class="animalbox"><div id="animal" class="animal">🐰</div><div><div class="growtext">答对题目，小动物会长大一点</div><div id="growthText" class="sub">读取成长进度…</div></div></div></section>
+<div class="scorebar"><span id="scoreText">本组得分：0 / 6</span><span id="doneText">已完成：0 / 6</span></div>
+<section class="card"><div class="num">第 1 题</div><h2>10 个一万是多少？</h2><div class="opts"><button class="opt" id="q0o0" onclick="checkMC(0,0);return false;">A. 十万</button><button class="opt" id="q0o1" onclick="checkMC(0,1);return false;">B. 一百万</button><button class="opt" id="q0o2" onclick="checkMC(0,2);return false;">C. 一亿</button></div><div id="fb0" class="feedback"></div>
 <details><summary>🤔 提示 1</summary><div class="hint">想一想：满十要向前进一位。</div></details>
 <details><summary>🌱 提示 2</summary><div class="hint">从“一万”开始数10个。</div></details>
-<details><summary>🧩 帮我拆一步</summary><div class="hint">1万×10=10万。</div></details>
-<details class="answer"><summary>✅ 做完以后再看答案</summary><div class="ans">十万</div></details>
-</section>
-<section class="card">
-<div class="num">第 2 题</div>
-<h2>在 50,703,000 中，数字 7 表示多少？</h2>
-<div class="opts"><label class="opt"><input type="radio" name="q1" value="A. 7万"><span>A. 7万</span></label><label class="opt"><input type="radio" name="q1" value="B. 70万"><span>B. 70万</span></label><label class="opt"><input type="radio" name="q1" value="C. 700万"><span>C. 700万</span></label></div>
+<details><summary>🧩 帮我拆一步</summary><div class="hint">1万×10=10万。</div></details></section><section class="card"><div class="num">第 2 题</div><h2>在 50,703,000 中，数字 7 表示多少？</h2><div class="opts"><button class="opt" id="q1o0" onclick="checkMC(1,0);return false;">A. 7万</button><button class="opt" id="q1o1" onclick="checkMC(1,1);return false;">B. 70万</button><button class="opt" id="q1o2" onclick="checkMC(1,2);return false;">C. 700万</button></div><div id="fb1" class="feedback"></div>
 <details><summary>🤔 提示 1</summary><div class="hint">先把这个数按四位一级分级。</div></details>
 <details><summary>🌱 提示 2</summary><div class="hint">5070｜3000，7在哪个数位？</div></details>
-<details><summary>🧩 帮我拆一步</summary><div class="hint">7在十万位，表示7个十万。</div></details>
-<details class="answer"><summary>✅ 做完以后再看答案</summary><div class="ans">70万</div></details>
-</section>
-<section class="card">
-<div class="num">第 3 题</div>
-<h2>“三亿零五十万零八”写成数字是多少？</h2>
-<input class="textans" type="text" inputmode="text" placeholder="先把你的答案写在这里">
+<details><summary>🧩 帮我拆一步</summary><div class="hint">7在十万位，表示7个十万。</div></details></section><section class="card"><div class="num">第 3 题</div><h2>“三亿零五十万零八”写成数字是多少？</h2><div class="textrow"><input id="q2input" class="textans" type="text" placeholder="输入答案"><button class="checkbtn" onclick="checkText(2);return false;">检查答案</button></div><div id="fb2" class="feedback"></div>
 <details><summary>🤔 提示 1</summary><div class="hint">先分成亿级、万级、个级。</div></details>
 <details><summary>🌱 提示 2</summary><div class="hint">3｜0050｜0008。</div></details>
-<details><summary>🧩 帮我拆一步</summary><div class="hint">把三个数级依次写在一起。</div></details>
-<details class="answer"><summary>✅ 做完以后再看答案</summary><div class="ans">300500008</div></details>
-</section>
-<section class="card">
-<div class="num">第 4 题</div>
-<h2>把 6,496,000 四舍五入到万位，约是多少万？</h2>
-<input class="textans" type="text" inputmode="text" placeholder="先把你的答案写在这里">
+<details><summary>🧩 帮我拆一步</summary><div class="hint">把三个数级依次写在一起。</div></details></section><section class="card"><div class="num">第 4 题</div><h2>把 6,496,000 四舍五入到万位，约是多少万？</h2><div class="textrow"><input id="q3input" class="textans" type="text" placeholder="输入答案"><button class="checkbtn" onclick="checkText(3);return false;">检查答案</button></div><div id="fb3" class="feedback"></div>
 <details><summary>🤔 提示 1</summary><div class="hint">保留到万位，要看哪一位？</div></details>
 <details><summary>🌱 提示 2</summary><div class="hint">看千位，千位是6。</div></details>
-<details><summary>🧩 帮我拆一步</summary><div class="hint">千位≥5，万位进1。</div></details>
-<details class="answer"><summary>✅ 做完以后再看答案</summary><div class="ans">650万</div></details>
-</section>
-<section class="card">
-<div class="num">第 5 题</div>
-<h2>一个数四舍五入到万位约是36万。这个数最大可能是多少？</h2>
-<input class="textans" type="text" inputmode="text" placeholder="先把你的答案写在这里">
+<details><summary>🧩 帮我拆一步</summary><div class="hint">千位≥5，万位进1。</div></details></section><section class="card"><div class="num">第 5 题</div><h2>一个数四舍五入到万位约是36万。这个数最大可能是多少？</h2><div class="textrow"><input id="q4input" class="textans" type="text" placeholder="输入答案"><button class="checkbtn" onclick="checkText(4);return false;">检查答案</button></div><div id="fb4" class="feedback"></div>
 <details><summary>🤔 提示 1</summary><div class="hint">先别算，想想哪些数会约成36万。</div></details>
 <details><summary>🌱 提示 2</summary><div class="hint">最小从355000开始，最大不能进到37万。</div></details>
-<details><summary>🧩 帮我拆一步</summary><div class="hint">37万之前的最后一个整数是多少？</div></details>
-<details class="answer"><summary>✅ 做完以后再看答案</summary><div class="ans">364999</div></details>
-</section>
-<section class="card">
-<div class="num">第 6 题</div>
-<h2>甲城人口3,648,500人，乙城人口约365万人。只根据这些信息，能确定哪个城市人口更多吗？</h2>
-<div class="opts"><label class="opt"><input type="radio" name="q5" value="A. 甲城更多"><span>A. 甲城更多</span></label><label class="opt"><input type="radio" name="q5" value="B. 乙城更多"><span>B. 乙城更多</span></label><label class="opt"><input type="radio" name="q5" value="C. 不能确定"><span>C. 不能确定</span></label></div>
+<details><summary>🧩 帮我拆一步</summary><div class="hint">37万之前的最后一个整数是多少？</div></details></section><section class="card"><div class="num">第 6 题</div><h2>甲城人口3,648,500人，乙城人口约365万人。只根据这些信息，能确定哪个城市人口更多吗？</h2><div class="opts"><button class="opt" id="q5o0" onclick="checkMC(5,0);return false;">A. 甲城更多</button><button class="opt" id="q5o1" onclick="checkMC(5,1);return false;">B. 乙城更多</button><button class="opt" id="q5o2" onclick="checkMC(5,2);return false;">C. 不能确定</button></div><div id="fb5" class="feedback"></div>
 <details><summary>🤔 提示 1</summary><div class="hint">注意“约365万”不是精确数。</div></details>
 <details><summary>🌱 提示 2</summary><div class="hint">乙城真实人口可能比365万略大，也可能略小。</div></details>
-<details><summary>🧩 帮我拆一步</summary><div class="hint">甲城是364.85万；乙城只给近似数。</div></details>
-<details class="answer"><summary>✅ 做完以后再看答案</summary><div class="ans">不能确定</div></details>
-</section>
-<section class="card"><a class="btn" href="./math.html">完成这一组，返回数学首页</a></section>
-</main></body></html>
+<details><summary>🧩 帮我拆一步</summary><div class="hint">甲城是364.85万；乙城只给近似数。</div></details></section>
+<section class="card"><a class="btn" href="./math.html?v=6">完成这一组，返回数学首页</a></section>
+</main>
+<script>
+var QS=[{"type":"mc","correctIndex":0,"answer":"","alts":[]},{"type":"mc","correctIndex":1,"answer":"","alts":[]},{"type":"text","answer":"300500008","alts":[]},{"type":"text","answer":"650万","alts":["650"]},{"type":"text","answer":"364999","alts":[]},{"type":"mc","correctIndex":2,"answer":"","alts":[]}];var score=0,done=0,finished=[];for(var z=0;z<QS.length;z++){finished[z]=false;}
+function clean(s){return String(s).replace(/^\s+|\s+$/g,"").replace(/[，、;；]/g,",").replace(/\s*,\s*/g,",").replace(/\s+/g," ");}
+function getAnimal(){var a="🐰";try{a=localStorage.getItem("math_animal")||"🐰";}catch(e){}return a;}
+function getXP(){var x=0;try{x=parseInt(localStorage.getItem("math_xp")||"0",10);}catch(e){}return x||0;}
+function addXP(){var x=getXP()+1;try{localStorage.setItem("math_xp",String(x));}catch(e){}renderAnimal();}
+function renderAnimal(){var a=getAnimal(),x=getXP(),size=52,label="小宝宝";if(x>=5){size=64;label="长大一点啦";}if(x>=12){size=78;label="越来越厉害";}if(x>=24){size=94;label="小勇士";}if(x>=40){size=112;label="大朋友啦";}var el=document.getElementById("animal");el.innerHTML=a;el.style.fontSize=size+"px";document.getElementById("growthText").innerHTML=label+" · 成长值 "+x;}
+function updateTop(){document.getElementById("scoreText").innerHTML="本组得分："+score+" / "+QS.length;document.getElementById("doneText").innerHTML="已完成："+done+" / "+QS.length;}
+function markDone(i,ok){if(!finished[i]){finished[i]=true;done++;if(ok){score++;addXP();}updateTop();if(done===QS.length){setTimeout(function(){alert("这一组完成啦！得分 "+score+" / "+QS.length+"。小动物也长大了一点 🌱");},250);}}}
+function checkMC(i,j){var q=QS[i],fb=document.getElementById("fb"+i),k,b;for(k=0;k<4;k++){b=document.getElementById("q"+i+"o"+k);if(b){b.className="opt";}}b=document.getElementById("q"+i+"o"+j);if(j===q.correctIndex){b.className="opt correct";fb.className="feedback good";fb.innerHTML="✅ 对啦！";markDone(i,true);}else{b.className="opt wrong";fb.className="feedback bad";fb.innerHTML="❌ 还不对。先想一想，或者打开提示再试一次。";}}
+function checkText(i){var q=QS[i],v=clean(document.getElementById("q"+i+"input").value),ok=(v===clean(q.answer)),k;if(!ok&&q.alts){for(k=0;k<q.alts.length;k++){if(v===clean(q.alts[k])){ok=true;break;}}}var fb=document.getElementById("fb"+i);if(ok){fb.className="feedback good";fb.innerHTML="✅ 对啦！";markDone(i,true);}else{fb.className="feedback bad";fb.innerHTML="❌ 还不对。先看看提示，再试一次。";}}
+window.onload=function(){renderAnimal();updateTop();};
+</script></body></html>
