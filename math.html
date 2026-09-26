@@ -1,27 +1,37 @@
-<!doctype html>
-<html lang="zh-CN">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
-<title>萌萌数学思考屋</title>
+<!doctype html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no"><title>萌萌数学思考屋</title>
 <style>
 *{box-sizing:border-box}body{margin:0;font-family:Arial,"Microsoft YaHei",sans-serif;color:#51465d;background:linear-gradient(180deg,#faf8ff,#fffafd)}
-.wrap{max-width:980px;margin:auto;padding:18px 16px 70px}.hero,.card{background:#fff;border:2px solid #eee3f4;border-radius:24px;padding:20px;margin-bottom:14px}
-.hero{background:linear-gradient(135deg,#efeaff,#ffe7f1)}.badge{display:inline-block;background:#fff;border:1px solid #dfd5ff;color:#6e5fe3;border-radius:999px;padding:7px 12px;font-weight:bold}
+.wrap{max-width:980px;margin:auto;padding:18px 16px 70px}.hero,.card{background:#fff;border:2px solid #eee3f4;border-radius:24px;padding:20px;margin-bottom:14px}.hero{background:linear-gradient(135deg,#efeaff,#ffe7f1)}
+.badge{display:inline-block;background:#fff;border:1px solid #dfd5ff;color:#6e5fe3;border-radius:999px;padding:7px 12px;font-weight:bold}
 h1{font-size:32px;margin:8px 0}h2{font-size:23px;margin:0 0 10px}.sub{font-size:16px;line-height:1.65;color:#84778e}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.unit{border:2px solid #ece1f3;border-radius:20px;padding:16px;background:#fff}.unit.active{border-color:#a99cff;background:#f8f5ff}
-a.btn{display:block;text-decoration:none;text-align:center;border-radius:16px;padding:14px 16px;font-size:18px;font-weight:bold;margin-top:10px}
-.primary{color:#fff;background:linear-gradient(135deg,#a494ff,#817eff)}.soft{background:#fff;border:2px solid #e9dff1;color:#51465d}
-.tip{background:#fffaf0;border:2px dashed #ffdb9d;border-radius:16px;padding:12px;text-align:center;color:#8e7025;line-height:1.6}
-@media(max-width:720px){.grid{grid-template-columns:1fr}.wrap{padding:12px 10px 60px}h1{font-size:28px}}
-</style>
-</head>
-<body><main class="wrap">
-<section class="hero"><span class="badge">➗ 希沃兼容版 · 无脚本导航</span><h1>数学思考屋 🌱</h1><div class="sub">这版先保证希沃能稳定点开。单元入口全部改成普通网页链接，不依赖 JavaScript。</div></section>
+a.btn,button.btn{display:block;width:100%;text-decoration:none;text-align:center;border-radius:16px;padding:14px 16px;font-size:18px;font-weight:bold;margin-top:10px;border:0}
+.primary{color:#fff;background:linear-gradient(135deg,#a494ff,#817eff)}.soft{background:#fff;border:2px solid #e9dff1!important;color:#51465d}
+.animals{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:12px}.animalChoice{border:2px solid #eee3f4;background:#fff;border-radius:18px;padding:12px;font-size:38px}.animalChoice.on{border-color:#ff9bc8;background:#fff0f7}
+.petbox{display:flex;align-items:center;gap:14px;margin-top:12px;padding:12px;border-radius:18px;background:#fff8fc;border:2px solid #f2dfea}.pet{font-size:60px}.tip{background:#fffaf0;border:2px dashed #ffdb9d;border-radius:16px;padding:12px;text-align:center;color:#8e7025;line-height:1.6}
+@media(max-width:720px){.grid{grid-template-columns:1fr}.wrap{padding:12px 10px 60px}}
+</style></head><body><main class="wrap">
+<section class="hero"><span class="badge">➗ 数学思考屋 · 成长版</span><h1>选一只小动物陪你学数学 🌱</h1><div class="sub">每答对一道题，小动物就获得一点成长值，慢慢长大。答错不会变小。</div>
+<div class="animals">
+<button class="animalChoice" onclick="chooseAnimal('🐰')">🐰</button>
+<button class="animalChoice" onclick="chooseAnimal('🐱')">🐱</button>
+<button class="animalChoice" onclick="chooseAnimal('🐼')">🐼</button>
+<button class="animalChoice" onclick="chooseAnimal('🐶')">🐶</button>
+</div>
+<div class="petbox"><div id="pet" class="pet">🐰</div><div><b id="petStage">小宝宝</b><div class="sub" id="petXP">成长值 0</div></div></div>
+</section>
 <section class="card"><h2>选择单元</h2><div class="grid">
-<div class="unit"><h2>1️⃣ 认识更大的数</h2><div class="sub">数位 · 大数读写 · 比较 · 改写 · 近似数 · 综合</div><a class="btn soft" href="./math-unit1.html">进入第一单元</a></div>
-<div class="unit active"><h2>2️⃣ 线与角</h2><div class="sub">线段/射线/直线 · 垂直与平行 · 角 · 量角</div><a class="btn primary" href="./math-unit2.html">正在学，先练这个</a></div>
+<div class="unit"><h2>1️⃣ 认识更大的数</h2><div class="sub">数位 · 读写 · 比较 · 改写 · 近似数</div><a class="btn soft" href="./math-unit1.html?v=7">进入第一单元</a></div>
+<div class="unit active"><h2>2️⃣ 线与角</h2><div class="sub">线段/射线/直线 · 垂直与平行 · 角 · 量角</div><a class="btn primary" href="./math-unit2.html?v=7">正在学，先练这个</a></div>
 </div></section>
-<section class="card"><div class="tip">⭐ 先做会的题。<br>🌱 稍难题先打开“提示1”。<br>🧩 还不会再看“提示2/拆一步”。<br>答案最后再展开。</div></section>
+<section class="card"><div class="tip">✅ 选择答案后立刻判断对错。<br>🌱 答对增加成长值，小动物慢慢长大。<br>🧩 答错不扣分，可以看提示后再试。</div></section>
 <section class="card"><a class="btn soft" href="./index.html">← 返回学习平台</a></section>
-</main></body></html>
+</main>
+<script>
+function readAnimal(){var a="🐰";try{a=localStorage.getItem("math_animal")||"🐰";}catch(e){}return a;}
+function readXP(){var x=0;try{x=parseInt(localStorage.getItem("math_xp")||"0",10);}catch(e){}return x||0;}
+function chooseAnimal(a){try{localStorage.setItem("math_animal",a);}catch(e){}renderPet();}
+function renderPet(){var a=readAnimal(),x=readXP(),size=60,label="小宝宝";if(x>=5){size=72;label="长大一点啦";}if(x>=12){size=86;label="越来越厉害";}if(x>=24){size=102;label="小勇士";}if(x>=40){size=120;label="大朋友啦";}document.getElementById("pet").innerHTML=a;document.getElementById("pet").style.fontSize=size+"px";document.getElementById("petStage").innerHTML=label;document.getElementById("petXP").innerHTML="成长值 "+x;}
+window.onload=renderPet;
+</script></body></html>
