@@ -100,7 +100,37 @@ function startSmart(){let u=BANK[S.meta.unit],unseen=u.qs.filter(q=>qstate(q.id)
 function startWeak(){let u=BANK[S.meta.unit];session=u.qs.filter(q=>{let s=qstate(q.id);return s.wrong||s.helped&&!s.independent}).slice(0,6);if(!session.length){alert("目前还没有明显薄弱题，先做今日训练吧～");return}begin()}
 function begin(){qi=0;current=session[0];show("quiz");renderQ()}
 function renderQ(){help=0;qMeta.textContent="第 "+(qi+1)+" / "+session.length+" 题 · "+(current.lv===1?"基础":current.lv===2?"小变式":"综合思考");qIcon.textContent=current.icon;qText.textContent=current.q;guideBox.innerHTML="";fb.className="feedback";thinkbar.style.display=current.lv===1?"none":"grid";renderAnswer()}
-function renderAnswer(){answerArea.innerHTML="";if(current.type==="mc"){let box=document.createElement("div");box.className="options";current.o.forEach(o=>{let b=document.createElement("button");b.className="opt";b.textContent=o;b.onclick=()=>check(o);box.appendChild(b)});answerArea.appendChild(box)}else{answerArea.innerHTML='<input id="ans" class="answer" inputmode="text" placeholder="输入答案"><button class="btn primary" style="width:100%;margin-top:10px" onclick="check(document.getElementById(\'ans\').value)">确定</button>'}}
+function renderAnswer(){
+  const area=document.getElementById("answerArea");
+  area.innerHTML="";
+  if(current.type==="mc"){
+    const box=document.createElement("div");
+    box.className="options";
+    current.o.forEach(o=>{
+      const b=document.createElement("button");
+      b.className="opt";
+      b.textContent=o;
+      b.addEventListener("click",()=>check(o));
+      box.appendChild(b);
+    });
+    area.appendChild(box);
+  }else{
+    const input=document.createElement("input");
+    input.id="ans";
+    input.className="answer";
+    input.inputMode="text";
+    input.placeholder="输入答案";
+    input.addEventListener("keydown",e=>{if(e.key==="Enter")check(input.value);});
+    const btn=document.createElement("button");
+    btn.className="btn primary";
+    btn.style.width="100%";
+    btn.style.marginTop="10px";
+    btn.textContent="确定";
+    btn.addEventListener("click",()=>check(input.value));
+    area.appendChild(input);
+    area.appendChild(btn);
+  }
+}
 function clean(x){return String(x).trim().replace(/[，、;；]/g,",").replace(/\s*,\s*/g,",").replace(/\s+/g," ")}
 function check(v){let s=qstate(current.id);s.tries++;s.last=Date.now();let ok=clean(v)===clean(current.a)||(current.alts||[]).some(a=>clean(v)===clean(a));if(ok){if(help===0){s.independent++;s.bestHelp=0}else{s.helped++;s.bestHelp=Math.min(s.bestHelp,help)}save();fb.className="feedback show good";fb.innerHTML=help===0?"🌟 独立做出来了！":"🌱 用了提示也坚持做出来了，这也很棒。";setTimeout(nextQ,700)}else{s.wrong++;save();fb.className="feedback show bad";fb.textContent="还没对，不急。先不要看答案，可以点“给一点提示”或“帮我拆一步”。"}}
 function needHelp(level){help=Math.max(help,level);document.querySelectorAll(".think").forEach((b,i)=>b.classList.toggle("on",i<level));let txt=current.h[Math.min(level-1,current.h.length-1)];guideBox.innerHTML='<div class="tip" style="margin-top:12px"><b>'+(level===1?"先想这里":level===2?"提示":"拆一步")+"</b><br>"+txt+"</div>"}
