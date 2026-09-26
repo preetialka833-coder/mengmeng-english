@@ -1,143 +1,209 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
-<meta name="theme-color" content="#9588ff"><title>萌萌数学思考屋</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#9588ff">
+<title>萌萌数学思考屋</title>
 <style>
-:root{--ink:#51465d;--muted:#84778e;--purple:#9182ff;--pink:#ff91bc;--mint:#d8f6eb;--line:#e9dff1;--good:#dcf7e8;--bad:#ffe6e6}
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);background:linear-gradient(180deg,#faf8ff,#fffafd 58%,#fffdf7)}
-button,input{font:inherit}.app{max-width:980px;margin:auto;min-height:100vh;padding:18px 18px 105px}.screen{display:none}.screen.active{display:block}
-.hero,.card{background:white;border:2px solid #eee3f4;border-radius:28px;box-shadow:0 10px 28px rgba(125,105,160,.08)}.hero{padding:22px;background:linear-gradient(135deg,#efeaff,#ffe7f1)}
-.badge{display:inline-block;background:white;border:1px solid #dfd5ff;color:#6e5fe3;border-radius:999px;padding:7px 12px;font-weight:900}
-h1{font-size:34px;margin:8px 0}h2{font-size:25px;margin:0 0 10px}.sub{font-size:17px;line-height:1.7;color:var(--muted)}.card{padding:20px;margin-top:14px}
-.unitgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.unit{border:2px solid #ece1f3;border-radius:23px;padding:18px;background:#fff}.unit.active{border-color:#a99cff;background:#f8f5ff}
-.btn{border:0;border-radius:18px;padding:14px 18px;font-size:19px;font-weight:950;cursor:pointer}.primary{color:white;background:linear-gradient(135deg,#a494ff,#817eff)}.soft{background:#fff;border:2px solid var(--line);color:var(--ink)}.mint{background:var(--mint);color:#337463}
-.row{display:flex;gap:10px;flex-wrap:wrap}.row>.btn{flex:1}.progress{height:14px;background:#eee8f3;border-radius:999px;overflow:hidden}.progress i{display:block;height:100%;background:linear-gradient(90deg,#9d90ff,#ff99c5);width:0}
-.topic{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px dashed #ece2f0}.topic:last-child{border-bottom:0}.tag{font-size:12px;font-weight:900;border-radius:999px;padding:5px 8px;background:#f0ebff;color:#6a59d8}
-.qicon{font-size:56px;text-align:center}.question{font-size:28px;font-weight:1000;line-height:1.5;text-align:center;margin:8px 0 16px}.tip{background:#fffaf0;border:2px dashed #ffdb9d;border-radius:18px;padding:12px;text-align:center;color:#8e7025;line-height:1.6}
-.options{display:grid;gap:10px;margin-top:12px}.opt{border:2px solid #e9def0;background:white;border-radius:18px;padding:15px;font-size:19px;font-weight:900;color:var(--ink);text-align:left}.answer{width:100%;border:3px solid #e5dbed;border-radius:18px;padding:14px;text-align:center;font-size:24px;font-weight:900;outline:none}.answer:focus{border-color:#9c8dff}
-.feedback{display:none;margin-top:12px;border-radius:16px;padding:11px;text-align:center;font-weight:900}.feedback.show{display:block}.good{background:var(--good);color:#2c7e4d}.bad{background:var(--bad);color:#c24e4e}
-.thinkbar{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}.think{border:0;border-radius:16px;padding:12px 6px;font-weight:900;background:#f7f2fb;color:#74677d}.think.on{background:#fff0b9;color:#7c6000}
-.small{font-size:13px;color:var(--muted)}.summarygrid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.stat{border:2px solid #eee3f3;border-radius:18px;padding:12px;text-align:center}.stat b{font-size:24px;display:block}
-nav{position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,.97);border-top:1px solid #eaddf0}nav .inner{max-width:980px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr)}nav button{border:0;background:transparent;padding:11px 4px;color:#877b91;font-weight:900}nav button.active{color:#7a67ef}
-@media(max-width:720px){.app{padding:12px 10px 95px}.unitgrid{grid-template-columns:1fr}.question{font-size:24px}.thinkbar{grid-template-columns:1fr}.sub{font-size:15px}}
-</style></head>
-<body><div class="app">
+*{box-sizing:border-box}body{margin:0;font-family:Arial,"Microsoft YaHei",sans-serif;color:#51465d;background:linear-gradient(180deg,#faf8ff,#fffafd)}
+button,input{font:inherit}.app{max-width:980px;margin:0 auto;padding:16px 16px 100px}.screen{display:none}.screen.active{display:block}
+.hero,.card{background:#fff;border:2px solid #eee3f4;border-radius:24px;box-shadow:0 8px 24px rgba(125,105,160,.08)}.hero{padding:20px;background:linear-gradient(135deg,#efeaff,#ffe7f1)}.card{padding:18px;margin-top:14px}
+.badge{display:inline-block;background:#fff;border:1px solid #dfd5ff;color:#6e5fe3;border-radius:999px;padding:7px 12px;font-weight:bold}
+h1{font-size:32px;margin:8px 0}h2{font-size:23px;margin:0 0 10px}.sub{font-size:16px;line-height:1.65;color:#84778e}
+.unitgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.unit{border:2px solid #ece1f3;border-radius:20px;padding:16px;background:#fff}.unit.active{border-color:#a99cff;background:#f8f5ff}
+.btn{border:0;border-radius:16px;padding:13px 16px;font-size:18px;font-weight:bold;cursor:pointer}.primary{color:#fff;background:linear-gradient(135deg,#a494ff,#817eff)}.soft{background:#fff;border:2px solid #e9dff1;color:#51465d}.mint{background:#d8f6eb;color:#337463}
+.row{display:flex;gap:10px;flex-wrap:wrap}.row .btn{flex:1}.progress{height:13px;background:#eee8f3;border-radius:999px;overflow:hidden}.progress i{display:block;height:100%;background:linear-gradient(90deg,#9d90ff,#ff99c5);width:0}
+.topic{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 0;border-bottom:1px dashed #ece2f0}.tag{font-size:12px;font-weight:bold;border-radius:999px;padding:5px 8px;background:#f0ebff;color:#6a59d8}
+.qicon{font-size:54px;text-align:center}.question{font-size:26px;font-weight:bold;line-height:1.5;text-align:center;margin:8px 0 16px}.tip{background:#fffaf0;border:2px dashed #ffdb9d;border-radius:16px;padding:12px;text-align:center;color:#8e7025;line-height:1.6}
+.options{display:grid;gap:10px;margin-top:12px}.opt{border:2px solid #e9def0;background:#fff;border-radius:16px;padding:14px;font-size:18px;font-weight:bold;color:#51465d;text-align:left}.answer{width:100%;border:3px solid #e5dbed;border-radius:16px;padding:14px;text-align:center;font-size:22px;font-weight:bold;outline:none}
+.feedback{display:none;margin-top:12px;border-radius:14px;padding:11px;text-align:center;font-weight:bold}.feedback.good{display:block;background:#dcf7e8;color:#2c7e4d}.feedback.bad{display:block;background:#ffe6e6;color:#c24e4e}
+.thinkbar{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}.think{border:0;border-radius:14px;padding:12px 6px;font-weight:bold;background:#f7f2fb;color:#74677d}.small{font-size:13px;color:#84778e}
+.summarygrid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.stat{border:2px solid #eee3f3;border-radius:16px;padding:12px;text-align:center}.stat b{font-size:22px;display:block}
+.statusok{margin-top:10px;padding:8px 10px;background:#e8f8ef;color:#317d50;border-radius:12px;font-size:13px;font-weight:bold}
+nav{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #eaddf0}nav .inner{max-width:980px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)}nav button{border:0;background:transparent;padding:11px 4px;color:#877b91;font-weight:bold}
+@media(max-width:720px){.app{padding:12px 10px 94px}.unitgrid{grid-template-columns:1fr}.thinkbar{grid-template-columns:1fr}.question{font-size:23px}}
+</style>
+</head>
+<body>
+<div class="app">
 <section id="home" class="screen active">
-<div class="hero"><span class="badge">➗ 数学思考屋 · 试用版</span><h1>不怕难题，一步一步想 🌱</h1><div class="sub">第一、二单元先试用。这里不比谁做得快，而是练习：题目长一点、难一点，也愿意继续往下想。</div></div>
+<div class="hero">
+<span class="badge">➗ 数学思考屋 · 希沃兼容版</span>
+<h1>不怕难题，一步一步想 🌱</h1>
+<div class="sub">第一、二单元先试用。重点不是刷得多，而是题目稍微难一点时，也愿意继续想。</div>
+<div id="scriptStatus" class="statusok">正在检查页面功能…</div>
+</div>
 <div class="card"><h2>选择单元</h2><div class="unitgrid">
-<div class="unit" id="u1card"><h2>1️⃣ 认识更大的数</h2><div class="sub">数位与计数单位 · 大数读写 · 比较 · 改写 · 近似数</div><button class="btn soft" style="margin-top:10px;width:100%" onclick="selectUnit(1)">进入第一单元</button></div>
-<div class="unit active" id="u2card"><h2>2️⃣ 线与角</h2><div class="sub">线段/射线/直线 · 垂直与平行 · 角 · 量角与画角</div><button class="btn primary" style="margin-top:10px;width:100%" onclick="selectUnit(2)">正在学，先练这个</button></div>
+<div class="unit"><h2>1️⃣ 认识更大的数</h2><div class="sub">数位 · 大数读写 · 比较 · 改写 · 近似数</div><button class="btn soft" style="width:100%;margin-top:10px" onclick="selectUnit(1)">进入第一单元</button></div>
+<div class="unit active"><h2>2️⃣ 线与角</h2><div class="sub">线段/射线/直线 · 垂直与平行 · 角 · 量角</div><button class="btn primary" style="width:100%;margin-top:10px" onclick="selectUnit(2)">正在学，先练这个</button></div>
 </div></div>
-<div class="card"><h2>今天的规则</h2><div class="tip">⭐ 简单题会做，不重复刷很多。<br>🌱 稍难题先找条件、再找问题、再想第一步。<br>🧩 卡住可以要提示，但提示后做出来也算进步。</div></div>
-<div class="card"><a href="./index.html" style="text-decoration:none"><button class="btn soft">← 返回学习平台</button></a></div>
+<div class="card"><div class="tip">⭐ 简单题会做就过。<br>🌱 难一点先找条件、再找问题。<br>🧩 卡住可以要提示，但不直接给答案。</div></div>
+<div class="card"><a href="./index.html"><button class="btn soft">← 返回学习平台</button></a></div>
 </section>
 
 <section id="unit" class="screen">
-<div class="card"><div class="row" style="align-items:center"><button class="btn soft" onclick="show('home')">←</button><div style="flex:3"><h2 id="unitTitle"></h2><div class="progress"><i id="unitProg"></i></div><div class="small" id="unitMeta"></div></div></div></div>
+<div class="card"><div class="row"><button class="btn soft" onclick="showScreen('home')">← 返回</button><div style="flex:3"><h2 id="unitTitle"></h2><div class="progress"><i id="unitProg"></i></div><div class="small" id="unitMeta"></div></div></div></div>
 <div class="card"><h2>知识地图</h2><div id="topicList"></div></div>
 <div class="row" style="margin-top:14px"><button class="btn primary" onclick="startSmart()">开始今天 6 题</button><button class="btn soft" onclick="startWeak()">只练不稳的</button></div>
 </section>
 
 <section id="quiz" class="screen">
 <div class="card">
-<div class="row" style="align-items:center"><button class="btn soft" onclick="show('unit')">退出</button><div class="small" id="qMeta"></div></div>
+<div class="row"><button class="btn soft" onclick="showScreen('unit')">退出</button><div class="small" id="qMeta"></div></div>
 <div class="qicon" id="qIcon">🧠</div><div class="question" id="qText"></div>
 <div id="guideBox"></div><div id="answerArea"></div><div id="fb" class="feedback"></div>
 <div class="thinkbar" id="thinkbar">
-<button class="think" onclick="needHelp(1)">🤔 我想一下</button><button class="think" onclick="needHelp(2)">🌱 给一点提示</button><button class="think" onclick="needHelp(3)">🧩 帮我拆一步</button>
+<button class="think" onclick="needHelp(1)">🤔 我想一下</button>
+<button class="think" onclick="needHelp(2)">🌱 给一点提示</button>
+<button class="think" onclick="needHelp(3)">🧩 帮我拆一步</button>
 </div>
 </div>
 </section>
 
 <section id="report" class="screen">
-<div class="card"><h2>妈妈查看</h2><div class="summarygrid"><div class="stat"><b id="rDone">0</b><span class="small">做过的题</span></div><div class="stat"><b id="rIndependent">0</b><span class="small">独立完成</span></div><div class="stat"><b id="rHelp">0</b><span class="small">提示后完成</span></div></div></div>
+<div class="card"><h2>妈妈查看</h2><div class="summarygrid">
+<div class="stat"><b id="rDone">0</b><span class="small">做过的题</span></div>
+<div class="stat"><b id="rIndependent">0</b><span class="small">独立完成</span></div>
+<div class="stat"><b id="rHelp">0</b><span class="small">提示后完成</span></div>
+</div></div>
 <div class="card"><h2>最值得关注</h2><div id="reportText" class="sub"></div></div>
-<div class="card"><button class="btn soft" onclick="resetMath()">清空数学试用记录</button></div>
 </section>
 </div>
-<nav><div class="inner"><button id="nav-home" class="active" onclick="show('home')">🏠<br>数学首页</button><button id="nav-unit" onclick="openCurrent()">🗺️<br>知识地图</button><button id="nav-quiz" onclick="startSmart()">🌱<br>今日训练</button><button id="nav-report" onclick="show('report')">👩‍👧<br>妈妈</button></div></nav>
+
+<nav><div class="inner">
+<button onclick="showScreen('home')">🏠<br>数学首页</button>
+<button onclick="openCurrent()">🗺️<br>知识地图</button>
+<button onclick="startSmart()">🌱<br>今日训练</button>
+<button onclick="showReport()">👩‍👧<br>妈妈</button>
+</div></nav>
 
 <script>
-const BANK={
-1:{title:"第一单元 · 认识更大的数",topics:[["place","数位与计数单位"],["read","大数读写"],["compare","大小比较"],["rewrite","改写成万/亿"],["round","近似数与四舍五入"],["mixed","综合应用"]],qs:[
-{id:"u1q1",t:"place",lv:1,icon:"🔢",q:"10 个一万是多少？",type:"mc",o:["十万","一百万","一亿"],a:"十万",h:["想一想：满十要向前进一位。","从“一万”开始数 10 个。","1万×10=10万，所以是十万。"]},
-{id:"u1q2",t:"place",lv:2,icon:"🧮",q:"在 50,703,000 中，数字 7 表示多少？",type:"mc",o:["7万","70万","700万"],a:"70万",h:["先给这个数分级：5070｜3000。","7 在万级里的十万位。","十万位上的 7 表示 7 个十万，即 70 万。"]},
-{id:"u1q3",t:"read",lv:1,icon:"📖",q:"50,703,000 读作什么？",type:"mc",o:["五千零七十万三千","五千七十万三千","五千零七万三千"],a:"五千零七十万三千",h:["先按四位一级分级。","万级是 5070，个级是 3000。","5070万读作“五千零七十万”。"]},
-{id:"u1q4",t:"read",lv:2,icon:"✍️",q:"“三亿零五十万零八”写成数字是多少？",type:"text",a:"300500008",h:["先分成亿级、万级、个级。","三亿｜零五十万｜零八。","亿级3，万级0050，个级0008。"]},
-{id:"u1q5",t:"compare",lv:2,icon:"⚖️",q:"比较 9,870,000 和 987 万，哪个更大？",type:"mc",o:["9,870,000 更大","987 万更大","一样大"],a:"一样大",h:["先把单位统一。","987 万 = 9,870,000。","两个数完全相同。"]},
-{id:"u1q6",t:"rewrite",lv:1,icon:"🔄",q:"36,000,000 改写成以“万”为单位的数是？",type:"text",a:"3600万",h:["整万数改写时，去掉末尾4个0。","36000000 ÷ 10000 = 3600。","所以是3600万。"]},
-{id:"u1q7",t:"round",lv:2,icon:"🎯",q:"把 6,496,000 四舍五入到万位，约是多少万？",type:"text",a:"650万",h:["要保留到万位，就看千位。","千位是6，要进1。","649万进1变成650万。"]},
-{id:"u1q8",t:"round",lv:3,icon:"🧠",q:"一个数四舍五入到万位约是 36 万。这个数最大可能是多少？",type:"text",a:"364999",h:["先想：哪些数四舍五入后会变成36万？","范围从355000开始，到364999结束。","最大就是进到37万之前的最后一个数。"]},
-{id:"u1q9",t:"mixed",lv:3,icon:"🏙️",q:"甲城人口 3,648,500 人，乙城人口约 365 万人。只根据这些信息，能确定哪个城市人口更多吗？",type:"mc",o:["甲城更多","乙城更多","不能确定"],a:"不能确定",h:["“约365万”不是精确数。","乙城真实人口可能比365万略大，也可能略小。","甲城是364.85万，乙城只给了近似数，所以不能确定。"]},
-{id:"u1q10",t:"mixed",lv:3,icon:"🧩",q:"一个八位数，千万位是5，十万位是7，千位是3，其余各位都是0。这个数是多少？",type:"text",a:"50703000",h:["先把八个数位写出来。","千万位放5，十万位放7，千位放3。","得到50,703,000。"]},
-{id:"u1q11",t:"mixed",lv:3,icon:"🔍",q:"小明把 7,050,000 读成“七百零五万”。他说得对吗？",type:"mc",o:["对","不对"],a:"对",h:["先改写成万作单位看看。","7,050,000 = 705万。","705万读作七百零五万。"]},
-{id:"u1q12",t:"mixed",lv:3,icon:"🌟",q:"一个数四舍五入到万位约是 50 万。这个数最小可能是多少？",type:"text",a:"495000",h:["先想50万的四舍五入范围。","从49万5千开始会进到50万。","所以最小是495000。"]}
+var BANK={
+1:{title:"第一单元 · 认识更大的数",topics:[["place","数位与计数单位"],["read","大数读写"],["compare","大小比较"],["rewrite","改写成万/亿"],["round","近似数"],["mixed","综合应用"]],qs:[
+{id:"u1q1",t:"place",lv:1,icon:"🔢",q:"10 个一万是多少？",type:"mc",o:["十万","一百万","一亿"],a:"十万",h:["想一想：满十要向前进一位。","从“一万”开始数10个。","1万×10=10万。"]},
+{id:"u1q2",t:"place",lv:2,icon:"🧮",q:"在 50,703,000 中，数字 7 表示多少？",type:"mc",o:["7万","70万","700万"],a:"70万",h:["先把数分级。","7在十万位。","7个十万就是70万。"]},
+{id:"u1q3",t:"read",lv:1,icon:"📖",q:"50,703,000 读作什么？",type:"mc",o:["五千零七十万三千","五千七十万三千","五千零七万三千"],a:"五千零七十万三千",h:["四位一级。","万级是5070。","所以读五千零七十万三千。"]},
+{id:"u1q4",t:"read",lv:2,icon:"✍️",q:"“三亿零五十万零八”写成数字是多少？",type:"text",a:"300500008",h:["分成亿级、万级、个级。","3｜0050｜0008。","写成300500008。"]},
+{id:"u1q5",t:"compare",lv:2,icon:"⚖️",q:"9,870,000 和 987 万，哪个更大？",type:"mc",o:["9,870,000 更大","987 万更大","一样大"],a:"一样大",h:["统一单位。","987万=9,870,000。","所以一样大。"]},
+{id:"u1q6",t:"rewrite",lv:1,icon:"🔄",q:"36,000,000 改写成以“万”为单位的数是？",type:"text",a:"3600万",alts:["3600"],h:["去掉末尾4个0。","36000000÷10000=3600。","所以是3600万。"]},
+{id:"u1q7",t:"round",lv:2,icon:"🎯",q:"把 6,496,000 四舍五入到万位，约是多少万？",type:"text",a:"650万",alts:["650"],h:["保留万位看千位。","千位是6，要进1。","得到650万。"]},
+{id:"u1q8",t:"round",lv:3,icon:"🧠",q:"一个数四舍五入到万位约是36万。这个数最大可能是多少？",type:"text",a:"364999",h:["先想范围。","355000到364999都会约成36万。","最大是364999。"]},
+{id:"u1q9",t:"mixed",lv:3,icon:"🏙️",q:"甲城人口3,648,500人，乙城人口约365万人。只根据这些信息，能确定哪个更多吗？",type:"mc",o:["甲城更多","乙城更多","不能确定"],a:"不能确定",h:["“约365万”不是精确数。","乙城真实人数可能略大或略小。","所以不能确定。"]},
+{id:"u1q10",t:"mixed",lv:3,icon:"🧩",q:"一个八位数，千万位是5，十万位是7，千位是3，其余都是0。这个数是多少？",type:"text",a:"50703000",h:["先写八个数位。","千万位放5，十万位放7，千位放3。","得到50,703,000。"]}
 ]},
 2:{title:"第二单元 · 线与角",topics:[["line","线段、射线、直线"],["vertical","相交与垂直"],["parallel","平行"],["angle","旋转与角"],["measure","量角"],["mixed","综合应用"]],qs:[
-{id:"u2q1",t:"line",lv:1,icon:"📏",q:"有两个端点、不能无限延伸的是哪一种线？",type:"mc",o:["线段","射线","直线"],a:"线段",h:["先想端点个数。","两个端点把长度限制住了。","所以是线段。"]},
-{id:"u2q2",t:"line",lv:2,icon:"🔦",q:"手电筒发出的光线更接近哪一种数学模型？",type:"mc",o:["线段","射线","直线"],a:"射线",h:["它有一个起点。","从起点向一个方向延伸。","所以用射线表示最合适。"]},
-{id:"u2q3",t:"vertical",lv:1,icon:"➕",q:"两条直线相交成直角时，我们说这两条直线怎样？",type:"mc",o:["互相平行","互相垂直","只是相交"],a:"互相垂直",h:["关键词是“直角”。","相交成90°有专门名称。","叫互相垂直。"]},
-{id:"u2q4",t:"parallel",lv:2,icon:"🛤️",q:"同一平面内，两条永不相交的直线互相怎样？",type:"mc",o:["垂直","平行","重合"],a:"平行",h:["注意条件：同一平面。","一直延伸也不相交。","这就是平行。"]},
-{id:"u2q5",t:"angle",lv:1,icon:"📐",q:"一条射线绕端点旋转半周形成的角是多少度？",type:"text",a:"180",alts:["180°"],h:["半周就是半个圆。","一周是360°。","360°÷2=180°，是平角。"]},
-{id:"u2q6",t:"angle",lv:2,icon:"🔄",q:"周角是平角的几倍？",type:"text",a:"2",alts:["2倍"],h:["平角180°，周角360°。","比较360÷180。","结果是2。"]},
-{id:"u2q7",t:"measure",lv:2,icon:"📐",q:"用量角器量角时，角的顶点应该和量角器的哪里重合？",type:"mc",o:["中心点","0°刻度","外圈任意位置"],a:"中心点",h:["量角器要围绕角的顶点读数。","先对中心，再对0°线。","所以顶点与中心点重合。"]},
-{id:"u2q8",t:"measure",lv:3,icon:"👀",q:"量一个角时，一条边对准右侧0°刻度，另一条边经过60°和120°两个刻度。应该读多少度？",type:"text",a:"60",alts:["60°"],h:["关键是从哪一边的0°开始读。","题目说对准的是右侧0°。","因此沿右侧0°对应的那圈读，得到60°。"]},
-{id:"u2q9",t:"mixed",lv:3,icon:"🧩",q:"两条直线相交，其中一个角是35°，它相邻的角是多少度？",type:"text",a:"145",alts:["145°"],h:["相邻两个角合起来是一条平角。","平角是180°。","180°-35°=145°。"]},
-{id:"u2q10",t:"mixed",lv:3,icon:"🔍",q:"两条直线相交，其中一个角是90°。另外三个角分别是多少度？",type:"text",a:"90,90,90",alts:["90 90 90","90° 90° 90°","都是90°"],h:["相邻角和是180°。","180°-90°还是90°。","四个角全都是90°。"]},
-{id:"u2q11",t:"mixed",lv:3,icon:"🧠",q:"经过直线外一点，可以画几条与这条直线平行的直线？",type:"mc",o:["1条","2条","无数条"],a:"1条",h:["想一想平行线的唯一性。","位置和方向同时受限制。","只能画1条。"]},
-{id:"u2q12",t:"mixed",lv:3,icon:"🌟",q:"一个角比直角大25°，它是多少度？它属于什么角？",type:"mc",o:["65°，锐角","115°，钝角","205°，优角"],a:"115°，钝角",h:["直角是90°。","90°+25°=115°。","115°大于90°小于180°，所以是钝角。"]}
+{id:"u2q1",t:"line",lv:1,icon:"📏",q:"有两个端点、不能无限延伸的是哪一种线？",type:"mc",o:["线段","射线","直线"],a:"线段",h:["先想端点个数。","两个端点把长度限制住。","所以是线段。"]},
+{id:"u2q2",t:"line",lv:2,icon:"🔦",q:"手电筒发出的光线更接近哪一种数学模型？",type:"mc",o:["线段","射线","直线"],a:"射线",h:["它有一个起点。","向一个方向延伸。","所以是射线。"]},
+{id:"u2q3",t:"vertical",lv:1,icon:"➕",q:"两条直线相交成直角时，我们说这两条直线怎样？",type:"mc",o:["互相平行","互相垂直","只是相交"],a:"互相垂直",h:["关键词是直角。","直角是90°。","相交成直角叫互相垂直。"]},
+{id:"u2q4",t:"parallel",lv:2,icon:"🛤️",q:"同一平面内，两条永不相交的直线互相怎样？",type:"mc",o:["垂直","平行","重合"],a:"平行",h:["注意同一平面。","延伸也不相交。","这就是平行。"]},
+{id:"u2q5",t:"angle",lv:1,icon:"📐",q:"一条射线绕端点旋转半周形成的角是多少度？",type:"text",a:"180",alts:["180°"],h:["半周是半个圆。","一周360°。","半周180°。"]},
+{id:"u2q6",t:"angle",lv:2,icon:"🔄",q:"周角是平角的几倍？",type:"text",a:"2",alts:["2倍"],h:["平角180°。","周角360°。","360÷180=2。"]},
+{id:"u2q7",t:"measure",lv:2,icon:"📐",q:"用量角器量角时，角的顶点应该和量角器的哪里重合？",type:"mc",o:["中心点","0°刻度","外圈任意位置"],a:"中心点",h:["先对中心。","再对0°线。","所以顶点对中心点。"]},
+{id:"u2q8",t:"measure",lv:3,icon:"👀",q:"一条边对准右侧0°刻度，另一条边经过60°和120°两个刻度。应该读多少度？",type:"text",a:"60",alts:["60°"],h:["关键看从哪边0°开始。","题目说右侧0°。","因此读60°。"]},
+{id:"u2q9",t:"mixed",lv:3,icon:"🧩",q:"两条直线相交，其中一个角是35°，它相邻的角是多少度？",type:"text",a:"145",alts:["145°"],h:["相邻角合成平角。","平角180°。","180-35=145。"]},
+{id:"u2q10",t:"mixed",lv:3,icon:"🌟",q:"一个角比直角大25°，它是多少度？属于什么角？",type:"mc",o:["65°，锐角","115°，钝角","205°，优角"],a:"115°，钝角",h:["直角90°。","90+25=115°。","115°是钝角。"]}
 ]}}
 };
 
-const KEY="mengmeng_math_v1";let S=JSON.parse(localStorage.getItem(KEY)||"{}");if(!S.meta)S.meta={unit:2};let session=[],qi=0,current=null,help=0;
-function save(){localStorage.setItem(KEY,JSON.stringify(S))}
-function qstate(id){if(!S[id])S[id]={tries:0,wrong:0,independent:0,helped:0,bestHelp:9,last:0};return S[id]}
-function selectUnit(u){S.meta.unit=u;save();openCurrent()}
-function openCurrent(){renderUnit();show("unit")}
-function renderUnit(){let u=BANK[S.meta.unit];unitTitle.textContent=u.title;let done=u.qs.filter(q=>qstate(q.id).independent||qstate(q.id).helped).length;unitProg.style.width=(done/u.qs.length*100)+"%";unitMeta.textContent="已练 "+done+" / "+u.qs.length+" 道试题";topicList.innerHTML="";u.topics.forEach(([k,n])=>{let qs=u.qs.filter(q=>q.t===k),ok=qs.filter(q=>qstate(q.id).independent).length,helped=qs.filter(q=>qstate(q.id).helped&&!qstate(q.id).independent).length;let status=ok===qs.length?"🟢 稳定":helped||ok?"🟡 学习中":"⚪ 未开始";topicList.innerHTML+='<div class="topic"><div><b>'+n+'</b><div class="small">'+qs.length+' 个训练点</div></div><span class="tag">'+status+"</span></div>"})}
-function startSmart(){let u=BANK[S.meta.unit],unseen=u.qs.filter(q=>qstate(q.id).tries===0),weak=u.qs.filter(q=>qstate(q.id).wrong||qstate(q.id).helped&&!qstate(q.id).independent),easy=unseen.filter(q=>q.lv<=2),hard=unseen.filter(q=>q.lv===3);session=[...easy.slice(0,2),...weak.slice(0,2),...hard.slice(0,2)];if(session.length<6)session=[...new Map([...session,...u.qs].map(q=>[q.id,q])).values()].slice(0,6);begin()}
-function startWeak(){let u=BANK[S.meta.unit];session=u.qs.filter(q=>{let s=qstate(q.id);return s.wrong||s.helped&&!s.independent}).slice(0,6);if(!session.length){alert("目前还没有明显薄弱题，先做今日训练吧～");return}begin()}
-function begin(){qi=0;current=session[0];show("quiz");renderQ()}
-function renderQ(){help=0;qMeta.textContent="第 "+(qi+1)+" / "+session.length+" 题 · "+(current.lv===1?"基础":current.lv===2?"小变式":"综合思考");qIcon.textContent=current.icon;qText.textContent=current.q;guideBox.innerHTML="";fb.className="feedback";thinkbar.style.display=current.lv===1?"none":"grid";renderAnswer()}
-function renderAnswer(){
-  const area=document.getElementById("answerArea");
-  area.innerHTML="";
-  if(current.type==="mc"){
-    const box=document.createElement("div");
-    box.className="options";
-    current.o.forEach(o=>{
-      const b=document.createElement("button");
-      b.className="opt";
-      b.textContent=o;
-      b.addEventListener("click",()=>check(o));
-      box.appendChild(b);
-    });
-    area.appendChild(box);
-  }else{
-    const input=document.createElement("input");
-    input.id="ans";
-    input.className="answer";
-    input.inputMode="text";
-    input.placeholder="输入答案";
-    input.addEventListener("keydown",e=>{if(e.key==="Enter")check(input.value);});
-    const btn=document.createElement("button");
-    btn.className="btn primary";
-    btn.style.width="100%";
-    btn.style.marginTop="10px";
-    btn.textContent="确定";
-    btn.addEventListener("click",()=>check(input.value));
-    area.appendChild(input);
-    area.appendChild(btn);
-  }
+var KEY="mengmeng_math_v11";
+var S={meta:{unit:2}};
+try{var saved=localStorage.getItem(KEY);if(saved){S=JSON.parse(saved);}}catch(e){}
+if(!S.meta){S.meta={unit:2};}
+var session=[],qi=0,current=null,helpLevel=0;
+
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
+function qstate(id){if(!S[id]){S[id]={tries:0,wrong:0,independent:0,helped:0,bestHelp:9};}return S[id];}
+function byId(id){return document.getElementById(id);}
+function showScreen(id){
+ var screens=document.getElementsByClassName("screen"),i;
+ for(i=0;i<screens.length;i++){screens[i].className="screen";}
+ byId(id).className="screen active";
+ if(id==="report"){renderReport();}
 }
-function clean(x){return String(x).trim().replace(/[，、;；]/g,",").replace(/\s*,\s*/g,",").replace(/\s+/g," ")}
-function check(v){let s=qstate(current.id);s.tries++;s.last=Date.now();let ok=clean(v)===clean(current.a)||(current.alts||[]).some(a=>clean(v)===clean(a));if(ok){if(help===0){s.independent++;s.bestHelp=0}else{s.helped++;s.bestHelp=Math.min(s.bestHelp,help)}save();fb.className="feedback show good";fb.innerHTML=help===0?"🌟 独立做出来了！":"🌱 用了提示也坚持做出来了，这也很棒。";setTimeout(nextQ,700)}else{s.wrong++;save();fb.className="feedback show bad";fb.textContent="还没对，不急。先不要看答案，可以点“给一点提示”或“帮我拆一步”。"}}
-function needHelp(level){help=Math.max(help,level);document.querySelectorAll(".think").forEach((b,i)=>b.classList.toggle("on",i<level));let txt=current.h[Math.min(level-1,current.h.length-1)];guideBox.innerHTML='<div class="tip" style="margin-top:12px"><b>'+(level===1?"先想这里":level===2?"提示":"拆一步")+"</b><br>"+txt+"</div>"}
-function nextQ(){qi++;if(qi>=session.length){finish();return}current=session[qi];renderQ()}
-function finish(){alert("今天这一小组完成啦！重点不是快，而是把难题想下去 🌱");openCurrent()}
-function show(id){document.querySelectorAll(".screen").forEach(x=>x.classList.remove("active"));document.getElementById(id).classList.add("active");document.querySelectorAll("nav button").forEach(x=>x.classList.remove("active"));let n=document.getElementById("nav-"+id);if(n)n.classList.add("active");if(id==="report")renderReport()}
-function renderReport(){let all=[...BANK[1].qs,...BANK[2].qs],used=all.filter(q=>qstate(q.id).tries),ind=used.filter(q=>qstate(q.id).independent).length,he=used.filter(q=>qstate(q.id).helped&&!qstate(q.id).independent).length;rDone.textContent=used.length;rIndependent.textContent=ind;rHelp.textContent=he;let deep=used.filter(q=>qstate(q.id).bestHelp>=3&&qstate(q.id).bestHelp<9).length,wrong=[...used].sort((a,b)=>qstate(b.id).wrong-qstate(a.id).wrong).slice(0,3);reportText.innerHTML="目前更值得看的是“是否愿意继续想”，而不只是正确率。<br><br>需要三级拆解提示的题：<b>"+deep+"</b> 道。<br>最近最容易卡住："+(wrong.length?wrong.map(q=>q.q).join("；"):"暂无明显记录")+"。"}
-function resetMath(){if(confirm("确定清空数学试用记录吗？")){localStorage.removeItem(KEY);location.reload()}}
-renderUnit();
-</script></body></html>
+function selectUnit(u){S.meta.unit=u;save();openCurrent();}
+function openCurrent(){renderUnit();showScreen("unit");}
+function renderUnit(){
+ var u=BANK[S.meta.unit],done=0,i,j,qs,ok,helped,status,html="";
+ byId("unitTitle").innerHTML=u.title;
+ for(i=0;i<u.qs.length;i++){if(qstate(u.qs[i].id).independent||qstate(u.qs[i].id).helped){done++;}}
+ byId("unitProg").style.width=(done/u.qs.length*100)+"%";
+ byId("unitMeta").innerHTML="已练 "+done+" / "+u.qs.length+" 道试题";
+ for(i=0;i<u.topics.length;i++){
+   qs=[];ok=0;helped=0;
+   for(j=0;j<u.qs.length;j++){if(u.qs[j].t===u.topics[i][0]){qs.push(u.qs[j]);}}
+   for(j=0;j<qs.length;j++){if(qstate(qs[j].id).independent){ok++;}else if(qstate(qs[j].id).helped){helped++;}}
+   status=ok===qs.length?"🟢 稳定":(ok||helped)?"🟡 学习中":"⚪ 未开始";
+   html+='<div class="topic"><div><b>'+u.topics[i][1]+'</b><div class="small">'+qs.length+' 个训练点</div></div><span class="tag">'+status+'</span></div>';
+ }
+ byId("topicList").innerHTML=html;
+}
+function startSmart(){
+ var u=BANK[S.meta.unit],picked=[],i,s;
+ for(i=0;i<u.qs.length&&picked.length<2;i++){s=qstate(u.qs[i].id);if(!s.tries&&u.qs[i].lv<=2){picked.push(u.qs[i]);}}
+ for(i=0;i<u.qs.length&&picked.length<4;i++){s=qstate(u.qs[i].id);if((s.wrong||s.helped)&&picked.indexOf(u.qs[i])<0){picked.push(u.qs[i]);}}
+ for(i=0;i<u.qs.length&&picked.length<6;i++){if(u.qs[i].lv===3&&picked.indexOf(u.qs[i])<0){picked.push(u.qs[i]);}}
+ for(i=0;i<u.qs.length&&picked.length<6;i++){if(picked.indexOf(u.qs[i])<0){picked.push(u.qs[i]);}}
+ session=picked;begin();
+}
+function startWeak(){
+ var u=BANK[S.meta.unit],picked=[],i,s;
+ for(i=0;i<u.qs.length&&picked.length<6;i++){s=qstate(u.qs[i].id);if(s.wrong||(s.helped&&!s.independent)){picked.push(u.qs[i]);}}
+ if(!picked.length){alert("目前还没有明显薄弱题，先做今日训练吧～");return;}
+ session=picked;begin();
+}
+function begin(){qi=0;current=session[0];showScreen("quiz");renderQ();}
+function renderQ(){
+ helpLevel=0;
+ byId("qMeta").innerHTML="第 "+(qi+1)+" / "+session.length+" 题 · "+(current.lv===1?"基础":current.lv===2?"小变式":"综合思考");
+ byId("qIcon").innerHTML=current.icon;byId("qText").innerHTML=current.q;byId("guideBox").innerHTML="";byId("fb").className="feedback";
+ byId("thinkbar").style.display=current.lv===1?"none":"grid";renderAnswer();
+}
+function renderAnswer(){
+ var area=byId("answerArea"),box,b,i,input,btn;
+ area.innerHTML="";
+ if(current.type==="mc"){
+   box=document.createElement("div");box.className="options";
+   for(i=0;i<current.o.length;i++){
+     b=document.createElement("button");b.className="opt";b.innerHTML=current.o[i];
+     b.onclick=(function(v){return function(){check(v);};})(current.o[i]);
+     box.appendChild(b);
+   }
+   area.appendChild(box);
+ }else{
+   input=document.createElement("input");input.id="ans";input.className="answer";input.placeholder="输入答案";
+   btn=document.createElement("button");btn.className="btn primary";btn.style.width="100%";btn.style.marginTop="10px";btn.innerHTML="确定";
+   btn.onclick=function(){check(byId("ans").value);};
+   area.appendChild(input);area.appendChild(btn);
+ }
+}
+function clean(x){return String(x).replace(/^\s+|\s+$/g,"").replace(/[，、;；]/g,",").replace(/\s*,\s*/g,",").replace(/\s+/g," ");}
+function isCorrect(v){var i;if(clean(v)===clean(current.a)){return true;}if(current.alts){for(i=0;i<current.alts.length;i++){if(clean(v)===clean(current.alts[i])){return true;}}}return false;}
+function check(v){
+ var s=qstate(current.id);s.tries++;
+ if(isCorrect(v)){
+   if(helpLevel===0){s.independent++;s.bestHelp=0;}else{s.helped++;if(helpLevel<s.bestHelp){s.bestHelp=helpLevel;}}
+   save();byId("fb").className="feedback good";byId("fb").innerHTML=helpLevel===0?"🌟 独立做出来了！":"🌱 用了提示也坚持做出来了，很棒。";
+   setTimeout(nextQ,700);
+ }else{
+   s.wrong++;save();byId("fb").className="feedback bad";byId("fb").innerHTML="还没对，不急。可以点下面的提示，一步一步来。";
+ }
+}
+function needHelp(level){
+ helpLevel=Math.max(helpLevel,level);
+ var txt=current.h[Math.min(level-1,current.h.length-1)];
+ byId("guideBox").innerHTML='<div class="tip" style="margin-top:12px"><b>'+(level===1?"先想这里":level===2?"提示":"拆一步")+'</b><br>'+txt+'</div>';
+}
+function nextQ(){qi++;if(qi>=session.length){alert("这一小组完成啦！重点不是快，而是把难题想下去 🌱");openCurrent();return;}current=session[qi];renderQ();}
+function showReport(){renderReport();showScreen("report");}
+function renderReport(){
+ var all=[],u,i,q,s,used=0,ind=0,he=0,deep=0;
+ for(u=1;u<=2;u++){for(i=0;i<BANK[u].qs.length;i++){all.push(BANK[u].qs[i]);}}
+ for(i=0;i<all.length;i++){q=all[i];s=qstate(q.id);if(s.tries){used++;if(s.independent){ind++;}else if(s.helped){he++;}if(s.bestHelp>=3&&s.bestHelp<9){deep++;}}}
+ byId("rDone").innerHTML=used;byId("rIndependent").innerHTML=ind;byId("rHelp").innerHTML=he;
+ byId("reportText").innerHTML="目前重点看她是否愿意继续想，而不只是正确率。<br><br>需要三级拆解提示的题：<b>"+deep+"</b> 道。";
+}
+window.onload=function(){byId("scriptStatus").innerHTML="✅ 页面功能已加载，可以点击下面的单元按钮";renderUnit();};
+</script>
+</body>
+</html>
