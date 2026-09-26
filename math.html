@@ -12,15 +12,48 @@ a.btn,button.btn{display:block;width:100%;text-decoration:none;text-align:center
 .petbox{display:flex;align-items:center;gap:14px;margin-top:12px;padding:12px;border-radius:18px;background:#fff8fc;border:2px solid #f2dfea}.pet{font-size:60px}.tip{background:#fffaf0;border:2px dashed #ffdb9d;border-radius:16px;padding:12px;text-align:center;color:#8e7025;line-height:1.6}
 @media(max-width:720px){.grid{grid-template-columns:1fr}.wrap{padding:12px 10px 60px}}
 </style></head><body><main class="wrap">
-<section class="hero"><span class="badge">➗ 数学思考屋 · 成长版</span><h1>选一只小动物陪你学数学 🌱</h1><div class="sub">每答对一道题，小动物就获得一点成长值，慢慢长大。答错不会变小。</div>
-<div class="animals">
-<button class="animalChoice" onclick="chooseAnimal('🐰')">🐰</button>
-<button class="animalChoice" onclick="chooseAnimal('🐱')">🐱</button>
-<button class="animalChoice" onclick="chooseAnimal('🐼')">🐼</button>
-<button class="animalChoice" onclick="chooseAnimal('🐶')">🐶</button>
+<section class="hero">
+<span class="badge">➗ 数学思考屋 · 布偶猫成长版</span>
+<h1>我的布偶猫数学伙伴 🐾</h1>
+<div class="sub">答对题目会获得金币和成长值。金币可以给布偶猫买衣服、饰品和生活用品。</div>
+
+<div class="petbox" style="align-items:flex-end;justify-content:center;gap:24px;flex-wrap:wrap">
+  <div style="text-align:center">
+    <div id="ragdoll" style="position:relative;width:180px;height:230px;margin:auto">
+      <svg viewBox="0 0 180 230" width="180" height="230" aria-label="布偶猫全身">
+        <ellipse cx="91" cy="145" rx="48" ry="63" fill="#f5f2f2"/>
+        <ellipse cx="91" cy="70" rx="50" ry="46" fill="#faf8f8"/>
+        <path d="M48 42 L60 9 L78 38" fill="#c9c0c5"/><path d="M104 38 L122 9 L136 44" fill="#c9c0c5"/>
+        <ellipse cx="71" cy="67" rx="7" ry="10" fill="#7ec8ff"/><ellipse cx="111" cy="67" rx="7" ry="10" fill="#7ec8ff"/>
+        <circle cx="72" cy="69" r="3" fill="#27364a"/><circle cx="110" cy="69" r="3" fill="#27364a"/>
+        <path d="M84 83 Q91 88 98 83" stroke="#aa7788" stroke-width="3" fill="none"/>
+        <ellipse cx="89" cy="81" rx="5" ry="4" fill="#d69eae"/>
+        <path d="M48 120 Q18 140 25 190 Q30 215 55 205" stroke="#c9c0c5" stroke-width="18" fill="none" stroke-linecap="round"/>
+        <ellipse cx="62" cy="204" rx="21" ry="12" fill="#f5f2f2"/><ellipse cx="120" cy="204" rx="21" ry="12" fill="#f5f2f2"/>
+        <ellipse cx="64" cy="154" rx="15" ry="45" fill="#f8f6f6"/><ellipse cx="118" cy="154" rx="15" ry="45" fill="#f8f6f6"/>
+        <path d="M61 47 Q91 22 122 47 Q114 101 91 108 Q67 100 61 47" fill="#d7cfd3" opacity=".58"/>
+      </svg>
+      <div id="wearBow" style="position:absolute;top:101px;left:76px;font-size:30px;display:none">🎀</div>
+      <div id="wearCrown" style="position:absolute;top:-3px;left:72px;font-size:36px;display:none">👑</div>
+      <div id="wearDress" style="position:absolute;top:126px;left:58px;font-size:56px;display:none">👗</div>
+    </div>
+    <div><b id="petStage">小布偶</b></div>
+    <div class="sub" id="petXP">成长值 0</div>
+    <div style="margin-top:6px;font-weight:bold;color:#a86a00">🪙 <span id="coinCount">0</span> 金币</div>
+  </div>
 </div>
-<div class="petbox"><div id="pet" class="pet">🐰</div><div><b id="petStage">小宝宝</b><div class="sub" id="petXP">成长值 0</div></div></div>
 </section>
+
+<section class="card">
+<h2>🛍️ 布偶猫商店</h2>
+<div class="grid">
+  <div class="unit"><h2>🎀 蝴蝶结</h2><div class="sub">5 金币</div><button class="btn soft" onclick="buyItem('bow',5)">购买 / 穿戴</button></div>
+  <div class="unit"><h2>👗 小裙子</h2><div class="sub">10 金币</div><button class="btn soft" onclick="buyItem('dress',10)">购买 / 穿戴</button></div>
+  <div class="unit"><h2>👑 小皇冠</h2><div class="sub">20 金币</div><button class="btn soft" onclick="buyItem('crown',20)">购买 / 穿戴</button></div>
+  <div class="unit"><h2>🏠 小房子</h2><div class="sub">25 金币 · 先收藏</div><button class="btn soft" onclick="buyItem('house',25)">购买</button></div>
+</div>
+</section>
+
 <section class="card"><h2>选择单元</h2><div class="grid">
 <div class="unit"><h2>1️⃣ 认识更大的数</h2><div class="sub">数位 · 读写 · 比较 · 改写 · 近似数</div><a class="btn soft" href="./math-unit1.html?v=7">进入第一单元</a></div>
 <div class="unit active"><h2>2️⃣ 线与角</h2><div class="sub">线段/射线/直线 · 垂直与平行 · 角 · 量角</div><a class="btn primary" href="./math-unit2.html?v=7">正在学，先练这个</a></div>
@@ -29,9 +62,31 @@ a.btn,button.btn{display:block;width:100%;text-decoration:none;text-align:center
 <section class="card"><a class="btn soft" href="./index.html">← 返回学习平台</a></section>
 </main>
 <script>
-function readAnimal(){var a="🐰";try{a=localStorage.getItem("math_animal")||"🐰";}catch(e){}return a;}
-function readXP(){var x=0;try{x=parseInt(localStorage.getItem("math_xp")||"0",10);}catch(e){}return x||0;}
-function chooseAnimal(a){try{localStorage.setItem("math_animal",a);}catch(e){}renderPet();}
-function renderPet(){var a=readAnimal(),x=readXP(),size=60,label="小宝宝";if(x>=5){size=72;label="长大一点啦";}if(x>=12){size=86;label="越来越厉害";}if(x>=24){size=102;label="小勇士";}if(x>=40){size=120;label="大朋友啦";}document.getElementById("pet").innerHTML=a;document.getElementById("pet").style.fontSize=size+"px";document.getElementById("petStage").innerHTML=label;document.getElementById("petXP").innerHTML="成长值 "+x;}
+function getNum(k){var v=0;try{v=parseInt(localStorage.getItem(k)||"0",10);}catch(e){}return v||0;}
+function getText(k,d){var v=d;try{v=localStorage.getItem(k)||d;}catch(e){}return v;}
+function owned(){var o={};try{o=JSON.parse(localStorage.getItem("math_owned")||"{}");}catch(e){}return o;}
+function saveOwned(o){try{localStorage.setItem("math_owned",JSON.stringify(o));}catch(e){}}
+function renderPet(){
+  var x=getNum("math_xp"), coins=getNum("math_coins"), o=owned();
+  var label="小布偶"; if(x>=5)label="长大一点啦"; if(x>=12)label="漂亮小猫"; if(x>=24)label="数学小勇士"; if(x>=40)label="闪亮大布偶";
+  document.getElementById("petStage").innerHTML=label;
+  document.getElementById("petXP").innerHTML="成长值 "+x;
+  document.getElementById("coinCount").innerHTML=coins;
+  document.getElementById("wearBow").style.display=o.bow?"block":"none";
+  document.getElementById("wearDress").style.display=o.dress?"block":"none";
+  document.getElementById("wearCrown").style.display=o.crown?"block":"none";
+}
+function buyItem(name,price){
+  var o=owned(), coins=getNum("math_coins");
+  if(o[name]){
+    if(name==="bow"||name==="dress"||name==="crown"){o[name]=!o[name];saveOwned(o);renderPet();}
+    else alert("已经拥有啦！");
+    return;
+  }
+  if(coins<price){alert("金币还不够哦～继续做题就能赚金币。");return;}
+  coins-=price; o[name]=true;
+  try{localStorage.setItem("math_coins",String(coins));}catch(e){}
+  saveOwned(o); renderPet(); alert("购买成功！✨");
+}
 window.onload=renderPet;
 </script></body></html>
