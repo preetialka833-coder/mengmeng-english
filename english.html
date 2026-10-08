@@ -16,7 +16,7 @@
 .feedback{display:none;margin-top:12px;padding:12px;border-radius:16px;text-align:center;font-weight:900}.feedback.show{display:block}.good{background:#dff6e7;color:#2f8251}.bad{background:#ffe4e4;color:#c84f4f}.rewardStrip{display:flex;gap:8px;flex-wrap:wrap}.sticker{width:56px;height:56px;border-radius:18px;background:#f8f1f7;display:flex;align-items:center;justify-content:center;font-size:30px}.sticker.on{background:#fff0c6;border:2px solid #ffdf7d}.gift{border-radius:24px;padding:18px;background:linear-gradient(135deg,#fff1b7,#ffe1ef);border:2px solid #ffd57f;text-align:center}
 nav{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.97);border-top:1px solid #efdfeb}nav .inner{max-width:980px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr)}nav button{border:0;background:transparent;padding:13px 4px;color:#8f8397;font-weight:900}nav button.active{color:#eb64a3}
 @media(max-width:760px){.app{padding:14px 10px 98px}.hero h1{font-size:30px}.sub{font-size:16px}.choiceGrid{grid-template-columns:1fr}.key{min-width:0;flex:1;height:58px;font-size:23px}.key.action{min-width:0;flex:1;font-size:18px}.key.ok{font-size:22px}.cn,.en{font-size:34px}}
-</style></head><body><div data-build="2026.10.07-r1" style="max-width:980px;margin:8px auto;padding:0 18px;color:#74657e;font:13px system-ui,sans-serif">试用修复版 · 2026.10.07-r1</div><div style="max-width:980px;margin:10px auto 0;padding:0 18px"><a href="./index.html?v=20261007r1" style="text-decoration:none"><button style="border:2px solid #f0deeb;background:white;border-radius:16px;padding:10px 14px;font-weight:900;color:#5b4d67">← 返回学习平台</button></a></div><div class="app">
+</style></head><body><div data-build="2026.10.08-r2" style="max-width:980px;margin:8px auto;padding:0 18px;color:#74657e;font:13px system-ui,sans-serif">试用修复版 · 2026.10.08-r2</div><div style="max-width:980px;margin:10px auto 0;padding:0 18px"><a href="./index.html?v=20261008r2" style="text-decoration:none"><button style="border:2px solid #f0deeb;background:white;border-radius:16px;padding:10px 14px;font-weight:900;color:#5b4d67">← 返回学习平台</button></a></div><div class="app">
 <section id="home" class="screen active"><div class="hero"><span class="badge">希沃学习机固定网址版 · V5.1</span><h1>萌萌英语花园 🌸</h1><div class="sub">每天一点点：先复习到期内容，再学少量新内容。答错就多练一次，按自己的进度来。</div></div>
 <div class="stats"><div class="stat"><b id="dayNum">1</b><span>成长路线</span></div><div class="stat"><b id="todayCount">0</b><span>今天总任务</span></div><div class="stat"><b id="reviewCount">0</b><span>今日复习</span></div></div>
 <div class="card"><h2>今天只做这一点</h2><div class="progress"><i id="unitProgress"></i></div><p class="sub" id="plan"></p><details class="small" style="margin-bottom:16px"><summary>今天为什么这样安排？</summary><p>先做最早到期的复习，每天最多 8 项。没有积压时，再按单词、短语、句子的顺序学最多 4 项新内容。每天按这台设备的日期安排，刷新或重进都会接着做。<br>首次学会后隔天复习；以后隔天独立写对，间隔逐步延长到 3、7、14、30 天。这是可调整的练习安排。<br>答错后先改对，约 10 分钟后再试；每项每天最多两次短复习，再错就明天继续。看过答案后的改正和当天短复习，都不算隔天独立写对。</p></details><div class="row"><button class="btn primary" onclick="startToday()">开始今天学习</button><button class="btn soft" onclick="show('rewards')">看看奖励</button></div></div>
@@ -32,7 +32,10 @@ nav{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.97);bord
 <div class="krow"><button class="key" onclick="tap('a')">A</button><button class="key" onclick="tap('s')">S</button><button class="key" onclick="tap('d')">D</button><button class="key" onclick="tap('f')">F</button><button class="key" onclick="tap('g')">G</button><button class="key" onclick="tap('h')">H</button><button class="key" onclick="tap('j')">J</button><button class="key" onclick="tap('k')">K</button><button class="key" onclick="tap('l')">L</button></div>
 <div class="krow"><button class="key" onclick="tap('z')">Z</button><button class="key" onclick="tap('x')">X</button><button class="key" onclick="tap('c')">C</button><button class="key" onclick="tap('v')">V</button><button class="key" onclick="tap('b')">B</button><button class="key" onclick="tap('n')">N</button><button class="key" onclick="tap('m')">M</button></div>
 <div class="krow"><button class="key action" onclick="tap('-')">-</button><button class="key action" onclick="tap('/')">/</button><button class="key action" onclick="tap(&quot;'&quot;)">'</button><button class="key action" onclick="tap(' ')">空格</button><button class="key action" onclick="backspace()">⌫</button><button class="key ok" onclick="submitAnswer()">✓</button></div>
-</div><div class="row" style="margin-top:12px"><button class="btn soft" onclick="speakCurrent()">🔊 再听一次</button></div></div></div></section>
+</div><div class="row" style="margin-top:12px"><button class="btn soft" onclick="speakCurrent()">🔊 再听一次</button></div></div>
+<div id="audioStatus" class="small" role="status" aria-live="polite" data-state="ready" style="margin-top:14px;line-height:1.6">点听音按钮播放英语录音。</div><div id="audioPlayer" style="margin-top:8px"></div>
+<details class="small" style="margin-top:8px"><summary>没听到声音？</summary><p>先调高媒体音量，再点播放器的播放键或“再听一次”。录音加载失败时，可以试试下面的设备朗读。英语录音使用离线合成的美式声音。</p><p>课本里的 sb 读作 somebody，sth 读作 something；答题仍按课本缩写输入。</p><button class="btn soft" onclick="speakWithDevice()">备用设备朗读</button></details>
+</div></section>
 
 <section id="rewards" class="screen"><div class="card"><h2>贴纸墙 🎀</h2><div class="rewardStrip" id="stickers"></div></div><div class="card"><div class="gift"><div style="font-size:52px" id="giftIcon">🔒</div><h2>Unit 1 · 100 元礼物券</h2><div class="sub" id="giftText"></div></div></div></section>
 
@@ -263,6 +266,7 @@ function presentNext(){
 }
 function chunkHint(w){if(w.toLowerCase()==="volleyball")return"volley · ball";let c=w.replace(/[^A-Za-z]/g,"");if(c.length<8)return"";let a=Math.round(c.length/3),b=Math.round(2*c.length/3);return c.slice(0,a)+" · "+c.slice(a,b)+" · "+c.slice(b);}
 function renderLesson(){
+  stopLessonAudio();
   stageName.textContent=current._mode==="retest"?"隔一会儿再试":current._review?"今日复习":STAGES[stage];
   lessonMeta.textContent=(idx+1)+" / "+queue.length+(current._review?" · 复习":" · 新学");
   icon.textContent=current.icon;cn.textContent=current.cn;en.textContent=current.en;
@@ -345,16 +349,111 @@ function finishDay(){
   }else alert(earned?"今天完成啦！得到 1 张贴纸 🎀。明天再来学一点。":base.length?"今天任务已经完成啦～ 明天再来。":"今天没有到期任务，休息一下，明天再来看看。" );
   show("home");
 }
+// Audio is independent of lesson/progress state. Clips are generated offline
+// from the public D text; no learner information is sent to a speech service.
+let lessonAudio=null, audioRequest=0, audioTimer=null, activeUtterance=null, deviceVoices=[];
+function setAudioStatus(state,text){
+  const node=document.getElementById("audioStatus");
+  if(node){node.setAttribute("data-state",state);node.textContent=text;}
+}
+function clearAudioTimer(){if(audioTimer!==null)clearTimeout(audioTimer);audioTimer=null;}
+function stopLessonAudio(reset=true){
+  audioRequest++;clearAudioTimer();
+  if(lessonAudio){
+    lessonAudio.onplay=lessonAudio.onplaying=lessonAudio.onpause=lessonAudio.onended=lessonAudio.onerror=lessonAudio.onwaiting=lessonAudio.onstalled=null;
+    try{lessonAudio.pause();}catch(e){}
+    lessonAudio=null;
+  }
+  if(activeUtterance){
+    activeUtterance.onstart=activeUtterance.onend=activeUtterance.onerror=null;
+    try{window.speechSynthesis.cancel();}catch(e){}
+    activeUtterance=null;
+  }
+  const player=document.getElementById("audioPlayer");if(player)player.innerHTML="";
+  if(reset)setAudioStatus("ready","点听音按钮播放英语录音。");
+}
+function recordedAudioFor(item){
+  const group={word:"words",phrase:"phrases",sentence:"sentences"}[item.kind];
+  const index=group?D[group].findIndex(row=>row[1]===item.en):-1;
+  return index<0?null:"./audio/english/"+group+"-"+String(index+1).padStart(2,"0")+".mp3";
+}
+function spokenAudioText(text){
+  return text.replace(/\bsb\s*\/\s*sth\b/gi,"somebody or something").replace(/\bsb\b/gi,"somebody").replace(/\bsth\b/gi,"something").replace(/\bDaming\b/g,"Dah Ming");
+}
 function speakCurrent(){
   if(!current)return;
-  if(!("speechSynthesis"in window)||typeof SpeechSynthesisUtterance==="undefined"){
-    alert("这个浏览器暂时不能播放语音，请使用支持朗读的浏览器，或请家长读出题目。");return;
-  }
-  speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(current.en);u.lang="en-GB";u.rate=.76;
-  u.onerror=e=>{if(e.error!=="canceled"&&e.error!=="interrupted")alert("语音没有播放成功，请再试一次，或请家长读出题目。");};
-  speechSynthesis.speak(u);
+  stopLessonAudio(false);
+  const request=audioRequest,source=recordedAudioFor(current);
+  const valid=()=>request===audioRequest;
+  let failed=false;
+  const fail=(message,code="")=>{
+    if(!valid())return;failed=true;clearAudioTimer();
+    if(lessonAudio){try{lessonAudio.pause();}catch(e){}}
+    setAudioStatus("error",message+(code?"（"+code+"）":"")+"。请点听音按钮重试，或展开“没听到声音？”试试备用设备朗读。");
+  };
+  const watch=(milliseconds,message)=>{
+    if(audioTimer===null)audioTimer=setTimeout(()=>{audioTimer=null;fail(message,"播放超时");},milliseconds);
+  };
+  if(!source||typeof Audio==="undefined"){fail("这个浏览器暂时不能播放录音");return;}
+  try{
+    const player=new Audio(source);lessonAudio=player;
+    player.controls=true;player.preload="auto";player.volume=1;player.muted=false;
+    player.style.width="100%";player.setAttribute("aria-label","英语录音播放器");
+    document.getElementById("audioPlayer").appendChild(player);
+    player.onplay=()=>{if(valid()){failed=false;setAudioStatus("loading","正在加载英语录音…");watch(12000,"录音加载时间太长");}};
+    player.onplaying=()=>{
+      if(!valid()||failed)return;clearAudioTimer();setAudioStatus("playing","正在播放英语录音…");
+      watch(30000,"录音播放没有正常结束");
+    };
+    player.onwaiting=player.onstalled=()=>{
+      if(!valid()||failed)return;setAudioStatus("loading","录音正在缓冲，请稍等…");
+      // Repeated stalled/waiting events must not extend the existing deadline.
+      watch(12000,"录音加载时间太长");
+    };
+    player.onpause=()=>{if(valid()&&!failed&&!player.ended){clearAudioTimer();setAudioStatus("paused","录音已暂停，点播放器的播放键继续。");}};
+    player.onended=()=>{if(valid()&&!failed){clearAudioTimer();setAudioStatus("complete","播放结束，可以再听一次。");}};
+    player.onerror=()=>fail("录音加载或播放失败",player.error?"音频错误 "+player.error.code:"音频错误");
+    setAudioStatus("loading","正在加载英语录音…");watch(12000,"录音加载时间太长");
+    // Keep play() in the original button gesture; do not await fetch/canplay.
+    const started=player.play();
+    if(started&&typeof started.catch==="function")started.catch(error=>{
+      if(!valid())return;
+      fail(error&&error.name==="NotAllowedError"?"浏览器未允许播放，请直接点播放器的播放键":"录音没有开始播放",error&&error.name||"播放错误");
+    });
+  }catch(error){fail("录音没有开始播放",error&&error.name||"播放错误");}
 }
+function refreshDeviceVoices(){
+  try{deviceVoices=window.speechSynthesis?window.speechSynthesis.getVoices():[];}
+  catch(e){deviceVoices=[];}
+}
+function speakWithDevice(){
+  if(!current)return;
+  stopLessonAudio(false);const request=audioRequest;
+  const fail=code=>{
+    if(request!==audioRequest)return;clearAudioTimer();
+    if(activeUtterance){activeUtterance.onstart=activeUtterance.onend=activeUtterance.onerror=null;try{window.speechSynthesis.cancel();}catch(e){}activeUtterance=null;}
+    setAudioStatus("error","设备朗读未能播放（"+code+"）。请重试英语录音，或请家长帮助读题。");
+  };
+  if(!window.speechSynthesis||typeof SpeechSynthesisUtterance==="undefined"){fail("不支持设备朗读");return;}
+  refreshDeviceVoices();
+  const available=deviceVoices.filter(voice=>voice.localService===true&&/^en(?:[-_]|$)/i.test(voice.lang));
+  const voice=available.find(voice=>/^en[-_]GB$/i.test(voice.lang))||available.find(voice=>/^en[-_]US$/i.test(voice.lang))||available[0];
+  if(!voice){fail("暂未找到本机英语声音，可稍后再试");return;}
+  try{
+    const synth=window.speechSynthesis,u=new SpeechSynthesisUtterance(spokenAudioText(current.en));
+    activeUtterance=u;u.voice=voice;u.lang=voice.lang;u.rate=.88;u.volume=1;
+    u.onstart=()=>{if(request===audioRequest){clearAudioTimer();setAudioStatus("playing","正在使用备用设备朗读…");audioTimer=setTimeout(()=>fail("朗读超时"),30000);}};
+    u.onend=()=>{if(request===audioRequest){clearAudioTimer();activeUtterance=null;setAudioStatus("complete","设备朗读结束，可以再听一次。");}};
+    u.onerror=event=>fail(event.error||"朗读错误");
+    setAudioStatus("loading","正在启动备用设备朗读…");audioTimer=setTimeout(()=>fail("朗读没有启动"),6000);
+    synth.cancel();if(synth.paused&&typeof synth.resume==="function")synth.resume();synth.speak(u);
+  }catch(error){fail(error&&error.name||"朗读错误");}
+}
+refreshDeviceVoices();
+if(window.speechSynthesis&&typeof window.speechSynthesis.addEventListener==="function")window.speechSynthesis.addEventListener("voiceschanged",refreshDeviceVoices);
+window.addEventListener("pagehide",()=>stopLessonAudio(false));
 function show(id){
+  if(id!=="learn")stopLessonAudio();
   // Leaving during a feedback animation must not reopen the lesson later.
   if(id!=="learn")cancelTransition();
   document.querySelectorAll(".screen").forEach(x=>x.classList.remove("active"));document.getElementById(id).classList.add("active");

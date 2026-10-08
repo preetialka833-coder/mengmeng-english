@@ -1,0 +1,501 @@
+{
+  "version": 1,
+  "engine": "Flite via installed FFmpeg flite filter",
+  "voice": "slt",
+  "accent": "US English, synthetic female voice",
+  "audioFormat": "MP3, mono, 22050 Hz, 48 kbit/s",
+  "filter": "atempo=0.88,loudnorm=I=-18:TP=-2:LRA=7,adelay=80:all=1,apad=pad_dur=0.18",
+  "source": "Existing public English lesson text only; no learner data.",
+  "tracks": [
+    {
+      "group": "words",
+      "index": 1,
+      "text": "sport",
+      "spokenText": "sport",
+      "file": "words-01.mp3",
+      "durationSeconds": 1.28,
+      "bytes": 7906,
+      "sha256": "20b9e446ac7ecf7456232042f9921428fe2e09724195145d0c63ca772eef2aa1"
+    },
+    {
+      "group": "words",
+      "index": 2,
+      "text": "jump",
+      "spokenText": "jump",
+      "file": "words-02.mp3",
+      "durationSeconds": 1.176,
+      "bytes": 7279,
+      "sha256": "74c6e812f9f649a23ebee7e8b0550529c94e932719b43d2225fc07f2e6ae03ef"
+    },
+    {
+      "group": "words",
+      "index": 3,
+      "text": "high",
+      "spokenText": "high",
+      "file": "words-03.mp3",
+      "durationSeconds": 0.914,
+      "bytes": 5711,
+      "sha256": "8f2bd2a5b82b68bc6e02900eb5e5f0f6c837e05b775ff591101c83f75b042aeb"
+    },
+    {
+      "group": "words",
+      "index": 4,
+      "text": "far",
+      "spokenText": "far",
+      "file": "words-04.mp3",
+      "durationSeconds": 1.045,
+      "bytes": 6495,
+      "sha256": "d3289e4ba476da2da17b617dcea24b6011040c2f2f3b328432b43796d1f0b02e"
+    },
+    {
+      "group": "words",
+      "index": 5,
+      "text": "ping-pong",
+      "spokenText": "ping-pong",
+      "file": "words-05.mp3",
+      "durationSeconds": 1.593,
+      "bytes": 9787,
+      "sha256": "6b440e52f6a58360a4ba3fbc5c7e1b308ea6535adb2731ac0bb2b89c41756cbc"
+    },
+    {
+      "group": "words",
+      "index": 6,
+      "text": "volleyball",
+      "spokenText": "volleyball",
+      "file": "words-06.mp3",
+      "durationSeconds": 1.62,
+      "bytes": 9943,
+      "sha256": "cb172317359ea5c8f78c45722add8802cb3335c64085339b2cea4334fbc92dc7"
+    },
+    {
+      "group": "words",
+      "index": 7,
+      "text": "across",
+      "spokenText": "across",
+      "file": "words-07.mp3",
+      "durationSeconds": 1.567,
+      "bytes": 9630,
+      "sha256": "e3b8343122938d23543424375ad05d069ab4c8d38552022749a75d8402b4762d"
+    },
+    {
+      "group": "words",
+      "index": 8,
+      "text": "hope",
+      "spokenText": "hope",
+      "file": "words-08.mp3",
+      "durationSeconds": 1.149,
+      "bytes": 7122,
+      "sha256": "b3708e66c7a5a0a8a37f80cb0104f40e59d7caf11845da1818ce8ee1783015b9"
+    },
+    {
+      "group": "words",
+      "index": 9,
+      "text": "lose",
+      "spokenText": "lose",
+      "file": "words-09.mp3",
+      "durationSeconds": 1.228,
+      "bytes": 7592,
+      "sha256": "b40a12ff640d064cef765496defa4ed0b1609827f0591e7c34aff9459f20ced6"
+    },
+    {
+      "group": "words",
+      "index": 10,
+      "text": "because",
+      "spokenText": "because",
+      "file": "words-10.mp3",
+      "durationSeconds": 1.254,
+      "bytes": 7749,
+      "sha256": "10d36e6ef7cbd2b269ac23750d3c393091ba4791ed3f2fdc91231682bb600b66"
+    },
+    {
+      "group": "words",
+      "index": 11,
+      "text": "cancer",
+      "spokenText": "cancer",
+      "file": "words-11.mp3",
+      "durationSeconds": 1.384,
+      "bytes": 8533,
+      "sha256": "74b7d9b596704ad720d42ef732f4d1efe828d743f8d7a257140101a743e8493a"
+    },
+    {
+      "group": "words",
+      "index": 12,
+      "text": "other",
+      "spokenText": "other",
+      "file": "words-12.mp3",
+      "durationSeconds": 1.071,
+      "bytes": 6652,
+      "sha256": "d9a307d3698491e3cb6d070764ca41e653160ec495ddfd2c57121fddd974d10d"
+    },
+    {
+      "group": "words",
+      "index": 13,
+      "text": "money",
+      "spokenText": "money",
+      "file": "words-13.mp3",
+      "durationSeconds": 1.228,
+      "bytes": 7592,
+      "sha256": "b85ebf2740275bf37e8ceb2420c5f748a43757b2051c5be577f215c30068eb2d"
+    },
+    {
+      "group": "words",
+      "index": 14,
+      "text": "hard",
+      "spokenText": "hard",
+      "file": "words-14.mp3",
+      "durationSeconds": 1.228,
+      "bytes": 7592,
+      "sha256": "e1db3d05b1ab59b33ac3d5d93e67c6d5b879589b4135c76f67e23acdab520a7a"
+    },
+    {
+      "group": "words",
+      "index": 15,
+      "text": "kind",
+      "spokenText": "kind",
+      "file": "words-15.mp3",
+      "durationSeconds": 1.202,
+      "bytes": 7436,
+      "sha256": "44f5cd30a46b3e372dbf166928eed40dce9830e65a906e3419d054a99a199e60"
+    },
+    {
+      "group": "words",
+      "index": 16,
+      "text": "keep",
+      "spokenText": "keep",
+      "file": "words-16.mp3",
+      "durationSeconds": 1.176,
+      "bytes": 7279,
+      "sha256": "380d7f5337ff0bd58a871ad7d954546e3c21d555fe5aea39db63074a05e37057"
+    },
+    {
+      "group": "words",
+      "index": 17,
+      "text": "month",
+      "spokenText": "month",
+      "file": "words-17.mp3",
+      "durationSeconds": 1.202,
+      "bytes": 7436,
+      "sha256": "044369aa2759477f08411e48cdd3ae7ef00ee333bf34d306c4a314fb24a740d1"
+    },
+    {
+      "group": "words",
+      "index": 18,
+      "text": "ill",
+      "spokenText": "ill",
+      "file": "words-18.mp3",
+      "durationSeconds": 1.202,
+      "bytes": 7436,
+      "sha256": "9868e8bf738b9e86d9f599087139171983afd4f3309ac04a0421cefdf5612b12"
+    },
+    {
+      "group": "words",
+      "index": 19,
+      "text": "anymore",
+      "spokenText": "anymore",
+      "file": "words-19.mp3",
+      "durationSeconds": 1.332,
+      "bytes": 8219,
+      "sha256": "462feecdd6bd0acf6d31fb31beb630716edc14da33f8bca49c42c666eb2a5257"
+    },
+    {
+      "group": "words",
+      "index": 20,
+      "text": "year",
+      "spokenText": "year",
+      "file": "words-20.mp3",
+      "durationSeconds": 1.202,
+      "bytes": 7436,
+      "sha256": "8b92796715cef5125b35e8834c114da96ce2c3ec63ddad891f3b967ba1aba40f"
+    },
+    {
+      "group": "words",
+      "index": 21,
+      "text": "remember",
+      "spokenText": "remember",
+      "file": "words-21.mp3",
+      "durationSeconds": 1.489,
+      "bytes": 9160,
+      "sha256": "7b7693e2d3dcd8630e308a47cffd5dba1d38542e8290ba7a8c04aea90faccd01"
+    },
+    {
+      "group": "words",
+      "index": 22,
+      "text": "fail",
+      "spokenText": "fail",
+      "file": "words-22.mp3",
+      "durationSeconds": 1.332,
+      "bytes": 8219,
+      "sha256": "037f33735bd2c6d9932810ace0d87684c8765aa941b10619ddb41beeedc15599"
+    },
+    {
+      "group": "words",
+      "index": 23,
+      "text": "give",
+      "spokenText": "give",
+      "file": "words-23.mp3",
+      "durationSeconds": 1.149,
+      "bytes": 7122,
+      "sha256": "31ab55202fdc2af1af58177450e5c3a32c531dcfd72e2d51308aca93e67b5de3"
+    },
+    {
+      "group": "words",
+      "index": 24,
+      "text": "never",
+      "spokenText": "never",
+      "file": "words-24.mp3",
+      "durationSeconds": 1.176,
+      "bytes": 7279,
+      "sha256": "3c11b6b9208a9536f9fed29ce296bb88076d5b24e7c41014c1c6ed602d61dff1"
+    },
+    {
+      "group": "words",
+      "index": 25,
+      "text": "try",
+      "spokenText": "try",
+      "file": "words-25.mp3",
+      "durationSeconds": 1.28,
+      "bytes": 7906,
+      "sha256": "0a8d60082c5f6397ae5f1371ef3a57f3746e3fcefa419c2c1f863d608512b17b"
+    },
+    {
+      "group": "words",
+      "index": 26,
+      "text": "star",
+      "spokenText": "star",
+      "file": "words-26.mp3",
+      "durationSeconds": 1.28,
+      "bytes": 7906,
+      "sha256": "8b1df165b3912cca815c270a2d406b4d4d133f2c5ec7136d7ba0596c61b05b3a"
+    },
+    {
+      "group": "words",
+      "index": 27,
+      "text": "ability",
+      "spokenText": "ability",
+      "file": "words-27.mp3",
+      "durationSeconds": 1.489,
+      "bytes": 9160,
+      "sha256": "6c488d5ef7d81943f65a0f05c2de6dee1cb3349bdd5a44fd18173daa77d91fb4"
+    },
+    {
+      "group": "words",
+      "index": 28,
+      "text": "player",
+      "spokenText": "player",
+      "file": "words-28.mp3",
+      "durationSeconds": 1.28,
+      "bytes": 7906,
+      "sha256": "2298b1e659a1b1195290945071210723ad6782b79f6b6c7d5a41b190246d58d7"
+    },
+    {
+      "group": "phrases",
+      "index": 1,
+      "text": "play sports",
+      "spokenText": "play sports",
+      "file": "phrases-01.mp3",
+      "durationSeconds": 1.62,
+      "bytes": 9943,
+      "sha256": "1080c2f3bef48e1f571dd190dda171165a626b2001047ac3bdd6157ed7167015"
+    },
+    {
+      "group": "phrases",
+      "index": 2,
+      "text": "jump high",
+      "spokenText": "jump high",
+      "file": "phrases-02.mp3",
+      "durationSeconds": 1.411,
+      "bytes": 8689,
+      "sha256": "2688e607d887168f302c3777bc759d2701ef5078474af6839c6d49df88e53a7a"
+    },
+    {
+      "group": "phrases",
+      "index": 3,
+      "text": "at first",
+      "spokenText": "at first",
+      "file": "phrases-03.mp3",
+      "durationSeconds": 1.358,
+      "bytes": 8376,
+      "sha256": "ad3ab49acb6a44a06c53f8c6c36d336e826822a7328de3c6fd76599c7309d680"
+    },
+    {
+      "group": "phrases",
+      "index": 4,
+      "text": "run fast",
+      "spokenText": "run fast",
+      "file": "phrases-04.mp3",
+      "durationSeconds": 1.411,
+      "bytes": 8689,
+      "sha256": "d7e7d83f2e3f6bcd886164c4650b121c449677a000ec047c96fa21f6567495bb"
+    },
+    {
+      "group": "phrases",
+      "index": 5,
+      "text": "play ping-pong",
+      "spokenText": "play ping-pong",
+      "file": "phrases-05.mp3",
+      "durationSeconds": 1.829,
+      "bytes": 11197,
+      "sha256": "a9b4a3d70bc9cb87403583bb94a79c0cc1fe8a3694599242b7cc09d118a1a3f0"
+    },
+    {
+      "group": "phrases",
+      "index": 6,
+      "text": "because of sb/sth",
+      "spokenText": "because of somebody or something",
+      "file": "phrases-06.mp3",
+      "durationSeconds": 3.161,
+      "bytes": 19191,
+      "sha256": "df00947040269ed4284c9d442097d4224f78285a8b5bba14a0d81d4504890721"
+    },
+    {
+      "group": "phrases",
+      "index": 7,
+      "text": "keep running",
+      "spokenText": "keep running",
+      "file": "phrases-07.mp3",
+      "durationSeconds": 1.541,
+      "bytes": 9473,
+      "sha256": "072419bdf52856774a07358527c8f1bdd5d1cbf31f8801eee1a3f0c92d8a1c49"
+    },
+    {
+      "group": "phrases",
+      "index": 8,
+      "text": "give up",
+      "spokenText": "give up",
+      "file": "phrases-08.mp3",
+      "durationSeconds": 1.332,
+      "bytes": 8219,
+      "sha256": "333682d246de1e026d3c196088efde5377cd746732bc21bb3dd24483b8d75a60"
+    },
+    {
+      "group": "phrases",
+      "index": 9,
+      "text": "try your best",
+      "spokenText": "try your best",
+      "file": "phrases-09.mp3",
+      "durationSeconds": 1.672,
+      "bytes": 10257,
+      "sha256": "2ba311beaca4c93ea7593e3edcef52ed09c0c5596edc229c6db9abd9f555881b"
+    },
+    {
+      "group": "phrases",
+      "index": 10,
+      "text": "work hard",
+      "spokenText": "work hard",
+      "file": "phrases-10.mp3",
+      "durationSeconds": 1.593,
+      "bytes": 9787,
+      "sha256": "f83ca8047fcd4af7254f7f221613347b5335d505a7f94ad12875afdc1b7bc068"
+    },
+    {
+      "group": "phrases",
+      "index": 11,
+      "text": "run across",
+      "spokenText": "run across",
+      "file": "phrases-11.mp3",
+      "durationSeconds": 1.855,
+      "bytes": 11354,
+      "sha256": "4a19709adeb7c4a3007c332930b359feb159dcec4aac8644f9d92e1ad2d25d39"
+    },
+    {
+      "group": "phrases",
+      "index": 12,
+      "text": "be hard for sb",
+      "spokenText": "be hard for somebody",
+      "file": "phrases-12.mp3",
+      "durationSeconds": 2.22,
+      "bytes": 13548,
+      "sha256": "5befcfb895f5ebc7e8ffd77ccce1726501845af344961e5c7c68b087c410d00f"
+    },
+    {
+      "group": "phrases",
+      "index": 13,
+      "text": "like doing sth",
+      "spokenText": "like doing something",
+      "file": "phrases-13.mp3",
+      "durationSeconds": 2.247,
+      "bytes": 13705,
+      "sha256": "a63dc62db15573e13aabc1daa6ecfad42df001918e0543b04cd87002dc667358"
+    },
+    {
+      "group": "phrases",
+      "index": 14,
+      "text": "stop doing sth",
+      "spokenText": "stop doing something",
+      "file": "phrases-14.mp3",
+      "durationSeconds": 2.403,
+      "bytes": 14645,
+      "sha256": "541f3377d9532edee54f2d48d1fc4c260128e0c9225589ae235bbc68ea21b832"
+    },
+    {
+      "group": "sentences",
+      "index": 1,
+      "text": "I can run and swim.",
+      "spokenText": "I can run and swim.",
+      "file": "sentences-01.mp3",
+      "durationSeconds": 2.038,
+      "bytes": 12451,
+      "sha256": "0a2af4805aa817b337e699ac8dba6492934b9221bb4775afde5da61529a3fe78"
+    },
+    {
+      "group": "sentences",
+      "index": 2,
+      "text": "What about you?",
+      "spokenText": "What about you?",
+      "file": "sentences-02.mp3",
+      "durationSeconds": 1.672,
+      "bytes": 10257,
+      "sha256": "109eb815124519f96d96595abfe9a338aa0bb32c4e8ef49384f4efe38749f770"
+    },
+    {
+      "group": "sentences",
+      "index": 3,
+      "text": "What can Daming do?",
+      "spokenText": "What can Dah Ming do?",
+      "file": "sentences-03.mp3",
+      "durationSeconds": 2.142,
+      "bytes": 13078,
+      "sha256": "3109ae83683bfc934f6eee7be91c71891f58f8bef9ed2d2f7a0f8d0f34fef30f"
+    },
+    {
+      "group": "sentences",
+      "index": 4,
+      "text": "Can you swim?",
+      "spokenText": "Can you swim?",
+      "file": "sentences-04.mp3",
+      "durationSeconds": 1.802,
+      "bytes": 11040,
+      "sha256": "d9d21822b8dbeccada7186ed4c53f889c0cd0d4970628714d044efa4cfbd2aa0"
+    },
+    {
+      "group": "sentences",
+      "index": 5,
+      "text": "No, I can't. But I can learn.",
+      "spokenText": "No, I can't. But I can learn.",
+      "file": "sentences-05.mp3",
+      "durationSeconds": 3.109,
+      "bytes": 18877,
+      "sha256": "e9d9ffdacd4b2812d5cac2c48428f70c20e2a61963157075d2a2fa9dffb15ed4"
+    },
+    {
+      "group": "sentences",
+      "index": 6,
+      "text": "It's hard for me.",
+      "spokenText": "It's hard for me.",
+      "file": "sentences-06.mp3",
+      "durationSeconds": 1.959,
+      "bytes": 11981,
+      "sha256": "4bec21023b1ce33c1b15f794df34fc44996cc730457cfe77bf2e9fe09601f782"
+    },
+    {
+      "group": "sentences",
+      "index": 7,
+      "text": "I keep running for five months.",
+      "spokenText": "I keep running for five months.",
+      "file": "sentences-07.mp3",
+      "durationSeconds": 2.795,
+      "bytes": 16996,
+      "sha256": "b340294d453bc34ae0ee6b894e04f1af503c12494a6462e24bc439d2bbe44c48"
+    }
+  ]
+}
