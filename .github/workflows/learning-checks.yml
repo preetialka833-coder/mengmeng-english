@@ -1,7 +1,7 @@
 name: Learning site checks
 on:
   push:
-    branches: ["fix/learning-review-and-math-20261007"]
+    branches: ["fix/learning-review-and-math-20261007", "fix/seewo-pronunciation-20261008"]
   pull_request:
     branches: ["main"]
 permissions:

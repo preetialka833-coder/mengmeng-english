@@ -181,12 +181,12 @@ test('a struggling item gets at most two short retests and remains due tomorrow'
   a.run('startToday()');assert.equal(a.run('current'),null);
 });
 
-test('speech uses the full phrase and unavailable playback has a visible explanation',()=>{
+test('speech fallback uses the expanded phrase and unavailable playback has visible status',()=>{
   const a=createApp({state:dueOne('phrase|because of sb/sth')});a.run('startToday();speakCurrent()');
-  assert.match(a.alerts.at(-1),/不能播放语音/);
+  assert.match(a.nodes.audioStatus.textContent,/不能播放录音/);
   const spoken=[];a.context.SpeechSynthesisUtterance=class{constructor(text){this.text=text;}};
-  a.context.speechSynthesis={cancel(){},speak(u){spoken.push(u);}};a.context.window.speechSynthesis=a.context.speechSynthesis;
-  a.run('speakCurrent()');assert.equal(spoken[0].text,'because of sb/sth');assert.equal(spoken[0].lang,'en-GB');
+  a.context.window.speechSynthesis={getVoices(){return [{lang:'en-GB',localService:true}];},cancel(){},speak(u){spoken.push(u);}};
+  a.run('speakWithDevice()');assert.equal(spoken[0].text,'because of somebody or something');assert.equal(spoken[0].lang,'en-GB');
 });
 
 
