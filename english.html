@@ -11,17 +11,17 @@
 .card{padding:24px;margin-top:16px}h2{font-size:26px;margin:0 0 12px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}.stat{background:#fff;border:2px solid #f4e2ef;border-radius:22px;padding:16px;text-align:center}.stat b{font-size:30px;display:block}.stat span,.small{font-size:14px;color:var(--muted)}
 .row{display:flex;gap:12px;flex-wrap:wrap}.btn{border:0;border-radius:20px;padding:16px 22px;font-size:21px;font-weight:950;cursor:pointer}.primary{background:linear-gradient(135deg,#ff9ac7,#ff78b1);color:#fff}.secondary{background:linear-gradient(135deg,#aa98ff,#8d80ff);color:#fff}.soft{background:#fff;border:2px solid var(--line);color:var(--ink)}.mint{background:var(--mint);color:#347a67}
 .progress{height:16px;background:#f2e9f4;border-radius:999px;overflow:hidden}.progress i{display:block;height:100%;background:linear-gradient(90deg,#ff91c0,#a18fff);width:0}.route{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-top:12px}.day{padding:10px 2px;border-radius:16px;text-align:center;background:#faf3fa;font-weight:900}.day.done{background:#ffe0ed;color:#d45491}.day.today{outline:3px solid #a28fff}
-.lessonHead{display:flex;justify-content:space-between;align-items:center}.stage{padding:8px 13px;border-radius:999px;background:#fff0af;color:#7c6200;font-weight:950}.icon{font-size:90px;text-align:center}.cn,.en{font-size:40px;text-align:center;font-weight:1000;margin:8px 0}.en{color:#7c67ff}.tip{padding:13px 15px;border-radius:18px;background:#fffaf0;border:2px dashed #ffdda0;text-align:center;color:#92731f;font-size:17px;line-height:1.55}.choiceGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}.choice{border:2px solid #eadcf3;background:#fff;border-radius:20px;padding:18px;font-size:24px;font-weight:950;color:var(--ink)}
+.lessonHead{display:flex;justify-content:space-between;align-items:center}.stage{padding:8px 13px;border-radius:999px;background:#fff0af;color:#7c6200;font-weight:950}.icon{font-size:90px;text-align:center}.cn,.en{font-size:40px;text-align:center;font-weight:1000;margin:8px 0}.en{color:#7c67ff}.cn,.en,.pattern{overflow-wrap:anywhere}#plan{white-space:pre-line}details summary{cursor:pointer;font-weight:800}details p{line-height:1.7}.tip{padding:13px 15px;border-radius:18px;background:#fffaf0;border:2px dashed #ffdda0;text-align:center;color:#92731f;font-size:17px;line-height:1.55}.choiceGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}.choice{border:2px solid #eadcf3;background:#fff;border-radius:20px;padding:18px;font-size:24px;font-weight:950;color:var(--ink)}
 .pattern{font-size:44px;letter-spacing:5px;text-align:center;font-weight:1000;color:#e15e9c;margin:14px 0}.answerBox{min-height:62px;border:3px solid #e7d9ee;border-radius:22px;background:#fff;padding:12px 16px;text-align:center;font-size:32px;font-weight:950}.keyboard{margin-top:16px;padding:14px;background:#fbf7ff;border:2px solid #ecdff0;border-radius:26px}.krow{display:flex;justify-content:center;gap:8px;margin:8px 0}.key{min-width:64px;height:64px;border:0;border-radius:16px;background:#fff;box-shadow:0 3px 0 #e8dceb;font-size:27px;font-weight:1000;color:#6a5a75}.key.action{min-width:110px;background:#ffe4ef;color:#c64b89}.key.ok{background:#dff7eb;color:#2e8355}
 .feedback{display:none;margin-top:12px;padding:12px;border-radius:16px;text-align:center;font-weight:900}.feedback.show{display:block}.good{background:#dff6e7;color:#2f8251}.bad{background:#ffe4e4;color:#c84f4f}.rewardStrip{display:flex;gap:8px;flex-wrap:wrap}.sticker{width:56px;height:56px;border-radius:18px;background:#f8f1f7;display:flex;align-items:center;justify-content:center;font-size:30px}.sticker.on{background:#fff0c6;border:2px solid #ffdf7d}.gift{border-radius:24px;padding:18px;background:linear-gradient(135deg,#fff1b7,#ffe1ef);border:2px solid #ffd57f;text-align:center}
 nav{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.97);border-top:1px solid #efdfeb}nav .inner{max-width:980px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr)}nav button{border:0;background:transparent;padding:13px 4px;color:#8f8397;font-weight:900}nav button.active{color:#eb64a3}
-@media(max-width:760px){.app{padding:14px 10px 98px}.hero h1{font-size:30px}.sub{font-size:16px}.choiceGrid{grid-template-columns:1fr}.key{min-width:0;flex:1;height:58px;font-size:23px}.cn,.en{font-size:34px}}
-</style></head><body><div style="max-width:980px;margin:10px auto 0;padding:0 18px"><a href="./index.html" style="text-decoration:none"><button style="border:2px solid #f0deeb;background:white;border-radius:16px;padding:10px 14px;font-weight:900;color:#5b4d67">← 返回学习平台</button></a></div><div class="app">
-<section id="home" class="screen active"><div class="hero"><span class="badge">希沃学习机固定网址版 · V5.0</span><h1>萌萌英语花园 🌸</h1><div class="sub">每天分成“到期复习 + 少量新学”。复习按间隔重复安排：1天 → 3天 → 7天 → 14天 → 30天。</div></div>
-<div class="stats"><div class="stat"><b id="dayNum">1</b><span>第几天</span></div><div class="stat"><b id="todayCount">0</b><span>今天总任务</span></div><div class="stat"><b id="reviewCount">0</b><span>今日复习</span></div></div>
-<div class="card"><h2>今天只做这一点</h2><div class="progress"><i id="unitProgress"></i></div><p class="sub" id="plan"></p><div class="row"><button class="btn primary" onclick="startToday()">开始今天学习</button><button class="btn soft" onclick="show('rewards')">看看奖励</button></div></div>
+@media(max-width:760px){.app{padding:14px 10px 98px}.hero h1{font-size:30px}.sub{font-size:16px}.choiceGrid{grid-template-columns:1fr}.key{min-width:0;flex:1;height:58px;font-size:23px}.key.action{min-width:0;flex:1;font-size:18px}.key.ok{font-size:22px}.cn,.en{font-size:34px}}
+</style></head><body><div data-build="2026.10.07-r1" style="max-width:980px;margin:8px auto;padding:0 18px;color:#74657e;font:13px system-ui,sans-serif">试用修复版 · 2026.10.07-r1</div><div style="max-width:980px;margin:10px auto 0;padding:0 18px"><a href="./index.html?v=20261007r1" style="text-decoration:none"><button style="border:2px solid #f0deeb;background:white;border-radius:16px;padding:10px 14px;font-weight:900;color:#5b4d67">← 返回学习平台</button></a></div><div class="app">
+<section id="home" class="screen active"><div class="hero"><span class="badge">希沃学习机固定网址版 · V5.1</span><h1>萌萌英语花园 🌸</h1><div class="sub">每天一点点：先复习到期内容，再学少量新内容。答错就多练一次，按自己的进度来。</div></div>
+<div class="stats"><div class="stat"><b id="dayNum">1</b><span>成长路线</span></div><div class="stat"><b id="todayCount">0</b><span>今天总任务</span></div><div class="stat"><b id="reviewCount">0</b><span>今日复习</span></div></div>
+<div class="card"><h2>今天只做这一点</h2><div class="progress"><i id="unitProgress"></i></div><p class="sub" id="plan"></p><details class="small" style="margin-bottom:16px"><summary>今天为什么这样安排？</summary><p>先做最早到期的复习，每天最多 8 项。没有积压时，再按单词、短语、句子的顺序学最多 4 项新内容。每天按这台设备的日期安排，刷新或重进都会接着做。<br>首次学会后隔天复习；以后隔天独立写对，间隔逐步延长到 3、7、14、30 天。这是可调整的练习安排。<br>答错后先改对，约 10 分钟后再试；每项每天最多两次短复习，再错就明天继续。看过答案后的改正和当天短复习，都不算隔天独立写对。</p></details><div class="row"><button class="btn primary" onclick="startToday()">开始今天学习</button><button class="btn soft" onclick="show('rewards')">看看奖励</button></div></div>
 <div class="card"><div class="tip">💾 固定网址以后，请一直用同一台希沃、同一个浏览器打开。进度会自动保存在这里；妈妈页还能备份进度码。</div></div>
-<div class="card"><h2>14 天路线</h2><div class="route" id="route"></div><p class="small">1–7 天：单词 · 8–11 天：短语 · 12–13 天：重点句 · 14 天：毕业听写</p></div></section>
+<div class="card"><h2>14 格成长路线</h2><div class="route" id="route"></div><p class="small">依次学习单词、短语和重点句。每天主任务完成点亮一格，隔天继续；复习较多时可以慢一点。毕业听写分散在到期复习中完成，不用一天重写全部内容。</p></div></section>
 
 <section id="learn" class="screen"><div class="card"><div class="lessonHead"><span class="stage" id="stageName"></span><span class="small" id="lessonMeta"></span></div><div class="icon" id="icon">🐰</div><div class="cn" id="cn"></div><div class="en" id="en"></div><div id="chunkHelp" class="small" style="text-align:center;font-size:17px;font-weight:900;color:#9b79d6"></div><div class="pattern" id="pattern"></div>
 <div id="recognize"><div class="tip">先看一眼，再听一遍。现在不用写。</div><div class="row" style="margin-top:14px"><button class="btn mint" onclick="speakCurrent()">🔊 听一听</button><button class="btn primary" onclick="advance()">我记住一点啦</button></div></div>
@@ -37,90 +37,398 @@ nav{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.97);bord
 <section id="rewards" class="screen"><div class="card"><h2>贴纸墙 🎀</h2><div class="rewardStrip" id="stickers"></div></div><div class="card"><div class="gift"><div style="font-size:52px" id="giftIcon">🔒</div><h2>Unit 1 · 100 元礼物券</h2><div class="sub" id="giftText"></div></div></div></section>
 
 <section id="parent" class="screen"><div class="card"><h2>妈妈查看</h2><div class="tip" id="summary"></div><h3>最近总出错的内容</h3><div id="weak"></div>
-<h3>🔐 进度备份</h3><div class="row"><button class="btn mint" onclick="exportProgress()">生成进度码</button><button class="btn soft" onclick="copyProgress()">复制</button></div><div id="progressCode" class="tip" style="margin-top:10px;word-break:break-all;user-select:text">还没有生成</div>
+<h3>🔐 进度备份</h3><div class="row"><button class="btn mint" onclick="exportProgress()">生成进度码</button><button class="btn soft" onclick="copyProgress()">复制</button><button class="btn soft" onclick="exportOriginalBackup()">生成升级前备份码</button></div><p class="small" id="backupStatus">升级前的原始进度会单独保留；生成备份码不会恢复或覆盖当前进度。</p><div id="progressCode" class="tip" style="margin-top:10px;word-break:break-all;user-select:text">还没有生成</div>
 <textarea id="importCode" style="width:100%;min-height:80px;margin-top:10px;border:2px solid #eadbed;border-radius:16px;padding:10px" placeholder="把旧进度码粘贴到这里"></textarea><button class="btn secondary" style="width:100%;margin-top:8px" onclick="importProgress()">恢复进度</button>
 <div class="row" style="margin-top:12px"><button class="btn soft" onclick="setDayPrompt()">手动设置当前天数</button></div></div></section>
 </div>
 <nav><div class="inner"><button id="nav-home" class="active" onclick="show('home')">🏠<br>今天</button><button id="nav-learn" onclick="startToday()">🌸<br>学习</button><button id="nav-rewards" onclick="show('rewards')">🎀<br>奖励</button><button id="nav-parent" onclick="show('parent')">👩‍👧<br>妈妈</button></div></nav>
 <script>
 const D={"words":[["体育运动","sport","⚽"],["跳","jump","🐰"],["高高地","high","🎈"],["远","far","🌈"],["乒乓球运动","ping-pong","🏓"],["排球（运动）","volleyball","🏐"],["穿过；越过","across","➡️"],["希望","hope","🌟"],["失去","lose","😿"],["因为","because","💭"],["癌（症）","cancer","🎗️"],["其他的","other","🧩"],["钱","money","🪙"],["困难的","hard","⛰️"],["亲切的；友好的","kind","💗"],["持续；继续","keep","🔁"],["一个月","month","🗓️"],["生病的","ill","🤒"],["（不）再","anymore","🚫"],["年；年度","year","📅"],["纪念；记住","remember","🧠"],["失败","fail","🌧️"],["给予","give","🎁"],["决不；永不","never","🙅‍♀️"],["努力；尝试","try","💪"],["明星；最出色者","star","⭐"],["才能；能力","ability","✨"],["运动员；选手","player","🏅"]],"phrases":[["做运动","play sports"],["跳得高","jump high"],["起初","at first"],["跑得快","run fast"],["打乒乓球","play ping-pong"],["因为某人/某事物","because of sb/sth"],["坚持跑步","keep running"],["放弃","give up"],["尽最大努力","try your best"],["努力奋斗","work hard"],["穿过；跑着穿过","run across"],["对于某人来说是困难的","be hard for sb"],["喜欢做某事","like doing sth"],["停止做某事","stop doing sth"]],"sentences":[["我会跑步和游泳。","I can run and swim."],["那你呢？","What about you?"],["大明能做什么？","What can Daming do?"],["你会游泳吗？","Can you swim?"],["不，我不会。但我可以学。","No, I can't. But I can learn."],["这对我来说很难。","It's hard for me."],["我持续跑了5个月。","I keep running for five months."]]}; const U={words:D.words.map(x=>({cn:x[0],en:x[1],icon:x[2]})),phrases:D.phrases.map(x=>({cn:x[0],en:x[1],icon:"🎀"})),sentences:D.sentences.map(x=>({cn:x[0],en:x[1],icon:"💬"}))};
-const KEY="mengmeng_v4_unit1";let S=JSON.parse(localStorage.getItem(KEY)||"{}");if(!S.meta)S.meta={day:1,stickers:0,doneDays:{},graduated:false};let queue=[],idx=0,stage=0,current=null,typed="";
-const STAGES=["先认识","再认识一次","三选一","缺 1 个字母","缺 2 个字母","缺 3 个字母","完整听写"];
-function save(){localStorage.setItem(KEY,JSON.stringify(S));refresh()}
-function st(k,e){
-  let z=k+"|"+e;
-  if(!S[z])S[z]={seen:0,wrong:0,passed:0,due:0,reviewStep:0,lastReview:0};
-  if(S[z].reviewStep===undefined)S[z].reviewStep=0;
-  if(S[z].lastReview===undefined)S[z].lastReview=0;
-  return S[z];
-}
-function norm(s){return(s||"").trim().toLowerCase().replace(/[’‘]/g,"'").replace(/\s+/g," ").replace(/[.!?]+$/,"")}
-function loose(s){return norm(s).replace(/[\-–—'.,!?/]/g,"")}
-function allItems(){return[...U.words.map(x=>({...x,kind:"word"})),...U.phrases.map(x=>({...x,kind:"phrase"})),...U.sentences.map(x=>({...x,kind:"sentence"}))]}
-function todaysItems(){let d=S.meta.day;if(d<=7){let n=U.words.length,a=Math.floor((d-1)*n/7),b=Math.floor(d*n/7);return U.words.slice(a,b).map(x=>({...x,kind:"word"}))}if(d<=11){let k=d-8,n=U.phrases.length,a=Math.floor(k*n/4),b=Math.floor((k+1)*n/4);return U.phrases.slice(a,b).map(x=>({...x,kind:"phrase"}))}if(d<=13){let k=d-12,n=U.sentences.length,a=Math.floor(k*n/2),b=Math.floor((k+1)*n/2);return U.sentences.slice(a,b).map(x=>({...x,kind:"sentence"}))}return allItems()}
+const KEY="mengmeng_v4_unit1";
+const BACKUP_KEY=KEY+"_before_review_v2", BACKUP_INFO_KEY=BACKUP_KEY+"_info";
 const REVIEW_DAYS=[1,3,7,14,30];
-function migrateReviewData(){
-  let changed=false;
-  allItems().forEach(x=>{let s=st(x.kind,x.en);if(s.passed&&(!s.due||s.due===0)){s.due=Date.now();changed=true;}});
-  if(changed)localStorage.setItem(KEY,JSON.stringify(S));
+const MAX_REVIEWS=8, MAX_NEW=4, RETEST_MS=10*60*1000, MAX_SHORT_RETESTS=2;
+const STAGES=["先认识","再认识一次","三选一","缺 1 个字母","缺 2 个字母","缺 3 个字母","完整听写"];
+let S={}, storageWarning="", queue=[], idx=0, stage=0, current=null, typed="";
+let answerPending=false, transitionTimer=null, sessionToken=0;
+let initialRaw=null, initialReadOK=false, initialBackupRequired=false;
+try{
+  initialRaw=localStorage.getItem(KEY);initialReadOK=true;
+  let parsed;
+  try{parsed=JSON.parse(initialRaw===null?"{}":initialRaw);}
+  catch(e){initialBackupRequired=initialRaw!==null;ensureOriginalBackup(initialRaw,"before-upgrade");throw e;}
+  const knownFresh=validState(parsed)&&parsed.meta&&parsed.meta.reviewVersion===2&&parsed.meta.reviewBackupFreshInstall===true;
+  initialBackupRequired=initialRaw!==null&&!knownFresh;
+  ensureOriginalBackup(initialBackupRequired?initialRaw:null,"before-upgrade");
+  S=parsed;if(!validState(S))throw Error("state");
+  if(initialRaw===null)S.meta={reviewBackupFreshInstall:true};
+}catch(e){S={};storageWarning+=(storageWarning?" ":"")+"旧进度暂时无法读取，请先保留原备份，再从妈妈页恢复进度码。";}
+function rawChecksum(raw){
+  let hash=2166136261;
+  for(let i=0;i<raw.length;i++){hash^=raw.charCodeAt(i);hash=Math.imul(hash,16777619);}
+  return (hash>>>0).toString(16)+":"+raw.length;
 }
-function dueReviews(){
-  let now=Date.now();
-  return allItems().filter(x=>{let s=st(x.kind,x.en);return s.passed&&s.due&&s.due<=now;})
-    .sort((a,b)=>st(a.kind,a.en).due-st(b.kind,b.en).due).slice(0,8)
-    .map(x=>({...x,_review:true}));
+function readBackupInfo(){
+  const text=localStorage.getItem(BACKUP_INFO_KEY);
+  if(text===null)return null;
+  const info=JSON.parse(text);
+  if(!info||info.version!==1||typeof info.checksum!=="string")throw Error("backup metadata");
+  return info;
 }
-function scheduleReview(s,correct){
-  let now=Date.now();
-  if(correct){
-    s.reviewStep=Math.min((s.reviewStep||0)+1,REVIEW_DAYS.length);
-    let days=REVIEW_DAYS[Math.max(0,s.reviewStep-1)];
-    s.due=now+days*86400000;
-    s.lastReview=now;
-  }else{
-    s.reviewStep=Math.max(0,(s.reviewStep||0)-1);
-    s.due=now+10*60000;
+function ensureOriginalBackup(raw=initialBackupRequired?initialRaw:null,origin="before-upgrade"){
+  try{
+    const existing=localStorage.getItem(BACKUP_KEY);
+    if(existing!==null){
+      const info=readBackupInfo();
+      if(info){if(info.checksum!==rawChecksum(existing))throw Error("backup mismatch");return true;}
+      // A partial first attempt can be completed only while its raw bytes still
+      // exactly match the untouched source. Never replace an existing snapshot.
+      if(raw===null||existing!==raw)throw Error("unverified backup");
+    }else{
+      if(raw===null)return true; // An empty first install needs no snapshot.
+      localStorage.setItem(BACKUP_KEY,raw);
+      if(localStorage.getItem(BACKUP_KEY)!==raw)throw Error("backup verification");
+    }
+    const info=JSON.stringify({version:1,origin,createdAt:Date.now(),checksum:rawChecksum(raw)});
+    localStorage.setItem(BACKUP_INFO_KEY,info);
+    if(localStorage.getItem(BACKUP_INFO_KEY)!==info||localStorage.getItem(BACKUP_KEY)!==raw)throw Error("backup verification");
+    return true;
+  }catch(e){
+    storageWarning="无法安全保存升级前原始备份，原进度不会被覆盖；本次练习仅在内存中，请到妈妈页导出进度码。";
+    return false;
   }
 }
-function startToday(){
-  let reviews=dueReviews(),fresh=todaysItems().map(x=>({...x,_review:false}));
-  let seen={};
-  queue=[];
-  reviews.concat(fresh).forEach(x=>{let k=x.kind+"|"+x.en;if(!seen[k]){seen[k]=1;queue.push(x);}});
-  idx=0;current=queue[0];typed="";
-  if(!current){alert("今天任务已经完成啦～");return;}
-  stage=current._review?6:(S.meta.day===14?6:0);
+function localDay(value=Date.now()){
+  const d=new Date(value);
+  return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+}
+function validDay(value){return typeof value==="string"&&/^\d{4}-\d{2}-\d{2}$/.test(value)&&localDay(dayTime(value))===value;}
+function dayTime(day){const [y,m,d]=day.split("-").map(Number);return new Date(y,m-1,d).getTime();}
+function addDays(day,n){const d=new Date(dayTime(day));d.setDate(d.getDate()+n);return localDay(d);}
+function itemKey(x){return x.kind+"|"+x.en;}
+function allItems(){return[...U.words.map(x=>({...x,kind:"word"})),...U.phrases.map(x=>({...x,kind:"phrase"})),...U.sentences.map(x=>({...x,kind:"sentence"}))];}
+function itemFor(key){return allItems().find(x=>itemKey(x)===key);}
+function normalizeState(){
+  if(!S.meta||typeof S.meta!=="object"||Array.isArray(S.meta))S.meta={};
+  const m=S.meta;
+  if(!Number.isInteger(m.day)||m.day<1||m.day>14)m.day=1;
+  if(!Number.isFinite(m.stickers)||m.stickers<0)m.stickers=0;
+  if(!m.doneDays||typeof m.doneDays!=="object"||Array.isArray(m.doneDays))m.doneDays={};
+  if(m.graduated===undefined)m.graduated=false;
+}
+function persist(){
+  // Never overwrite unreadable original data with an empty replacement.
+  if(storageWarning||!initialReadOK)return;
+  if(!ensureOriginalBackup())return;
+  try{localStorage.setItem(KEY,JSON.stringify(S));}
+  catch(e){storageWarning="浏览器暂时不能保存进度，请在妈妈页生成进度码备份。";}
+}
+function save(){persist();refresh();}
+function st(k,e){
+  const key=k+"|"+e;
+  if(!S[key]||typeof S[key]!=="object"||Array.isArray(S[key]))S[key]={seen:0,wrong:0,passed:0,due:0,reviewStep:0,lastReview:0};
+  const s=S[key];
+  for(const field of ["seen","wrong","passed","due","reviewStep","lastReview"]){if(!Number.isFinite(s[field])||s[field]<0)s[field]=0;}
+  return s;
+}
+// Ignore case, optional sentence punctuation, and keyboard variants only.
+// Slashes, word boundaries, apostrophes, and hyphens remain meaningful.
+function norm(value){
+  return String(value||"").normalize("NFKC").trim().toLowerCase()
+    .replace(/[’‘]/g,"'").replace(/[‐‑–—]/g,"-")
+    .replace(/\s*\/\s*/g,"/").replace(/[.,!?，。！？]/g," ")
+    .replace(/\s+/g," ").trim();
+}
+function answersMatch(answer,expected){return norm(answer)===norm(expected);}
+function migrateReviewData(){
+  normalizeState();
+  allItems().forEach(x=>{
+    const s=st(x.kind,x.en);
+    if(!validDay(s.dueDay)&&(s.due||s.passed))s.dueDay=s.due?localDay(s.due):localDay();
+    if(s.passed&&!validDay(s.learnedDay))s.learnedDay=s.lastReview?localDay(s.lastReview):localDay();
+  });
+  S.meta.reviewVersion=2;
+  persist();
+}
+function dueReviews(day=localDay()){
+  return allItems().filter(x=>{const s=st(x.kind,x.en);return validDay(s.dueDay)&&s.dueDay<=day;})
+    .sort((a,b)=>{
+      const sa=st(a.kind,a.en),sb=st(b.kind,b.en);
+      return sa.dueDay.localeCompare(sb.dueDay)||(sa.due||0)-(sb.due||0)||allItems().findIndex(x=>itemKey(x)===itemKey(a))-allItems().findIndex(x=>itemKey(x)===itemKey(b));
+    });
+}
+function objectRecord(value){return !!value&&typeof value==="object"&&!Array.isArray(value);}
+function validPlan(p){
+  const keys=new Set(allItems().map(itemKey)),baseKeys=new Set(),retestCounts={},modeCounts={new:0,review:0};
+  return objectRecord(p)&&p.version===2&&validDay(p.day)&&Number.isInteger(p.routeDay)&&p.routeDay>=1&&p.routeDay<=14&&
+    Array.isArray(p.entries)&&p.entries.length<=36&&p.entries.every(e=>{
+      if(!objectRecord(e)||!keys.has(e.key)||!["new","review","retest"].includes(e.mode)||!Number.isInteger(e.stage)||e.stage<0||e.stage>6||typeof e.done!=="boolean"||typeof e.typed!=="string"||typeof e.assisted!=="boolean"||!Number.isFinite(e.readyAt)||e.readyAt<0)return false;
+      if(e.mode!=="new"&&e.stage!==6)return false;
+      if(e.mode==="retest"){retestCounts[e.key]=(retestCounts[e.key]||0)+1;return retestCounts[e.key]<=MAX_SHORT_RETESTS&&p.entries.some(base=>base.key===e.key&&base.mode!=="retest"&&base.done);}
+      if(baseKeys.has(e.key))return false;
+      baseKeys.add(e.key);modeCounts[e.mode]++;return baseKeys.size<=MAX_REVIEWS+MAX_NEW&&modeCounts.new<=MAX_NEW&&modeCounts.review<=MAX_REVIEWS;
+    });
+}
+function validState(value){
+  if(!objectRecord(value))return false;
+  const m=value.meta;
+  if(m!==undefined){
+    if(!objectRecord(m))return false;
+    if(m.day!==undefined&&(!Number.isInteger(m.day)||m.day<1||m.day>14))return false;
+    if(m.stickers!==undefined&&(!Number.isFinite(m.stickers)||m.stickers<0))return false;
+    if(m.doneDays!==undefined&&!objectRecord(m.doneDays))return false;
+    if(m.graduated!==undefined&&typeof m.graduated!=="boolean")return false;
+    if(m.dailyPlan!==undefined&&!validPlan(m.dailyPlan))return false;
+  }
+  return allItems().every(x=>{
+    const r=value[itemKey(x)];if(r===undefined)return true;if(!objectRecord(r))return false;
+    for(const name of ["seen","wrong","passed","due","reviewStep","lastReview","relearnAt"]){if(r[name]!==undefined&&(!Number.isFinite(r[name])||r[name]<0))return false;}
+    for(const name of ["dueDay","learnedDay","independentRecallDay","lastRecallDay","lastFailedDay"]){if(r[name]!==undefined&&!validDay(r[name]))return false;}
+    return true;
+  });
+}
+function newEntry(x,mode,old){
+  const s=st(x.kind,x.en);
+  return {key:itemKey(x),mode,stage:mode==="new"&&old?old.stage:mode==="new"?0:6,
+    typed:mode==="new"&&old?old.typed||"":"",assisted:mode==="new"&&old?!!old.assisted:false,
+    done:false,readyAt:0,dueAtSelection:s.dueDay||null};
+}
+function ensureDailyPlan(){
+  const today=localDay(),old=S.meta.dailyPlan;
+  if(validPlan(old)&&old.day===today)return old;
+  if(validPlan(old)&&old.day<today&&old.baseCompleted&&S.meta.day===old.routeDay&&S.meta.day<14)S.meta.day++;
+  const reviews=dueReviews(today),chosen=reviews.slice(0,MAX_REVIEWS),used=new Set(chosen.map(itemKey));
+  const fresh=reviews.length>MAX_REVIEWS?[]:allItems().filter(x=>!st(x.kind,x.en).passed&&!used.has(itemKey(x))).slice(0,MAX_NEW);
+  const previous=validPlan(old)?old.entries:[];
+  const entries=[...chosen.map(x=>newEntry(x,"review")),...fresh.map(x=>newEntry(x,"new",previous.find(e=>e.key===itemKey(x)&&e.mode==="new"&&!e.done)))];
+  S.meta.dailyPlan={version:2,day:today,routeDay:S.meta.day,createdAt:Date.now(),entries,
+    reviewLimit:MAX_REVIEWS,newLimit:MAX_NEW,backlog:Math.max(0,reviews.length-MAX_REVIEWS),baseCompleted:false,rewarded:false};
+  persist();
+  return S.meta.dailyPlan;
+}
+function todaysItems(){return ensureDailyPlan().entries.filter(e=>e.mode==="new").map(e=>itemFor(e.key));}
+function setDue(s,days){s.dueDay=addDays(localDay(),days);s.due=dayTime(s.dueDay);}
+function scheduleReview(s,correct,mode="new",assisted=false){
+  const today=localDay(),now=Date.now();
+  if(!correct){
+    s.reviewStep=0;
+    s.relearnAt=now+RETEST_MS;
+    s.lastFailedDay=today;
+    s.lastResult="needs-retest";
+    setDue(s,1);
+    return;
+  }
+  if(!validDay(s.learnedDay))s.learnedDay=today;
+  if(assisted){
+    // Keep a real gap even if correcting the original answer took a long time.
+    if(s.relearnAt)s.relearnAt=Math.max(s.relearnAt,now+RETEST_MS);
+    s.lastResult="corrected";return;
+  }
+  const independent=mode==="review"&&s.learnedDay<today&&s.lastRecallDay!==today;
+  if(independent){
+    s.reviewStep=Math.min(Math.max(1,s.reviewStep||0)+1,REVIEW_DAYS.length);
+    s.lastReview=now;s.lastRecallDay=today;s.independentRecallDay=today;
+    s.lastResult="independent-recall";
+    setDue(s,REVIEW_DAYS[s.reviewStep-1]);
+  }else{
+    // Guided learning and same-day retests never count as delayed recall.
+    s.reviewStep=Math.max(1,s.reviewStep||0);
+    s.lastResult=mode==="retest"?"short-retest":"learned";
+    setDue(s,1);
+  }
+  s.relearnAt=0;
+}
+function addRetest(entry){
+  const p=ensureDailyPlan(),x=itemFor(entry.key),s=st(x.kind,x.en);
+  if(!s.relearnAt)return;
+  const prior=p.entries.filter(e=>e.key===entry.key&&e.mode==="retest");
+  if(prior.some(e=>!e.done))return;
+  if(prior.length>=MAX_SHORT_RETESTS){s.relearnAt=0;s.lastResult="review-tomorrow";return;}
+  p.entries.push({...newEntry(x,"retest"),readyAt:s.relearnAt});
+}
+function cancelTransition(){if(transitionTimer!==null)clearTimeout(transitionTimer);transitionTimer=null;answerPending=false;sessionToken++;}
+function activeEntry(){return current?ensureDailyPlan().entries[idx]:null;}
+function activeDayOK(){
+  if(S.meta.dailyPlan&&S.meta.dailyPlan.day===localDay())return true;
+  startToday();return false;
+}
+function startToday(){cancelTransition();ensureDailyPlan();presentNext();}
+function presentNext(){
+  const p=ensureDailyPlan();
+  queue=p.entries.map(e=>({...itemFor(e.key),_review:e.mode!=="new",_mode:e.mode}));
+  idx=p.entries.findIndex(e=>!e.done&&(!e.readyAt||e.readyAt<=Date.now()));
+  if(idx<0){current=null;finishDay();return;}
+  current=queue[idx];stage=p.entries[idx].stage;typed=p.entries[idx].typed||"";
   show("learn");renderLesson();
 }
-function chunkHint(w){if(w.toLowerCase()==="volleyball")return"volley · ball";let c=w.replace(/[^A-Za-z]/g,"");if(c.length<8)return"";let a=Math.round(c.length/3),b=Math.round(2*c.length/3);return c.slice(0,a)+" · "+c.slice(a,b)+" · "+c.slice(b)}
-function renderLesson(){stageName.textContent=current&&current._review?"今日复习":(S.meta.day===14?"毕业听写":STAGES[stage]);lessonMeta.textContent=(idx+1)+" / "+queue.length+(current&&current._review?" · 复习":"");icon.textContent=current.icon;cn.textContent=current.cn;en.textContent=current.en;chunkHelp.textContent=chunkHint(current.en);pattern.textContent="";typed="";answerBox.textContent="";feedback.className="feedback";recognize.style.display=choice.style.display=spell.style.display="none";if(stage<=1){recognize.style.display="block";en.style.display="block";chunkHelp.style.display="block"}else if(stage===2){choice.style.display="block";en.style.display="none";chunkHelp.style.display="none";renderChoices()}else{spell.style.display="block";en.style.display="none";chunkHelp.style.display="none";renderPattern()}}
-function renderChoices(){let pool=allItems().filter(x=>x.en!==current.en&&x.kind===current.kind).sort(()=>Math.random()-.5).slice(0,2),opts=[current,...pool].sort(()=>Math.random()-.5);choiceGrid.innerHTML="";opts.forEach(o=>{let b=document.createElement("button");b.className="choice";b.textContent=o.en;b.onclick=()=>norm(o.en)===norm(current.en)?setTimeout(advance,250):(st(current.kind,current.en).wrong++,save(),alert("再看看哦～ 正确的是："+current.en));choiceGrid.appendChild(b)})}
-function mask(w,s){let ch=[...w],L=[];ch.forEach((c,i)=>/[A-Za-z]/.test(c)&&L.push(i));let n=L.length,h=s===3?1:s===4?2:s===5?3:n,p=[];let pick=r=>{let t=(n-1)*r,a=L.map((pos,i)=>({pos,d:Math.abs(i-t)})).filter(x=>!p.includes(x.pos)).sort((a,b)=>a.d-b.d);if(a[0])p.push(a[0].pos)};if(h===1)pick(.5);else if(h===2){pick(.33);pick(.67)}else if(h===3){pick(.22);pick(.5);pick(.78)}else p=[...L];let set=new Set(p);return ch.map((c,i)=>set.has(i)?"_":c).join("")}
-function renderPattern(){if(stage===6){pattern.textContent="🎧 听音，完整写出来";spellTip.textContent="这次不看英文。"}else{pattern.textContent=mask(current.en,stage);spellTip.textContent=stage===3?"从中间缺 1 个字母。":stage===4?"从不同位置缺 2 个字母。":"前、中、后都会缺字母。"}}
-function tap(c){typed+=c;answerBox.textContent=typed}function backspace(){typed=typed.slice(0,-1);answerBox.textContent=typed}
-function submitAnswer(){let s=st(current.kind,current.en),ok=norm(typed)===norm(current.en),p=!ok&&loose(typed)===loose(current.en);if(ok||p){
-  feedback.className="feedback show good";
-  feedback.innerHTML=p?"拼写对啦！标准写法：<b>"+current.en+"</b>":"答对啦！🌟";
-  if(stage===6){s.passed=1;s.seen++;scheduleReview(s,true);save();}
-  setTimeout(advance,500);
-}else{
-  s.wrong++;s.seen++;
-  if(stage===6)scheduleReview(s,false);
-  save();
-  feedback.className="feedback show bad";
-  feedback.innerHTML="还差一点～ 正确答案是 <b>"+current.en+"</b>。这项会更快回来复习。";
+function chunkHint(w){if(w.toLowerCase()==="volleyball")return"volley · ball";let c=w.replace(/[^A-Za-z]/g,"");if(c.length<8)return"";let a=Math.round(c.length/3),b=Math.round(2*c.length/3);return c.slice(0,a)+" · "+c.slice(a,b)+" · "+c.slice(b);}
+function renderLesson(){
+  stageName.textContent=current._mode==="retest"?"隔一会儿再试":current._review?"今日复习":STAGES[stage];
+  lessonMeta.textContent=(idx+1)+" / "+queue.length+(current._review?" · 复习":" · 新学");
+  icon.textContent=current.icon;cn.textContent=current.cn;en.textContent=current.en;
+  chunkHelp.textContent=chunkHint(current.en);pattern.textContent="";answerBox.textContent=typed;
+  feedback.className="feedback";recognize.style.display=choice.style.display=spell.style.display="none";
+  if(stage<=1){recognize.style.display="block";en.style.display="block";chunkHelp.style.display="block";}
+  else if(stage===2){choice.style.display="block";en.style.display="none";chunkHelp.style.display="none";renderChoices();}
+  else{spell.style.display="block";en.style.display="none";chunkHelp.style.display="none";renderPattern();}
 }
-function advance(){if(S.meta.day===14||stage===6){idx++;if(idx>=queue.length)return finishDay();current=queue[idx];stage=current._review?6:(S.meta.day===14?6:0);renderLesson()}else{stage++;renderLesson()}}
-function finishDay(){let k="d"+S.meta.day;if(!S.meta.doneDays[k]){S.meta.doneDays[k]=true;S.meta.stickers++}if(S.meta.day<14){S.meta.day++;save();alert("今天完成啦！得到 1 张贴纸 🎀");show("home")}else{S.meta.graduated=allItems().every(x=>st(x.kind,x.en).passed);save();alert(S.meta.graduated?"🎉 Unit 1 毕业！100 元礼物券解锁啦！":"还有一些内容需要再练。");show("rewards")}}
-function speakCurrent(){if(!("speechSynthesis"in window)||!current)return;speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(current.en);u.lang="en-GB";u.rate=.76;speechSynthesis.speak(u)}
-function show(id){document.querySelectorAll(".screen").forEach(x=>x.classList.remove("active"));document.getElementById(id).classList.add("active");document.querySelectorAll("nav button").forEach(x=>x.classList.remove("active"));let n=document.getElementById("nav-"+id);if(n)n.classList.add("active");if(id==="rewards")renderRewards();if(id==="parent")renderParent()}
-function renderRewards(){stickers.innerHTML="";for(let i=0;i<14;i++){let d=document.createElement("div");d.className="sticker"+(i<S.meta.stickers?" on":"");d.textContent=i<S.meta.stickers?["🌸","⭐","🎀","🐰","🌈"][i%5]:"♡";stickers.appendChild(d)}giftIcon.textContent=S.meta.graduated?"🎁":"🔒";giftText.textContent=S.meta.graduated?"已解锁！由妈妈确认兑换 100 元礼物。":"单词、短语、句子全部完成毕业听写后解锁。"}
-function renderParent(){let a=allItems(),w=a.filter(x=>st(x.kind,x.en).wrong>=2).sort((a,b)=>st(b.kind,b.en).wrong-st(a.kind,a.en).wrong),p=a.filter(x=>st(x.kind,x.en).passed).length;summary.innerHTML="已完整写出 <b>"+p+"</b> / "+a.length+" 项 · 当前第 <b>"+S.meta.day+"</b> 天 · 贴纸 <b>"+S.meta.stickers+"</b> 张";weak.innerHTML=w.length?w.slice(0,12).map(x=>"<div style='padding:8px 0'><b>"+x.cn+"</b> "+x.en+" · 错 "+st(x.kind,x.en).wrong+" 次</div>").join(""):"目前没有明显顽固项。"}
-function encodeState(o){return btoa(unescape(encodeURIComponent(JSON.stringify(o))))}function decodeState(c){return JSON.parse(decodeURIComponent(escape(atob(c.trim()))))}
-function exportProgress(){progressCode.textContent=encodeState(S)}async function copyProgress(){if(progressCode.textContent==="还没有生成")exportProgress();try{await navigator.clipboard.writeText(progressCode.textContent);alert("已复制")}catch(e){alert("请长按手动复制")}}
-function importProgress(){try{let r=decodeState(importCode.value);if(!r.meta)throw 0;S=r;save();alert("进度已恢复");show("home")}catch(e){alert("进度码无效")}}
-function setDayPrompt(){let v=prompt("当前应该是第几天（1–14）？",S.meta.day),n=parseInt(v,10);if(n>=1&&n<=14){S.meta.day=n;save();show("home")}}
-function refresh(){let rc=dueReviews().length,nc=todaysItems().length;dayNum.textContent=S.meta.day;todayCount.textContent=rc+nc;reviewCount.textContent=rc;unitProgress.style.width=((S.meta.day-1)/14*100)+"%";let phase=S.meta.day<=7?"单词":S.meta.day<=11?"短语":S.meta.day<=13?"重点句":"毕业听写";plan.innerHTML="第 <b>"+S.meta.day+"</b> / 14 天 · 今日到期复习 <b>"+rc+"</b> 项 + 新学 <b>"+nc+"</b> 项。<br>复习间隔：1天 → 3天 → 7天 → 14天 → 30天；答错会提前回来。";route.innerHTML="";for(let i=1;i<=14;i++){let d=document.createElement("div");d.className="day"+(i<S.meta.day?" done":"")+(i===S.meta.day?" today":"");d.textContent=i;route.appendChild(d)}}
-document.addEventListener("keydown",e=>{if(learn.classList.contains("active")&&stage>=3){if(e.key==="Enter")submitAnswer();else if(e.key==="Backspace")backspace();else if(e.key.length===1&&/[a-zA-Z \/\-'.,!?]/.test(e.key))tap(e.key.toLowerCase())}});
+function renderChoices(){
+  const pool=allItems().filter(x=>x.en!==current.en&&x.kind===current.kind).sort(()=>Math.random()-.5).slice(0,2);
+  const token=sessionToken,position=idx;
+  choiceGrid.innerHTML="";
+  [current,...pool].sort(()=>Math.random()-.5).forEach(o=>{
+    const b=document.createElement("button");b.className="choice";b.textContent=o.en;
+    b.onclick=()=>{
+      if(answerPending||token!==sessionToken||position!==idx||stage!==2||!activeDayOK())return;
+      if(answersMatch(o.en,current.en))completeStage(250);
+      else{st(current.kind,current.en).wrong++;activeEntry().assisted=true;save();alert("再看看哦～ 正确的是："+current.en);}
+    };
+    choiceGrid.appendChild(b);
+  });
+}
+function mask(w,s){let ch=[...w],L=[];ch.forEach((c,i)=>/[A-Za-z]/.test(c)&&L.push(i));let n=L.length,h=s===3?1:s===4?2:s===5?3:n,p=[];let pick=r=>{let t=(n-1)*r,a=L.map((pos,i)=>({pos,d:Math.abs(i-t)})).filter(x=>!p.includes(x.pos)).sort((a,b)=>a.d-b.d);if(a[0])p.push(a[0].pos);};if(h===1)pick(.5);else if(h===2){pick(.33);pick(.67);}else if(h===3){pick(.22);pick(.5);pick(.78);}else p=[...L];let set=new Set(p);return ch.map((c,i)=>set.has(i)?"_":c).join("");}
+function renderPattern(){if(stage===6){pattern.textContent="🎧 听音，完整写出来";spellTip.textContent="这次不看英文。";}else{pattern.textContent=mask(current.en,stage);spellTip.textContent=stage===3?"从中间缺 1 个字母。":stage===4?"从不同位置缺 2 个字母。":"前、中、后都会缺字母。";}}
+function tap(c){if(!current||answerPending||!activeDayOK())return;typed+=c;answerBox.textContent=typed;activeEntry().typed=typed;persist();}
+function backspace(){if(!current||answerPending||!activeDayOK())return;typed=typed.slice(0,-1);answerBox.textContent=typed;activeEntry().typed=typed;persist();}
+function submitAnswer(){
+  if(!current||stage<3||answerPending||!activeDayOK())return;
+  const entry=activeEntry(),s=st(current.kind,current.en),ok=answersMatch(typed,current.en);
+  if(ok){
+    feedback.className="feedback show good";feedback.textContent="答对啦！🌟";
+    if(stage===6){
+      s.passed=1;s.seen++;
+      // A correct copy after an error must not erase its short retest.
+      scheduleReview(s,true,entry.mode,entry.assisted&&entry.mode!=="new"||!!s.relearnAt&&entry.assisted);
+    }
+    completeStage(500);
+  }else{
+    s.wrong++;s.seen++;entry.assisted=true;
+    if(stage===6)scheduleReview(s,false);
+    save();feedback.className="feedback show bad";
+    feedback.textContent="还差一点～ 正确答案是 "+current.en+(stage===6?"。先改对，约 10 分钟后再试；每项每天最多两次短复习。":"。改对以后，再练下一步。");
+  }
+}
+function completeStage(delay=0){
+  const entry=activeEntry();
+  if(stage===6){entry.done=true;addRetest(entry);}else entry.stage=stage+1;
+  settlePlan(ensureDailyPlan());
+  entry.typed="";
+  // Persist the next position before animation, including a reload during feedback.
+  save();
+  if(delay){
+    answerPending=true;const token=sessionToken;
+    transitionTimer=setTimeout(()=>{if(token!==sessionToken)return;transitionTimer=null;answerPending=false;presentNext();},delay);
+  }else presentNext();
+}
+function advance(){if(!current||answerPending||!activeDayOK())return;if(stage<=1)completeStage();}
+function settlePlan(p){
+  const base=p.entries.filter(e=>e.mode!=="retest");
+  if(base.length&&base.every(e=>e.done)&&!p.baseCompleted){
+    p.baseCompleted=true;
+    const key="d"+p.routeDay;
+    if(!S.meta.doneDays[key]){S.meta.doneDays[key]=true;S.meta.stickers++;p.rewardNotice=true;}
+    p.rewarded=true;
+  }
+  if(!S.meta.graduated&&allItems().every(x=>!!st(x.kind,x.en).independentRecallDay)){
+    S.meta.graduated=true;p.graduationNotice=true;
+  }
+}
+function finishDay(){
+  const p=ensureDailyPlan(),base=p.entries.filter(e=>e.mode!=="retest"),waiting=p.entries.filter(e=>!e.done);
+  settlePlan(p);
+  const earned=!!p.rewardNotice,graduated=!!p.graduationNotice;
+  p.rewardNotice=false;p.graduationNotice=false;save();
+  if(graduated){alert("🎉 每项都在隔天独立写对过，Unit 1 毕业！100 元礼物券解锁啦！");show("rewards");return;}
+  if(waiting.length){
+    const minutes=Math.max(1,Math.ceil((Math.min(...waiting.map(e=>e.readyAt))-Date.now())/60000));
+    alert((earned?"今天主任务完成，得到 1 张贴纸 🎀。":"今天主任务已完成。")+"还有 "+waiting.length+" 项短复习，约 "+minutes+" 分钟后点“开始今天学习”。");
+  }else alert(earned?"今天完成啦！得到 1 张贴纸 🎀。明天再来学一点。":base.length?"今天任务已经完成啦～ 明天再来。":"今天没有到期任务，休息一下，明天再来看看。" );
+  show("home");
+}
+function speakCurrent(){
+  if(!current)return;
+  if(!("speechSynthesis"in window)||typeof SpeechSynthesisUtterance==="undefined"){
+    alert("这个浏览器暂时不能播放语音，请使用支持朗读的浏览器，或请家长读出题目。");return;
+  }
+  speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(current.en);u.lang="en-GB";u.rate=.76;
+  u.onerror=e=>{if(e.error!=="canceled"&&e.error!=="interrupted")alert("语音没有播放成功，请再试一次，或请家长读出题目。");};
+  speechSynthesis.speak(u);
+}
+function show(id){
+  // Leaving during a feedback animation must not reopen the lesson later.
+  if(id!=="learn")cancelTransition();
+  document.querySelectorAll(".screen").forEach(x=>x.classList.remove("active"));document.getElementById(id).classList.add("active");
+  document.querySelectorAll("nav button").forEach(x=>x.classList.remove("active"));let n=document.getElementById("nav-"+id);if(n)n.classList.add("active");
+  if(id==="home")refresh();if(id==="rewards")renderRewards();if(id==="parent")renderParent();
+}
+function renderRewards(){stickers.innerHTML="";for(let i=0;i<14;i++){let d=document.createElement("div");d.className="sticker"+(i<S.meta.stickers?" on":"");d.textContent=i<S.meta.stickers?["🌸","⭐","🎀","🐰","🌈"][i%5]:"♡";stickers.appendChild(d);}giftIcon.textContent=S.meta.graduated?"🎁":"🔒";giftText.textContent=S.meta.graduated?"已解锁！由妈妈确认兑换 100 元礼物。":"每项都在隔天独立写对后解锁，分散在每天复习中完成。原已解锁奖励保留。";}
+function renderParent(){
+  let a=allItems(),w=a.filter(x=>st(x.kind,x.en).wrong>=2).sort((a,b)=>st(b.kind,b.en).wrong-st(a.kind,a.en).wrong),p=a.filter(x=>st(x.kind,x.en).passed).length,r=a.filter(x=>st(x.kind,x.en).independentRecallDay).length;
+  summary.textContent="已完整写出 "+p+" / "+a.length+" 项 · 隔天独立写对 "+r+" 项 · 路线第 "+S.meta.day+" 格 · 贴纸 "+S.meta.stickers+" 张";
+  weak.innerHTML=w.length?w.slice(0,12).map(x=>"<div style='padding:8px 0'><b>"+x.cn+"</b> "+x.en+" · 错 "+st(x.kind,x.en).wrong+" 次</div>").join(""):"目前没有明显顽固项。";
+}
+function encodeState(o){return btoa(unescape(encodeURIComponent(JSON.stringify(o))));}
+function decodeState(c){return JSON.parse(decodeURIComponent(escape(atob(c.trim()))));}
+function exportProgress(){progressCode.textContent=encodeState(S);backupStatus.textContent="当前进度码，包含本次已完成的学习。请复制后单独保存。";}
+function exportOriginalBackup(){
+  try{
+    let raw=localStorage.getItem(BACKUP_KEY),info=null;
+    if(raw!==null){
+      info=readBackupInfo();
+      if(!info||info.checksum!==rawChecksum(raw))throw Error("backup not verified");
+    }else{
+      // If storage is full, the still-untouched source can also be exported.
+      raw=initialBackupRequired?initialRaw:null;
+      if(raw===null){alert("这台设备最初没有旧进度，目前没有升级前备份码。");return;}
+      ensureOriginalBackup(raw,"before-upgrade");
+    }
+    progressCode.textContent=btoa(unescape(encodeURIComponent(raw)));
+    backupStatus.textContent=(info&&info.origin==="before-import"?"首次导入前":"升级前")+"原始备份码，保留原来的全部内容。生成此码不会恢复或覆盖当前进度；有效旧进度码可粘贴到下方恢复。";
+  }catch(e){
+    // An unverified stored snapshot must not be presented as a safe backup.
+    if(initialRaw!==null){progressCode.textContent=btoa(unescape(encodeURIComponent(initialRaw)));backupStatus.textContent="自动备份未能验证。这是打开本页时的原始进度码，请先复制保存；当前进度没有被恢复或覆盖。";}
+    else alert("原始备份暂时无法读取，请先生成当前进度码保存。");
+  }
+}
+async function copyProgress(){if(progressCode.textContent==="还没有生成")exportProgress();try{await navigator.clipboard.writeText(progressCode.textContent);alert("已复制");}catch(e){alert("请长按手动复制");}}
+function importProgress(){
+  try{
+    const r=decodeState(importCode.value);
+    if(!r||!r.meta||!validState(r))throw Error("state");
+    const beforeImport=localStorage.getItem(KEY);
+    if(!ensureOriginalBackup(beforeImport,"before-import")){
+      refresh();alert("原始进度未能安全备份，本次没有导入，也没有覆盖旧进度。请先导出备份码。");return;
+    }
+    initialReadOK=true;
+    cancelTransition();current=null;queue=[];S=r;storageWarning="";migrateReviewData();save();alert(storageWarning?"进度已载入本页，但暂时未能保存。原始备份仍保留，请先生成当前进度码保存。":"进度已恢复");show("home");
+  }catch(e){alert("进度码无效，现有进度没有改变");}
+}
+function setDayPrompt(){
+  const v=prompt("当前应该是路线第几格（1–14）？只调整路线显示，不增加今天的新学。",S.meta.day),n=Number(v);
+  if(Number.isInteger(n)&&n>=1&&n<=14){S.meta.day=n;save();show("home");}
+}
+function refresh(){
+  const p=ensureDailyPlan(),base=p.entries.filter(e=>e.mode!=="retest"),rc=base.filter(e=>e.mode==="review").length,nc=base.filter(e=>e.mode==="new").length;
+  const done=base.filter(e=>e.done).length,waiting=p.entries.filter(e=>e.mode==="retest"&&!e.done);
+  const learned=allItems().filter(x=>st(x.kind,x.en).passed).length;
+  const ready=waiting.filter(e=>e.readyAt<=Date.now()).length;
+  const minutes=waiting.length?Math.max(1,Math.ceil((Math.min(...waiting.map(e=>e.readyAt))-Date.now())/60000)):0;
+  dayNum.textContent=S.meta.day;todayCount.textContent=base.length;reviewCount.textContent=rc;
+  unitProgress.style.width=(learned/allItems().length*100)+"%";
+  const dueNote=p.backlog?"还有 "+p.backlog+" 项到期内容留到后续日子；今天暂停新学。":"新学按单词、短语、句子的顺序补齐。";
+  plan.textContent=p.day+" · 复习 "+rc+" 项 + 新学 "+nc+" 项，已完成 "+done+" / "+base.length+" 项。\n"+
+    dueNote+"\n"+(storageWarning?"本次安排暂未保存。":"今天的安排已保存，重进或刷新会接着做。")+
+    (waiting.length?(ready?" 有 "+ready+" 项短复习现在可以做，点开始继续。":" 还有 "+waiting.length+" 项短复习，约 "+minutes+" 分钟后点开始。") : "")+(storageWarning?" "+storageWarning:"");
+  route.innerHTML="";for(let i=1;i<=14;i++){let d=document.createElement("div");d.className="day"+(S.meta.doneDays["d"+i]?" done":"")+(i===S.meta.day?" today":"");d.textContent=i;route.appendChild(d);}
+}
+document.addEventListener("keydown",e=>{
+  if(/^(INPUT|TEXTAREA|SELECT)$/.test(e.target&&e.target.tagName||"")||e.ctrlKey||e.metaKey||e.altKey)return;
+  if(learn.classList.contains("active")&&current&&stage>=3){
+    if(e.key==="Enter"){e.preventDefault();submitAnswer();}
+    else if(e.key==="Backspace"){e.preventDefault();backspace();}
+    else if(e.key.length===1&&/^[a-zA-Z \/／\-'’‘.,!?]$/.test(e.key)){e.preventDefault();tap(e.key.toLowerCase());}
+  }
+});
+window.addEventListener("focus",()=>{if(home.classList.contains("active"))refresh();});
 migrateReviewData();refresh();
 </script></body></html>

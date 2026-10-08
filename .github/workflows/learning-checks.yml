@@ -1,0 +1,40 @@
+name: Learning site checks
+on:
+  push:
+    branches: ["fix/learning-review-and-math-20261007"]
+  pull_request:
+    branches: ["main"]
+permissions:
+  contents: read
+concurrency:
+  group: learning-checks-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run syntax, content, and progress regressions
+        run: |
+          for test in tests/*.js; do node "$test"; done
+      - name: Install official Playwright test runner
+        run: npm install --no-save --package-lock=false @playwright/test@1.55.1
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Test isolated browser sessions
+        run: npx playwright test --config=playwright.config.cjs
+      - name: Save synthetic test screenshots and report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: synthetic-browser-checks
+          path: |
+            test-results/
+            playwright-report/
+          retention-days: 7

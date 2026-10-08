@@ -1,0 +1,11 @@
+{
+  "name": "mengmeng-learning-checks",
+  "private": true,
+  "scripts": {
+    "test": "node tests/run-all.cjs",
+    "test:browser": "playwright test --config=playwright.config.cjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.55.1"
+  }
+}
