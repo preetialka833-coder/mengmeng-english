@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="zh-CN"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>第二单元 · 线与角</title>
 <style>
 *{box-sizing:border-box}body{margin:0;font-family:Arial,"Microsoft YaHei",sans-serif;color:#51465d;background:linear-gradient(180deg,#faf8ff,#fffafd)}
@@ -15,37 +15,314 @@ details{margin-top:10px;border:2px solid #eee3f4;border-radius:14px;padding:10px
 .sectionGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.sectionCard{background:#fff;border:2px solid #eee3f4;border-radius:18px;padding:14px}.sectionCard h3{margin:0 0 7px;font-size:18px}.focusbtn{display:block;text-decoration:none;text-align:center;margin-top:10px;border-radius:13px;padding:10px;background:#f3efff;color:#6653d8;font-weight:bold}.focusNow{background:#fff3bf;border-color:#efd16f}.points{font-size:14px;line-height:1.65;color:#6f6378}@media(max-width:680px){.sectionGrid{grid-template-columns:1fr}}
 a.btn{display:block;text-decoration:none;text-align:center;border-radius:16px;padding:13px 16px;font-size:18px;font-weight:bold;background:#fff;border:2px solid #e9dff1;color:#51465d}
 @media(max-width:680px){.textrow{flex-direction:column}.checkbtn{padding:13px}.scorebar{font-size:14px}}
-</style></head><body><main class="wrap">
-<section class="hero"><a class="btn" href="./math.html?v=9">← 返回数学首页</a><h1>第二单元 · 线与角</h1>
-<div class="sub">现在不是固定 6 题了：每次从题库中抽 8 题。答错过、还不稳定、隔天该复习的题型会优先回来；已经连续做对的会减少出现。</div>
-<div id="mastery" class="mastery">正在读取掌握情况…</div></section>
-<section class="card"><h2>📚 小节重点与难点</h2><div class="sub">先看清“这一小节到底要会什么”，再进入对应题库。点击“只练这个小节”，每次仍随机抽题，并优先回流错题。</div><div class="sectionGrid" style="margin-top:12px"><div class="sectionCard" data-topic="线"><h3>1. 线段、射线、直线</h3><div class="points"><b>重点：</b>端点个数、是否能延伸、能向几个方向延伸。<br><b>难点：</b>图形方向改变后仍要根据“端点和延伸”判断，不能只靠外形。</div><a class="focusbtn" href="./math-unit2.html?topic=%E7%BA%BF&v=10">只练这个小节</a></div><div class="sectionCard" data-topic="平行"><h3>2. 平行</h3><div class="points"><b>重点：</b>同一平面内永不相交；过直线外一点只能画一条平行线。<br><b>难点：</b>必须注意“同一平面”；结合长方形、道路等情境识别。</div><a class="focusbtn" href="./math-unit2.html?topic=%E5%B9%B3%E8%A1%8C&v=10">只练这个小节</a></div><div class="sectionCard" data-topic="垂直"><h3>3. 垂直</h3><div class="points"><b>重点：</b>两条直线相交成直角；过一点作垂线具有唯一性。<br><b>难点：</b>“同垂一直线”的两条直线之间的关系，以及图形旋转后的垂直判断。</div><a class="focusbtn" href="./math-unit2.html?topic=%E5%9E%82%E7%9B%B4&v=10">只练这个小节</a></div><div class="sectionCard" data-topic="角"><h3>4. 角与旋转</h3><div class="points"><b>重点：</b>锐角、直角、钝角、平角、周角；90°、180°、360°。<br><b>难点：</b>根据旋转大小判断角的类别，利用平角/周角求未知角。</div><a class="focusbtn" href="./math-unit2.html?topic=%E8%A7%92&v=10">只练这个小节</a></div><div class="sectionCard" data-topic="量角"><h3>5. 量角</h3><div class="points"><b>重点：</b>量角器中心对顶点，一边对0°线，从对应0°方向读刻度。<br><b>难点：</b>内外两圈刻度容易读反；图形朝向改变后仍要找到正确起始0°。</div><a class="focusbtn" href="./math-unit2.html?topic=%E9%87%8F%E8%A7%92&v=10">只练这个小节</a></div><div class="sectionCard" data-topic="变式"><h3>6. 生活中的线与角</h3><div class="points"><b>重点：</b>钟面、长方形、道路等情境中识别角、平行和垂直。<br><b>难点：</b>把生活图景转成几何关系，而不是只会课本标准图。</div><a class="focusbtn" href="./math-unit2.html?topic=%E5%8F%98%E5%BC%8F&v=10">只练这个小节</a></div><div class="sectionCard" data-topic="综合"><h3>7. 综合求角</h3><div class="points"><b>重点：</b>相邻角组成平角、垂直相交、已知一个角求其他角。<br><b>难点：</b>题目文字较长时先画/想简图，再找180°或90°关系。</div><a class="focusbtn" href="./math-unit2.html?topic=%E7%BB%BC%E5%90%88&v=10">只练这个小节</a></div></div><a class="btn" style="margin-top:12px" href="./math-unit2.html?v=10">🎲 混合练习全单元</a></section>
-<div class="scorebar"><span id="scoreText">本组得分：0 / 8</span><span id="doneText">已完成：0 / 8</span></div>
+
+button,input{font:inherit}button,summary{touch-action:manipulation}button,summary,a{cursor:pointer}button:disabled{cursor:default;opacity:.65}button:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid #6653d8;outline-offset:3px}.opt{font-size:18px;line-height:1.55;overflow-wrap:anywhere}.opt:disabled{opacity:1}.questionCard h2{white-space:pre-line;overflow-wrap:anywhere;line-height:1.8;font-size:24px;scroll-margin-top:80px}.questionCard{max-width:760px;margin-left:auto;margin-right:auto}.questionNav{display:flex;gap:12px;margin-top:18px}.questionNav .btn{flex:1}.next{background:#9182ff!important;color:#fff!important}.navHelp{font-size:14px;text-align:center}.assistance{font-size:14px}.knowledge>summary{font-size:18px;line-height:1.6}.knowledge[open]>summary{margin-bottom:12px}.scorebar{max-width:760px;margin-left:auto;margin-right:auto}.notice{display:block;background:#fff6da;color:#806220}.groupSummary{background:#e3f8eb;color:#286642;padding:16px;border-radius:16px;line-height:1.7}.sessionNotice{margin:0 auto 12px;max-width:760px;font-size:14px;line-height:1.6}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.wrap button.btn{display:block;text-align:center;border-radius:16px;padding:13px 16px;font-size:18px;font-weight:bold;background:#fff;border:2px solid #e9dff1;color:#51465d}.hero h1{font-size:27px}.masteryDetails{background:rgba(255,255,255,.6)}@media(max-width:680px){.hero,.card{padding:15px}.questionCard h2{font-size:21px}.questionNav .btn{font-size:16px;padding:12px 8px}.scorebar{top:0}.tag{font-size:12px}.textans{font-size:20px}}[hidden]{display:none!important}
+
+</style></head><body><div data-build="2026.10.07-r1" style="max-width:980px;margin:8px auto;padding:0 18px;color:#74657e;font:13px system-ui,sans-serif">试用修复版 · 2026.10.07-r1</div><main class="wrap">
+<section class="hero"><a class="btn" href="./math.html?v=20261007r1">← 返回数学首页</a><h1>第二单元 · 线与角</h1>
+<div class="sub">每组最多8题，一次显示一题。错题和需要复习的题会优先出现；专项题少于8题时，练完该小节全部题目。</div>
+<details class="masteryDetails"><summary>查看独立掌握情况</summary><div id="mastery" class="mastery">正在读取掌握情况…</div></details></section>
+<details class="card knowledge"><summary>📚 需要时再看：知识点与专项练习</summary><div class="sub">想复习时再展开阅读，也可以选择一个小节来练习。题目不足8题时会显示该小节全部题目。</div><div class="sectionGrid" style="margin-top:12px"><div class="sectionCard" data-topic="线"><h3>1. 线段、射线、直线</h3><div class="points"><b>重点：</b>端点个数、是否能延伸、能向几个方向延伸。<br><b>难点：</b>图形方向改变后仍要根据“端点和延伸”判断，不能只靠外形。</div><a class="focusbtn" href="./math-unit2.html?topic=%E7%BA%BF&amp;v=20261007r1">只练这个小节</a></div><div class="sectionCard" data-topic="平行"><h3>2. 平行</h3><div class="points"><b>重点：</b>同一平面内永不相交；过直线外一点只能画一条平行线。<br><b>难点：</b>必须注意“同一平面”；结合长方形、道路等情境识别。</div><a class="focusbtn" href="./math-unit2.html?topic=%E5%B9%B3%E8%A1%8C&amp;v=20261007r1">只练这个小节</a></div><div class="sectionCard" data-topic="垂直"><h3>3. 垂直</h3><div class="points"><b>重点：</b>两条直线相交成直角；过一点作垂线具有唯一性。<br><b>难点：</b>“同垂一直线”的两条直线之间的关系，以及图形旋转后的垂直判断。</div><a class="focusbtn" href="./math-unit2.html?topic=%E5%9E%82%E7%9B%B4&amp;v=20261007r1">只练这个小节</a></div><div class="sectionCard" data-topic="角"><h3>4. 角与旋转</h3><div class="points"><b>重点：</b>锐角、直角、钝角、平角、周角；90°、180°、360°。<br><b>难点：</b>根据旋转大小判断角的类别，利用平角/周角求未知角。</div><a class="focusbtn" href="./math-unit2.html?topic=%E8%A7%92&amp;v=20261007r1">只练这个小节</a></div><div class="sectionCard" data-topic="量角"><h3>5. 量角</h3><div class="points"><b>重点：</b>量角器中心对顶点，一边对0°线，从对应0°方向读刻度。<br><b>难点：</b>内外两圈刻度容易读反；图形朝向改变后仍要找到正确起始0°。</div><a class="focusbtn" href="./math-unit2.html?topic=%E9%87%8F%E8%A7%92&amp;v=20261007r1">只练这个小节</a></div><div class="sectionCard" data-topic="变式"><h3>6. 生活中的线与角</h3><div class="points"><b>重点：</b>钟面、长方形、道路等情境中识别角、平行和垂直。<br><b>难点：</b>把生活图景转成几何关系，而不是只会课本标准图。</div><a class="focusbtn" href="./math-unit2.html?topic=%E5%8F%98%E5%BC%8F&amp;v=20261007r1">只练这个小节</a></div><div class="sectionCard" data-topic="综合"><h3>7. 综合求角</h3><div class="points"><b>重点：</b>相邻角组成平角、垂直相交、已知一个角求其他角。<br><b>难点：</b>题目文字较长时先画/想简图，再找180°或90°关系。</div><a class="focusbtn" href="./math-unit2.html?topic=%E7%BB%BC%E5%90%88&amp;v=20261007r1">只练这个小节</a></div></div><a class="btn" style="margin-top:12px" href="./math-unit2.html?v=20261007r1">🎲 混合练习全单元</a></details>
+<div class="scorebar"><span id="scoreText">独立答对：0 / 8</span><span id="doneText">已完成：0 / 8</span></div>
+<p id="sessionNotice" class="sub sessionNotice"></p><p id="storageNotice" class="sessionNotice notice" role="status" hidden></p>
 <div id="questions"></div>
-<section class="card"><a class="btn" href="./math-unit2.html?v=9">🔄 再抽一组新题</a><a class="btn" style="margin-top:10px" href="./math.html?v=9">完成这一组，返回数学首页</a></section>
+<div id="groupSummary" class="groupSummary" role="status" hidden></div>
+<section class="card"><button class="btn" type="button" onclick="startNewGroup()">🔄 再抽一组新题</button><a class="btn" style="margin-top:10px" href="./math.html?v=20261007r1">返回数学首页（进度会保留）</a></section>
 </main>
 <script>
-var BANK=[{"id":"u2_01","k":"线","d":1,"t":"mc","q":"有两个端点、不能无限延伸的是哪一种线？","o":["线段","射线","直线"],"a":0,"h":["先想端点个数。","两个端点把长度限制住。","所以是线段。"]},{"id":"u2_02","k":"线","d":2,"t":"mc","q":"手电筒发出的光线更接近哪一种数学模型？","o":["线段","射线","直线"],"a":1,"h":["它有一个起点。","向一个方向延伸。","所以是射线。"]},{"id":"u2_03","k":"垂直","d":1,"t":"mc","q":"两条直线相交成直角时，这两条直线怎样？","o":["互相平行","互相垂直","只是相交"],"a":1,"h":["关键词是直角。","直角是90°。","相交成直角叫互相垂直。"]},{"id":"u2_04","k":"平行","d":2,"t":"mc","q":"同一平面内，两条永不相交的直线互相怎样？","o":["垂直","平行","重合"],"a":1,"h":["注意同一平面。","一直延伸也不相交。","这就是平行。"]},{"id":"u2_05","k":"角","d":1,"t":"text","q":"一条射线绕端点旋转半周形成的角是多少度？","a":"180","alts":["180°"],"h":["半周是半个圆。","一周360°。","半周180°。"]},{"id":"u2_06","k":"量角","d":3,"t":"text","q":"一条边对准量角器右侧0°刻度，另一条边经过60°和120°两个刻度。应该读多少度？","a":"60","alts":["60°"],"h":["先看从哪边0°开始。","题目说右侧0°。","因此读60°。"]},{"id":"u2_07","k":"线","d":1,"t":"mc","q":"没有端点、能向两个方向无限延伸的是？","o":["线段","射线","直线"],"a":2,"h":["想端点数量。","两个方向都无限延伸。","所以是直线。"]},{"id":"u2_08","k":"线","d":2,"t":"mc","q":"把一条线段的一端无限延长，得到的是？","o":["射线","直线","另一条线段"],"a":0,"h":["保留了一个端点。","另一个方向无限延伸。","这就是射线。"]},{"id":"u2_09","k":"平行","d":2,"t":"mc","q":"在同一平面内，与一条直线平行的两条直线之间可能相交吗？","o":["可能","不可能","有时可能"],"a":1,"h":["平行的定义就是永不相交。","同一平面是关键条件。","所以不可能。"]},{"id":"u2_10","k":"垂直","d":2,"t":"mc","q":"如果直线a垂直于直线b，直线c也垂直于直线b，那么a和c怎样？","o":["平行","垂直","一定相交"],"a":0,"h":["a和c都与同一条直线成90°。","它们方向相同。","因此a与c平行。"]},{"id":"u2_11","k":"角","d":1,"t":"mc","q":"90°的角是什么角？","o":["锐角","直角","钝角"],"a":1,"h":["直角的标准度数是90°。","不大也不小。","所以是直角。"]},{"id":"u2_12","k":"角","d":2,"t":"mc","q":"135°的角属于哪一类？","o":["锐角","直角","钝角"],"a":2,"h":["大于90°。","又小于180°。","所以是钝角。"]},{"id":"u2_13","k":"角","d":2,"t":"text","q":"周角是多少度？","a":"360","alts":["360°"],"h":["一整圈就是周角。","一整圈有360°。","所以是360°。"]},{"id":"u2_14","k":"角","d":2,"t":"text","q":"周角是平角的几倍？","a":"2","alts":["2倍"],"h":["平角180°。","周角360°。","360÷180=2。"]},{"id":"u2_15","k":"综合","d":3,"t":"text","q":"两条直线相交，其中一个角是35°，它相邻的角是多少度？","a":"145","alts":["145°"],"h":["相邻角合成平角。","平角180°。","180-35=145。"]},{"id":"u2_16","k":"综合","d":3,"t":"mc","q":"两条直线相交，其中一个角是90°。另外三个角怎样？","o":["都是90°","有两个90°一个180°","无法判断"],"a":0,"h":["相邻角和是180°。","180-90仍是90。","所以四个角全是90°。"]},{"id":"u2_17","k":"平行","d":3,"t":"mc","q":"经过直线外一点，可以画几条与这条直线平行的直线？","o":["1条","2条","无数条"],"a":0,"h":["位置和方向都受到限制。","在同一平面内有唯一性。","只能画1条。"]},{"id":"u2_18","k":"垂直","d":3,"t":"mc","q":"经过直线外一点，可以画几条与这条直线垂直的直线？","o":["1条","2条","无数条"],"a":0,"h":["垂线也有唯一性。","从一点到直线的垂线只有一条。","所以是1条。"]},{"id":"u2_19","k":"量角","d":2,"t":"mc","q":"用量角器量角时，角的顶点应该和量角器哪里重合？","o":["中心点","0°刻度","外圈任意位置"],"a":0,"h":["量角器围绕顶点读数。","先对中心。","所以顶点和中心点重合。"]},{"id":"u2_20","k":"量角","d":2,"t":"mc","q":"量角时，一条边已经对准0°线，下一步最重要的是？","o":["随便看一个刻度","沿对应的那圈刻度读另一边","把量角器移开"],"a":1,"h":["量角器有内外两圈刻度。","从对准的0°方向开始读。","因此要读对应那一圈。"]},{"id":"u2_21","k":"综合","d":3,"t":"mc","q":"一个角比直角大25°，它是多少度，属于什么角？","o":["65°，锐角","115°，钝角","205°，优角"],"a":1,"h":["直角90°。","90+25=115°。","115°是钝角。"]},{"id":"u2_22","k":"综合","d":3,"t":"text","q":"一个平角被分成两个角，其中一个是68°，另一个是多少度？","a":"112","alts":["112°"],"h":["平角180°。","两个角加起来180°。","180-68=112。"]},{"id":"u2_23","k":"变式","d":3,"t":"mc","q":"钟面上3时整，时针和分针形成的较小角是多少度？","o":["60°","90°","120°"],"a":1,"h":["3时整时分针指12，时针指3。","相邻两个数字间30°。","跨3格：30×3=90°。"]},{"id":"u2_24","k":"变式","d":3,"t":"mc","q":"一张长方形纸相邻两条边的位置关系是？","o":["平行","垂直","既不平行也不垂直"],"a":1,"h":["长方形四个角都是直角。","相邻边相交成90°。","因此相邻边互相垂直。"]},{"id":"u2_25","k":"线","d":2,"t":"mc","q":"把一条射线沿反方向也无限延长，得到什么？","o":["线段","直线","还是射线"],"a":1,"h":["射线原本一个方向延伸。","再把反方向也无限延长。","两个方向都无限延伸就是直线。"]},{"id":"u2_26","k":"平行","d":2,"t":"mc","q":"长方形的两条对边是什么关系？","o":["平行","垂直","一定相交"],"a":0,"h":["观察长方形。","相邻边垂直，对边方向相同。","所以对边平行。"]},{"id":"u2_27","k":"垂直","d":2,"t":"mc","q":"正方形的一条边和相邻边是什么关系？","o":["平行","垂直","无法判断"],"a":1,"h":["正方形四个角都是直角。","相邻边相交成90°。","所以互相垂直。"]},{"id":"u2_28","k":"角","d":2,"t":"mc","q":"89°的角属于哪一类？","o":["锐角","直角","钝角"],"a":0,"h":["锐角小于90°。","89°比90°小。","所以是锐角。"]},{"id":"u2_29","k":"角","d":2,"t":"mc","q":"179°的角属于哪一类？","o":["锐角","钝角","平角"],"a":1,"h":["179°大于90°。","又小于180°。","所以是钝角。"]},{"id":"u2_30","k":"量角","d":3,"t":"mc","q":"量角器的一条边对准左侧0°，另一边同时经过40°和140°刻度，应读多少度？","o":["40°","140°","180°"],"a":0,"h":["从左侧0°开始读。","找对应左侧0°的那一圈。","得到40°。"]},{"id":"u2_31","k":"综合","d":3,"t":"text","q":"一个直角被分成两个角，其中一个是37°，另一个是多少度？","a":"53","alts":["53°"],"h":["直角90°。","两个角相加90°。","90-37=53。"]},{"id":"u2_32","k":"综合","d":3,"t":"text","q":"一个周角被分成一个平角和两个相等的角，这两个相等的角各是多少度？","a":"90","alts":["90°"],"h":["周角360°，平角180°。","剩下180°分成两份。","每份90°。"]},{"id":"u2_33","k":"变式","d":3,"t":"mc","q":"钟面上6时整，时针与分针形成的角是？","o":["90°","180°","360°"],"a":1,"h":["分针指12，时针指6。","它们正好相反方向。","形成180°平角。"]},{"id":"u2_34","k":"变式","d":3,"t":"mc","q":"两条笔直铁路在同一平面内始终保持相同距离且不相交，它们可以看作？","o":["平行线","垂线","射线"],"a":0,"h":["关键词：同一平面、不相交。","还保持相同方向。","可以看作平行线。"]},{"id":"u2_35","k":"垂直","d":3,"t":"mc","q":"直线a与b平行，直线c垂直于a，那么c与b怎样？","o":["平行","垂直","不一定"],"a":1,"h":["a与b方向相同。","c与a成90°。","因此c与b也成90°。"]},{"id":"u2_36","k":"综合","d":3,"t":"text","q":"两条直线相交，一个角是128°，与它相邻的角是多少度？","a":"52","alts":["52°"],"h":["相邻角组成平角。","平角180°。","180-128=52。"]}], SESSION=8, KEY="math-unit2_bank_stats_v1", stats={}, picked=[], done=0, score=0, tries={}, finished={};
-function load(){try{stats=JSON.parse(localStorage.getItem(KEY)||"{}");}catch(e){stats={};}}
-function save(){try{localStorage.setItem(KEY,JSON.stringify(stats));}catch(e){}}
-function st(id){if(!stats[id])stats[id]={ok:0,wrong:0,last:0};return stats[id];}
-function dayDue(s){return !s.last || (Date.now()-s.last)>20*60*60*1000;}
-function weight(q){var s=st(q.id),w=2+s.wrong*3;if(s.ok===0)w+=3;if(dayDue(s))w+=2;if(s.ok>=2)w-=2;if(w<1)w=1;return w;}
-function queryTopic(){var s=location.search||"",m=s.match(/[?&]topic=([^&]+)/);if(!m)return "";try{return decodeURIComponent(m[1].replace(/\+/g," "));}catch(e){return "";}}
-var FOCUS=queryTopic();
-function choose(){var pool=[],i,j,w,q,exists,source=[];for(i=0;i<BANK.length;i++){if(!FOCUS||BANK[i].k===FOCUS)source.push(BANK[i]);}
-for(i=0;i<source.length;i++){w=weight(source[i]);for(j=0;j<w;j++)pool.push(source[i]);}
-while(picked.length<SESSION&&pool.length){i=Math.floor(Math.random()*pool.length);q=pool[i];exists=false;for(j=0;j<picked.length;j++){if(picked[j].id===q.id)exists=true;}if(!exists)picked.push(q);for(j=pool.length-1;j>=0;j--){if(pool[j].id===q.id)pool.splice(j,1);}}
-while(picked.length<SESSION&&picked.length<source.length){q=source[Math.floor(Math.random()*source.length)];exists=false;for(j=0;j<picked.length;j++)if(picked[j].id===q.id)exists=true;if(!exists)picked.push(q);}}
-function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
-function render(){var out="",i,j,q;for(i=0;i<picked.length;i++){q=picked[i];out+='<section class="card"><div><span class="num">第 '+(i+1)+' 题</span><span class="tag">'+esc(q.k)+' · '+(q.d===1?'基础':q.d===2?'变式':'挑战')+'</span></div><h2>'+esc(q.q)+'</h2>';if(q.t==="mc"){out+='<div class="opts">';for(j=0;j<q.o.length;j++)out+='<button class="opt" id="q'+i+'o'+j+'" onclick="checkMC('+i+','+j+');return false;">'+String.fromCharCode(65+j)+'. '+esc(q.o[j])+'</button>';out+='</div>';}else{out+='<div class="textrow"><input id="q'+i+'input" class="textans" type="text" placeholder="输入答案"><button class="checkbtn" onclick="checkText('+i+');return false;">检查答案</button></div>';}out+='<div id="fb'+i+'" class="feedback"></div><details><summary>🤔 提示 1</summary><div class="hint">'+esc(q.h[0])+'</div></details><details><summary>🌱 提示 2</summary><div class="hint">'+esc(q.h[1])+'</div></details><details><summary>🧩 帮我拆一步</summary><div class="hint">'+esc(q.h[2])+'</div></details></section>';}document.getElementById("questions").innerHTML=out;updateTop();renderMastery();}
-function clean(s){return String(s).replace(/^\s+|\s+$/g,"").replace(/[,，\s]/g,"").replace(/度/g,"°");}
-function addRewards(q){var xp=0,coins=0;try{xp=parseInt(localStorage.getItem("math_xp")||"0",10)||0;coins=parseInt(localStorage.getItem("math_coins")||"0",10)||0;localStorage.setItem("math_xp",String(xp+1));localStorage.setItem("math_coins",String(coins+q.d));}catch(e){}}
-function markWrong(i){tries[i]=(tries[i]||0)+1;var s=st(picked[i].id);s.wrong++;s.ok=0;s.last=Date.now();save();renderMastery();}
-function markDone(i){if(finished[i])return;finished[i]=true;done++;score++;var s=st(picked[i].id);if((tries[i]||0)===0)s.ok++;else s.ok=0;s.last=Date.now();save();addRewards(picked[i]);updateTop();renderMastery();if(done===picked.length)setTimeout(function(){alert("这一组完成啦！答对 "+score+" / "+picked.length+"。难题金币更多，做错过的题型以后还会回来。");},250);}
-function checkMC(i,j){if(finished[i])return;var q=picked[i],fb=document.getElementById("fb"+i),k,b;for(k=0;k<q.o.length;k++){b=document.getElementById("q"+i+"o"+k);if(b)b.className="opt";}b=document.getElementById("q"+i+"o"+j);if(j===q.a){b.className="opt correct";fb.className="feedback good";fb.innerHTML="✅ 对啦！+"+q.d+" 金币";markDone(i);}else{b.className="opt wrong";fb.className="feedback bad";fb.innerHTML="❌ 还不对。先自己再想一下，需要时再打开提示。";markWrong(i);}}
-function checkText(i){if(finished[i])return;var q=picked[i],v=clean(document.getElementById("q"+i+"input").value),ok=v===clean(q.a),j;if(!ok&&q.alts)for(j=0;j<q.alts.length;j++)if(v===clean(q.alts[j]))ok=true;var fb=document.getElementById("fb"+i);if(ok){fb.className="feedback good";fb.innerHTML="✅ 对啦！+"+q.d+" 金币";markDone(i);}else{fb.className="feedback bad";fb.innerHTML="❌ 还不对。先看题目条件，需要时再打开提示。";markWrong(i);}}
-function updateTop(){document.getElementById("scoreText").innerHTML="本组得分："+score+" / "+picked.length;document.getElementById("doneText").innerHTML="已完成："+done+" / "+picked.length;}
-function renderMastery(){var map={},i,q,s,key,out="<b>掌握地图：</b> ";for(i=0;i<BANK.length;i++){q=BANK[i];if(!map[q.k])map[q.k]={n:0,g:0};map[q.k].n++;s=st(q.id);if(s.ok>=2)map[q.k].g++;}for(key in map){out+=key+" "+(map[key].g===map[key].n?"🟢":map[key].g>0?"🟡":"⚪")+"　";}document.getElementById("mastery").innerHTML=out+'<br><span class="sub">同一题型连续独立做对 2 次才算稳定；答错后会提高以后抽中的概率。</span>';}
-load();choose();render();if(FOCUS){var m=document.getElementById("mastery");m.innerHTML="<b>当前专项：</b>"+esc(FOCUS)+"　"+m.innerHTML;var cs=document.getElementsByClassName("sectionCard");for(var ci=0;ci<cs.length;ci++){if(cs[ci].getAttribute("data-topic")===FOCUS)cs[ci].className+=" focusNow";}}
+var BANK=[
+{"id":"u2_01","k":"线","d":1,"t":"mc","q":"有两个端点、不能无限延伸的是哪一种线？","o":["线段","射线","直线"],"a":0,"h":["比较三种线的端点数。","两个端点把这一段的两头都固定住了。","画出两个点并连接，想想这种有限长的线叫什么。"]},
+{"id":"u2_02","k":"线","d":2,"t":"mc","q":"手电筒发出的光线更接近哪一种数学模型？","o":["线段","射线","直线"],"a":1,"h":["题目问的是数学模型，可以把光想象成一直向前。","手电筒所在的位置是起点。","找“一个端点，只向一个方向无限延伸”的模型。"]},
+{"id":"u2_03","k":"垂直","d":1,"t":"mc","q":"两条直线相交成直角时，这两条直线怎样？","o":["互相平行","互相垂直","只是相交"],"a":1,"h":["先找题目强调的特殊角。","两条线不仅相交，还形成90°的角。","回忆：相交成直角的两条直线，用哪个专门的词描述？"]},
+{"id":"u2_04","k":"平行","d":2,"t":"mc","q":"同一平面内，两条永不相交的直线互相怎样？","o":["垂直","平行","重合"],"a":1,"h":["题目已经说明在同一平面内。","把两条直线向两边延长，它们仍不会碰到。","排除相交成直角和完全重合的情形，再选择。"]},
+{"id":"u2_05","k":"角","d":1,"t":"text","q":"一条射线绕端点旋转半周形成的角是多少度？","a":"180","alts":["180°"],"h":["半周是完整一周的一半。","一周可以看作4个直角，每个直角90°。","先算一周的度数，再除以2。"]},
+{"id":"u2_06","k":"量角","d":3,"t":"text","q":"量角器的内圈从右侧0°读到左侧180°，外圈从左侧0°读到右侧180°。\n角的顶点已对准中心，一条边对准右侧0°线；另一条边经过内圈60°、外圈120°。\n这个角是多少度？","a":"60","alts":["60°"],"h":["读数要从角的一条边对准的0°开始。","先找题目里哪一圈的0°在右侧。","选定这一圈后，只读取另一条边在同一圈上的刻度。"]},
+{"id":"u2_07","k":"线","d":1,"t":"mc","q":"没有端点、能向两个方向无限延伸的是？","o":["线段","射线","直线"],"a":2,"h":["比较线段、射线、直线的端点数。","这条线的两边都没有尽头。","画一个两端都有延伸箭头、没有端点的模型，再对照名称。"]},
+{"id":"u2_08","k":"线","d":2,"t":"mc","q":"把一条线段的一端无限延长，得到的是？","o":["射线","直线","另一条线段"],"a":0,"h":["先想原来线段有几个端点。","只延长一端，另一端仍然留着。","现在只剩一个端点，并向一个方向无限延伸，对照三种线。"]},
+{"id":"u2_09","k":"平行","d":2,"t":"mc","q":"在同一平面内，两条不同的直线都与同一条直线平行。\n这两条直线之间可能相交吗？","o":["可能","不可能","有时可能"],"a":1,"h":["在同一平面内，两条不同的直线都与同一条直线平行。","可以画三条方向相同的直线看看。","如果另外两条会相交，它们还能同时与原来的直线保持平行吗？"]},
+{"id":"u2_10","k":"垂直","d":2,"t":"mc","q":"在同一平面内，a、b、c是三条不同的直线。\na垂直于b，c也垂直于b。a和c是什么关系？","o":["平行","垂直","一定相交"],"a":0,"h":["先画直线b，在两个不同的位置各画一条与它成直角的线。","a和c都与b形成90°，方向相同。","向两边延长a和c，想想它们会不会相交，再选择关系。"]},
+{"id":"u2_11","k":"角","d":1,"t":"mc","q":"90°的角是什么角？","o":["锐角","直角","钝角"],"a":1,"h":["可以想象正方形的一个角。","它既不是小于90°，也不是大于90°。","在锐角、直角、钝角中，找与正方形角相同的那一类。"]},
+{"id":"u2_12","k":"角","d":2,"t":"mc","q":"135°的角属于哪一类？","o":["锐角","直角","钝角"],"a":2,"h":["先和90°比较，再和180°比较。","135°在90°与180°之间。","回忆：大于直角、小于平角的角叫什么？"]},
+{"id":"u2_13","k":"角","d":2,"t":"text","q":"周角是多少度？","a":"360","alts":["360°"],"h":["周角是一整圈。","一整圈有4个直角。","用4×90计算，不要与半圈混淆。"]},
+{"id":"u2_14","k":"角","d":2,"t":"text","q":"周角是平角的几倍？","a":"2","alts":["2倍"],"h":["先用旋转来想：周角转一圈，平角转半圈。","问“几倍”，可以用较大的度数除以较小的度数。","列式360÷180，自己算出商。"]},
+{"id":"u2_15","k":"综合","d":3,"t":"text","q":"两条直线相交，其中一个角是35°，它相邻的角是多少度？","a":"145","alts":["145°"],"h":["相邻的这两个角合起来是一条直线上的平角。","平角是180°。","列式180−35，算完再检查两个角相加是否是180°。"]},
+{"id":"u2_16","k":"综合","d":3,"t":"mc","q":"两条直线相交，其中一个角是90°。另外三个角怎样？","o":["都是90°","有两个90°一个180°","无法判断"],"a":0,"h":["先求与已知角相邻的角。","相邻角合起来180°，可以列180−90。","再沿交点转一圈，用同样的方法检查其余角。"]},
+{"id":"u2_17","k":"平行","d":3,"t":"mc","q":"在同一平面内，经过直线外一点，可以画几条与这条直线平行的直线？","o":["1条","2条","无数条"],"a":0,"h":["先画一条直线，再在它外面标一个点。","经过这个点画一条与原直线同方向的直线。","若再改变方向画第二条，它还能与原直线永不相交吗？"]},
+{"id":"u2_18","k":"垂直","d":3,"t":"mc","q":"在同一平面内，经过直线外一点，可以画几条与这条直线垂直的直线？","o":["1条","2条","无数条"],"a":0,"h":["先画原直线和外面的一个点。","连接这个点与直线，调整到相交成90°。","再转动这条线，能否出现另一条不同的线也经过这个点且成直角？"]},
+{"id":"u2_19","k":"量角","d":2,"t":"mc","q":"用量角器量角时，角的顶点应该和量角器哪里重合？","o":["中心点","0°刻度","外圈任意位置"],"a":0,"h":["角的两条边都从顶点出发。","量角器上刻度围绕一个固定点排列。","想想要让转动的起点对齐，顶点应放在哪个固定点上？"]},
+{"id":"u2_20","k":"量角","d":2,"t":"mc","q":"量角时，顶点已对准量角器中心，一条边已对准0°线。\n下一步应该怎样读数？","o":["随便看一个刻度","沿对应的那圈刻度读另一边","把量角器移开"],"a":1,"h":["先确认顶点已经对准量角器中心。","内外两圈的0°方向不同。","从已经对齐的0°开始，沿同一圈找到另一条边。"]},
+{"id":"u2_21","k":"综合","d":3,"t":"mc","q":"一个角比直角大25°，它是多少度，属于什么角？","o":["65°，锐角","115°，钝角","205°，优角"],"a":1,"h":["先确定直角的度数。","“比直角大25°”要在90°上加25°。","算出度数后，与90°和180°比较，判断类别。"]},
+{"id":"u2_22","k":"综合","d":3,"t":"text","q":"一个平角被分成两个角，其中一个是68°，另一个是多少度？","a":"112","alts":["112°"],"h":["两个角合起来是一个平角。","已知部分加上未知部分应等于180°。","列式180−68，算完再相加检查。"]},
+{"id":"u2_23","k":"变式","d":3,"t":"mc","q":"钟面上3时整，时针和分针形成的较小角是多少度？","o":["60°","90°","120°"],"a":1,"h":["先标出3时整两根针分别指向哪里。","钟面一圈360°被12个大格等分。","先算每个大格几度，再数12到3之间有几个大格。"]},
+{"id":"u2_24","k":"变式","d":3,"t":"mc","q":"一张长方形纸相邻两条边的位置关系是？","o":["平行","垂直","既不平行也不垂直"],"a":1,"h":["先找到相邻两条边共有的顶点。","长方形每个角都和三角尺上的直角一样。","两条边相交成这样的角时，属于哪种位置关系？"]},
+{"id":"u2_25","k":"线","d":2,"t":"mc","q":"把一条射线沿反方向也无限延长，得到什么？","o":["线段","直线","还是射线"],"a":1,"h":["先画出射线的端点和原来的延伸方向。","再从端点向反方向一直延长。","现在还剩端点吗？有几个无限延伸方向？"]},
+{"id":"u2_26","k":"平行","d":2,"t":"mc","q":"长方形的两条对边是什么关系？","o":["平行","垂直","一定相交"],"a":0,"h":["注意“对边”是彼此相对、不共用顶点的两条边。","把这两条边分别向两端延长。","它们在同一平面内，还会相交吗？根据定义选择。"]},
+{"id":"u2_27","k":"垂直","d":2,"t":"mc","q":"正方形的一条边和相邻边是什么关系？","o":["平行","垂直","无法判断"],"a":1,"h":["找正方形一个顶点处的两条边。","用三角尺的直角比一比这个角。","回忆相交成直角的两条线是什么关系。"]},
+{"id":"u2_28","k":"角","d":2,"t":"mc","q":"89°的角属于哪一类？","o":["锐角","直角","钝角"],"a":0,"h":["角的分类可以和90°比较。","89°比直角小1°。","找出度数大于0°而小于90°的角的名称。"]},
+{"id":"u2_29","k":"角","d":2,"t":"mc","q":"179°的角属于哪一类？","o":["锐角","钝角","平角"],"a":1,"h":["先把179°与90°比较。","再把它与180°比较，它还不到平角。","找出严格在90°与180°之间的角的名称。"]},
+{"id":"u2_30","k":"量角","d":3,"t":"mc","q":"量角器的外圈从左侧0°读到右侧180°，内圈从右侧0°读到左侧180°。\n角的顶点已对准中心，一条边对准左侧0°线；另一条边经过外圈40°、内圈140°。\n应读多少度？","o":["40°","140°","180°"],"a":0,"h":["从角的一条边对准的左侧0°出发。","先确定题目中左侧从0°起的是内圈还是外圈。","只读选定那一圈上的刻度，再核对另一圈是否被误用。"]},
+{"id":"u2_31","k":"综合","d":3,"t":"text","q":"一个直角被分成两个角，其中一个是37°，另一个是多少度？","a":"53","alts":["53°"],"h":["两个角合起来是一个直角。","已知部分与未知部分的和是90°。","列式90−37，算完再检查相加是否是90°。"]},
+{"id":"u2_32","k":"综合","d":3,"t":"text","q":"一个周角被分成一个平角和两个相等的角，这两个相等的角各是多少度？","a":"90","alts":["90°"],"h":["先从一周的度数里去掉平角。","剩下的度数还要平均分成两份。","列式（360−180）÷2，按顺序计算。"]},
+{"id":"u2_33","k":"变式","d":3,"t":"mc","q":"钟面上6时整，时针与分针形成的角是？","o":["90°","180°","360°"],"a":1,"h":["6时整时，分针指12，时针指6。","两根针在一条直线上，指向相反方向。","从12到6走了半圈，想想半圈的度数。"]},
+{"id":"u2_34","k":"变式","d":3,"t":"mc","q":"两条笔直铁路在同一平面内始终保持相同距离且不相交，它们可以看作？","o":["平行线","垂线","射线"],"a":0,"h":["把笔直铁路想象成向两端无限延伸的直线。","题目给了同一平面、不相交这两个条件。","哪一类直线的位置关系符合这两个条件？"]},
+{"id":"u2_35","k":"垂直","d":3,"t":"mc","q":"在同一平面内，直线a与b平行，直线c垂直于a。\nc与b是什么关系？","o":["平行","垂直","不一定"],"a":1,"h":["先画出同一平面内两条平行线a、b。","c与a形成90°，而a和b方向相同。","沿c移到它与b相交处，看看相交的角会不会改变。"]},
+{"id":"u2_36","k":"综合","d":3,"t":"text","q":"两条直线相交，一个角是128°，与它相邻的角是多少度？","a":"52","alts":["52°"],"h":["相邻的两个角合起来是平角。","已知角加上未知角应等于180°。","列式180−128，算完再用加法检查。"]}
+], SESSION=8, KEY="math-unit2_bank_stats_v1", stats={}, picked=[], done=0, score=0, tries={}, finished={};
+// Keep the original stats and reward keys. New fields distinguish verified independent work.
+var SESSION_KEY = KEY + '_session_v2_' + encodeURIComponent(queryTopic());
+var BANK_VERSION = '2026-10-repair-1';
+var FOCUS = queryTopic(), current = 0, assisted = {}, hintLevels = {}, answers = {}, outcomes = {};
+var sessionId = '', storageFailed = false, statsUnreadable = false;
+if (!BANK.some(function(q){ return q.k === FOCUS; })) FOCUS = '';
+SESSION_KEY = KEY + '_session_v2_' + encodeURIComponent(FOCUS);
+function object(value) { return value && typeof value === 'object' && !Array.isArray(value); }
+function count(value) { return typeof value === 'number' && isFinite(value) && value >= 0 ? Math.floor(value) : 0; }
+function storageWarning() {
+  storageFailed = true;
+  var el = document.getElementById('storageNotice');
+  if (el) { el.hidden = false; el.textContent = '这个浏览器暂时不能保存进度或奖励。可以继续练习，但离开或刷新后可能无法接着做。'; }
+}
+function readStored(key) {
+  try { return localStorage.getItem(key); } catch(e) { storageWarning(); return null; }
+}
+function writeStored(key, value) {
+  try { localStorage.setItem(key, value); return true; } catch(e) { storageWarning(); return false; }
+}
+function load() {
+  statsUnreadable = false;
+  try {
+    var value = JSON.parse(localStorage.getItem(KEY) || '{}');
+    if (!object(value)) throw new Error('Invalid stats');
+    stats = value;
+  } catch(e) {
+    stats = {}; statsUnreadable = true;
+    var el = document.getElementById('storageNotice');
+    if (el) { el.hidden = false; el.textContent = '以前的练习记录暂时无法读取，原记录已保留。本次可以继续练习，但独立掌握记录暂不保存。'; }
+  }
+}
+function save() { if (!statsUnreadable) writeStored(KEY, JSON.stringify(stats)); }
+function st(id) {
+  var s = stats[id];
+  if (!object(s)) s = stats[id] = { ok: 0, wrong: 0, last: 0, independentStreak: 0 };
+  s.ok = count(s.ok); s.wrong = count(s.wrong); s.last = count(s.last);
+  if (!Object.prototype.hasOwnProperty.call(s, 'independentStreak')) {
+    s.legacyOk = s.ok;
+    s.independentStreak = 0; // Earlier versions did not record hint use; never infer independence.
+  }
+  s.independentStreak = count(s.independentStreak);
+  s.independentTotal = count(s.independentTotal);
+  s.assistedTotal = count(s.assistedTotal);
+  return s;
+}
+function dayDue(s) { return !s.last || Date.now() - s.last > 20*60*60*1000; }
+function weight(q) {
+  var s = st(q.id), w = 2 + Math.min(s.wrong, 20)*3;
+  if (s.independentStreak === 0) w += 3;
+  if (dayDue(s)) w += 2;
+  if (s.independentStreak >= 2) w -= 2;
+  return Math.max(1, w);
+}
+function queryTopic() {
+  var m = (location.search || '').match(/[?&]topic=([^&]+)/);
+  if (!m) return '';
+  try { return decodeURIComponent(m[1].replace(/\+/g, ' ')); } catch(e) { return ''; }
+}
+function choose() {
+  var pool = BANK.filter(function(q){ return !FOCUS || q.k === FOCUS; });
+  picked = [];
+  while (picked.length < SESSION && pool.length) {
+    var total = pool.reduce(function(sum,q){ return sum + weight(q); }, 0);
+    var draw = Math.random()*total, index = 0;
+    for (; index < pool.length - 1; index++) { draw -= weight(pool[index]); if (draw < 0) break; }
+    picked.push(pool.splice(index,1)[0]);
+  }
+}
+function newSession() {
+  current = 0; tries = {}; finished = {}; assisted = {}; hintLevels = {}; answers = {}; outcomes = {};
+  done = 0; score = 0;
+  sessionId = Date.now().toString(36) + '-' + Math.random().toString(36).slice(2);
+  choose(); saveSession();
+}
+function saveSession() {
+  return writeStored(SESSION_KEY, JSON.stringify({ version: 2, bankVersion: BANK_VERSION, id: sessionId, focus: FOCUS,
+    ids: picked.map(function(q){ return q.id; }), current: current, tries: tries, finished: finished,
+    assisted: assisted, hintLevels: hintLevels, answers: answers, outcomes: outcomes, updatedAt: Date.now() }));
+}
+function restoreSession() {
+  var data;
+  try { data = JSON.parse(readStored(SESSION_KEY) || 'null'); } catch(e) { return false; }
+  if (!object(data) || data.version !== 2 || data.bankVersion !== BANK_VERSION || data.focus !== FOCUS ||
+      typeof data.id !== 'string' || !Array.isArray(data.ids) || !data.ids.length || data.ids.length > SESSION) return false;
+  var byId = {}, seen = {}, queue = [];
+  BANK.forEach(function(q){ byId[q.id] = q; });
+  for (var i = 0; i < data.ids.length; i++) {
+    var q = byId[data.ids[i]];
+    if (!q || seen[q.id] || (FOCUS && q.k !== FOCUS)) return false;
+    seen[q.id] = true; queue.push(q);
+  }
+  picked = queue; sessionId = data.id; current = Math.min(count(data.current), picked.length - 1);
+  tries = {}; finished = {}; assisted = {}; hintLevels = {}; answers = {}; outcomes = {};
+  for (var j = 0; j < picked.length; j++) {
+    tries[j] = object(data.tries) ? count(data.tries[j]) : 0;
+    var levels = object(data.hintLevels) && Array.isArray(data.hintLevels[j]) ? data.hintLevels[j] : [];
+    hintLevels[j] = [levels[0] === true, levels[1] === true, levels[2] === true];
+    assisted[j] = (object(data.assisted) && data.assisted[j] === true) || tries[j] > 0 || hintLevels[j].some(Boolean);
+    finished[j] = object(data.finished) && data.finished[j] === true;
+    var answer = object(data.answers) ? data.answers[j] : undefined;
+    if (picked[j].t === 'mc' && Number.isInteger(answer) && answer >= 0 && answer < picked[j].o.length) answers[j] = answer;
+    if (picked[j].t === 'text' && typeof answer === 'string') answers[j] = answer.slice(0, 100);
+    if (finished[j]) outcomes[j] = !assisted[j] && object(data.outcomes) && data.outcomes[j] === 'independent' ? 'independent' : 'assisted';
+  }
+  recount(); return true;
+}
+function recount() {
+  done = 0; score = 0;
+  picked.forEach(function(q,i){ if (finished[i]) { done++; if (outcomes[i] === 'independent') score++; } });
+}
+function esc(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+function render() {
+  var i = current, q = picked[i], out = '', j;
+  if (!q) return;
+  out += '<section class="card questionCard" aria-labelledby="questionTitle"><div><span class="num">第 ' + (i+1) + ' / ' + picked.length + ' 题</span><span class="tag">' + esc(q.k) + ' · ' + (q.d===1?'基础':q.d===2?'变式':'挑战') + '</span></div>';
+  out += '<h2 id="questionTitle" tabindex="-1">' + esc(q.q) + '</h2>';
+  if (q.t === 'mc') {
+    out += '<div class="opts">';
+    for (j=0;j<q.o.length;j++) {
+      var selected = answers[i] === j, cls = selected ? (finished[i] ? ' correct' : ' wrong') : '';
+      out += '<button type="button" class="opt' + cls + '" id="q'+i+'o'+j+'" onclick="checkMC('+i+','+j+')"' + (finished[i]?' disabled':'') + '>' + String.fromCharCode(65+j) + '. ' + esc(q.o[j]) + '</button>';
+    }
+    out += '</div>';
+  } else {
+    out += '<form class="textrow" onsubmit="checkText('+i+');return false;"><label class="sr-only" for="q'+i+'input">这道题的答案</label><input id="q'+i+'input" class="textans" type="text" maxlength="100" autocomplete="off" placeholder="输入答案" value="' + esc(answers[i] || '') + '" oninput="rememberAnswer('+i+',this.value)"' + (finished[i]?' disabled':'') + '><button type="submit" class="checkbtn"' + (finished[i]?' disabled':'') + '>检查答案</button></form>';
+  }
+  out += '<div id="fb'+i+'" class="feedback" role="status" aria-live="polite"></div><div id="assistanceNote" class="sub assistance">' + assistanceText(i) + '</div>';
+  var labels = ['🤔 提示 1 · 找思路', '🌱 提示 2 · 看关键', '🧩 帮我拆一步'];
+  for (j=0;j<3;j++) {
+    out += '<details class="questionHint" id="hint'+i+'_'+j+'"' + (hintLevels[i] && hintLevels[i][j]?' open':'') + '><summary onclick="openHint('+i+','+j+')">'+labels[j]+'</summary><div class="hint">'+esc(q.h[j])+'</div></details>';
+  }
+  out += '<nav class="questionNav" aria-label="题目翻页"><button type="button" class="btn" onclick="goQuestion(-1)"' + (i===0?' disabled':'') + '>← 上一题</button><button type="button" class="btn next" onclick="goQuestion(1)"' + (!finished[i] || i===picked.length-1?' disabled':'') + '>下一题 →</button></nav>';
+  if (!finished[i]) out += '<p class="sub navHelp">完成这题后，再继续下一题。可以慢慢想，也可以看提示。</p>';
+  out += '</section>';
+  document.getElementById('questions').innerHTML = out;
+  renderFeedback(i); updateTop(); renderMastery();
+}
+function assistanceText(i) {
+  if (finished[i]) return outcomes[i] === 'independent' ? '这题是独立完成的。' : '这题在提示或订正后完成，下次再试试独立解答。';
+  return assisted[i] ? '已记为有帮助的练习；完成后照样获得奖励。' : '需要时可以看提示；看过提示或订正后的完成，不计入独立掌握。';
+}
+function renderFeedback(i) {
+  var el = document.getElementById('fb'+i);
+  if (!el) return;
+  if (finished[i]) {
+    el.className = 'feedback good';
+    el.textContent = (outcomes[i]==='independent'?'✅ 独立答对！':'🌱 这题完成啦！') + (storageFailed ? ' 浏览器保存失败，本题奖励可能未记入。' : ' +' + picked[i].d + ' 金币，+1 成长值');
+  } else if (tries[i]) {
+    el.className = 'feedback bad'; el.textContent = '还不对，可以再试一次。先看清条件，需要时再打开提示。';
+  }
+}
+function openHint(i, level) {
+  if (i !== current || finished[i]) return;
+  if (!hintLevels[i]) hintLevels[i] = [false,false,false];
+  if (hintLevels[i][level]) return;
+  hintLevels[i][level] = true; assisted[i] = true;
+  var s = st(picked[i].id); s.independentStreak = 0; s.ok = 0;
+  save(); saveSession(); renderMastery();
+  document.getElementById('assistanceNote').textContent = assistanceText(i);
+}
+function rememberAnswer(i, value) {
+  if (finished[i] || i !== current) return;
+  answers[i] = value.slice(0,100); saveSession();
+}
+function clean(value) {
+  var s = String(value);
+  if (s.normalize) s = s.normalize('NFKC');
+  return s.replace(/[,，\s]/g,'').replace(/度/g,'°');
+}
+function addRewards(q) {
+  var xp = parseInt(readStored('math_xp') || '0',10), coins = parseInt(readStored('math_coins') || '0',10);
+  writeStored('math_xp', String((isFinite(xp)?Math.max(0,xp):0)+1));
+  writeStored('math_coins', String((isFinite(coins)?Math.max(0,coins):0)+q.d));
+}
+function markWrong(i) {
+  if (finished[i] || i !== current) return;
+  tries[i] = (tries[i] || 0)+1; assisted[i] = true;
+  var s = st(picked[i].id); s.wrong++; s.ok = 0; s.independentStreak = 0; s.last = Date.now();
+  save(); saveSession(); render();
+  if (picked[i].t === 'text') document.getElementById('q'+i+'input').focus();
+}
+function markDone(i) {
+  if (finished[i] || i !== current) return;
+  finished[i] = true;
+  var independent = !assisted[i] && !(tries[i] || 0);
+  outcomes[i] = independent ? 'independent' : 'assisted';
+  var s = st(picked[i].id);
+  if (independent) { s.ok++; s.independentStreak++; s.independentTotal++; }
+  else { s.ok = 0; s.independentStreak = 0; s.assistedTotal++; }
+  s.last = Date.now(); recount();
+  // Persist completion before rewarding so repeated clicks or a normal reload cannot award twice.
+  save(); if (saveSession()) addRewards(picked[i]); render();
+}
+function checkMC(i, j) {
+  if (finished[i] || i !== current || picked[i].t !== 'mc' || !Number.isInteger(j) || j<0 || j>=picked[i].o.length) return;
+  answers[i] = j;
+  if (j === picked[i].a) markDone(i); else markWrong(i);
+}
+function checkText(i) {
+  if (finished[i] || i !== current || picked[i].t !== 'text') return;
+  var q = picked[i], raw = document.getElementById('q'+i+'input').value, v = clean(raw);
+  if (!v) {
+    var fb = document.getElementById('fb'+i); fb.className = 'feedback notice'; fb.textContent = '先输入一个答案，再点检查。'; return;
+  }
+  answers[i] = raw.slice(0,100);
+  var ok = v === clean(q.a) || (q.alts || []).some(function(a){ return v === clean(a); });
+  if (ok) markDone(i); else markWrong(i);
+}
+function goQuestion(direction) {
+  var next = current + direction;
+  if ((direction !== 1 && direction !== -1) || next < 0 || next >= picked.length || (direction===1 && !finished[current])) return;
+  current = next; saveSession(); render();
+  var title = document.getElementById('questionTitle');
+  title.focus(); title.scrollIntoView({behavior:'smooth',block:'start'});
+}
+function startNewGroup() {
+  if (done < picked.length && !window.confirm('这一组还没做完。要换一组吗？已获得的成长值、金币和练习记录都会保留。')) return;
+  newSession(); document.getElementById('sessionNotice').textContent = '新的一组开始啦，一次专心做一题。'; render();
+  document.getElementById('questionTitle').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function updateTop() {
+  document.getElementById('scoreText').textContent = '独立答对：' + score + ' / ' + picked.length;
+  document.getElementById('doneText').textContent = '已完成：' + done + ' / ' + picked.length;
+  var summary = document.getElementById('groupSummary');
+  summary.hidden = done !== picked.length;
+  if (done === picked.length) summary.textContent = '这一组完成啦！独立答对 '+score+' 题，在提示或订正后完成 '+(done-score)+' 题。每一题的努力都获得了奖励。';
+}
+function renderMastery() {
+  var map = {}, old = false;
+  BANK.forEach(function(q){
+    if (!map[q.k]) map[q.k] = {n:0,g:0};
+    map[q.k].n++; var s = st(q.id);
+    if (s.independentStreak >= 2) map[q.k].g++;
+    if (s.legacyOk > 0) old = true;
+  });
+  var out = FOCUS ? '<b>当前专项：</b>'+esc(FOCUS)+'<br>' : '';
+  out += '<b>独立掌握：</b> ';
+  Object.keys(map).forEach(function(key){out += esc(key)+' '+map[key].g+'/'+map[key].n+' '+(map[key].g===map[key].n?'🟢':map[key].g>0?'🟡':'⚪')+'　';});
+  out += '<br><span class="sub">同一道题连续独立做对2次记为稳定；打开提示或答错后会重新累计。错题会优先复习。</span>';
+  if (old) out += '<br><span class="sub">以前的练习记录和奖励已保留；旧记录未区分提示使用，独立掌握从新练习重新核验。</span>';
+  document.getElementById('mastery').innerHTML = out;
+}
+load();
+var resumed = restoreSession();
+if (!resumed) newSession();
+render();
+document.getElementById('sessionNotice').textContent = resumed ? '已接着上次这一组继续，提示和订正记录也都保留了。' : '一次专心做一题，做完再看下一题。';
+var cards = document.getElementsByClassName('sectionCard');
+for (var ci=0;ci<cards.length;ci++) if (cards[ci].getAttribute('data-topic')===FOCUS) cards[ci].className += ' focusNow';
+// Other tabs receive completed/restarted sessions without replaying rewards.
+window.addEventListener('storage',function(event){
+  if (event.key===KEY) { load(); renderMastery(); }
+  if (event.key===SESSION_KEY && restoreSession()) render();
+});
 </script></body></html>
