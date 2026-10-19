@@ -159,7 +159,7 @@ test('bad imports are atomic and invalid stored JSON is never overwritten',()=>{
 });
 
 test('unavailable storage warns honestly rather than claiming saved progress',()=>{
-  const a=createApp({failWrites:true});assert.match(a.nodes.plan.textContent,/不能保存进度/);assert.doesNotMatch(a.nodes.plan.textContent,/今天的安排已保存/);
+  const a=createApp({failWrites:true});assert.match(a.nodes.plan.textContent,/无法确认.*是否已保存/);assert.doesNotMatch(a.nodes.plan.textContent,/今天的安排已保存/);
 });
 
 test('double correct submit is counted once and navigation cancels stale feedback callbacks',()=>{

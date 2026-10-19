@@ -36,7 +36,7 @@ for(const unit of [1,2]) {
     const a=boot(unit),c=a.c;assert.equal(c.BANK.length,36);assert.equal(new Set(c.BANK.map(q=>q.id)).size,36);
     assert.equal(c.picked.length,8);assert.equal(new Set(c.picked.map(q=>q.id)).size,8);
     assert.equal((a.el('questions').innerHTML.match(/class="card questionCard"/g)||[]).length,1);
-    assert.ok(a.html.includes('class="card knowledge"><summary>'));assert.ok(!a.html.includes('class="card knowledge" open'));
+    assert.match(a.html, /class="card knowledge"[^>]*><summary>/);assert.ok(!a.html.includes('class="card knowledge" open'));
     assert.match(a.html,/white-space:pre-line/);assert.ok(!a.html.includes('user-scalable=no'));
   });
   test(`unit ${unit}: topic uses actual question count; invalid topic falls back safely`,()=>{
@@ -45,7 +45,7 @@ for(const unit of [1,2]) {
     assert.equal(boot(unit,{},'?topic=unknown').c.picked.length,8);
     assert.equal(boot(unit,{},'?topic=%ZZ').c.picked.length,8);
   });
-  test(`unit ${unit}: two independent completions establish mastery without duplicate rewards`,()=>{
+  test(`unit ${unit}: same-day completions retain old counters without duplicate rewards`,()=>{
     const a=boot(unit),c=a.c,id=`u${unit}_01`;queue(a,[id]);correct(a);
     assert.equal(c.score,1);assert.equal(c.done,1);assert.equal(c.st(id).independentStreak,1);
     correct(a);assert.equal(a.storage.math_xp,'1');assert.equal(a.storage.math_coins,String(c.picked[0].d));
