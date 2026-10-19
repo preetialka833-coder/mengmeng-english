@@ -24,3 +24,13 @@ To roll back code, revert the repair commit (or restore the pre-repair page file
 ## English audio compatibility
 
 Version `2026.10.08-r2` plays 49 same-origin MP3 clips before relying on device speech. The clips use an offline synthetic US-English voice; see `audio/english/README.md` for provenance and verification limits. Local device English voices remain an explicit fallback. Playback status and retry controls make failures visible. No audio data or learner records are sent to an external TTS service. Actual listening and learning-device acceptance still require a brief trial.
+
+## Isolated upgrade candidate: 2026.10.19-review1
+
+English masked stages still require the complete word, phrase or sentence; the instruction now says so beside the answer. Related items explain sb/sth locally without changing accepted answers or recordings.
+
+Before every active English progress write, the page compares the exact stored string with its last successfully read/written value. Changed, removed or unreadable storage freezes old inputs, navigation and timers and offers a full reload. The parent-page import uses the same guard. No other page in this repository writes the English key. This detects observed stale-page writes; localStorage read/compare/write is not atomic, so simultaneous writers can still race. Do not use multiple active English editors as a supported concurrent workflow. A synthetic reentrant-write test deliberately demonstrates that remaining window; near-simultaneous browser checks do not prove it absent.
+
+Math adds recallFirstDay, recallDueDay, recallVerifiedDay and recallBlockedDay without converting older counters. Same-day successes earn existing rewards but do not verify delayed recall. A later independent success on or after its due calendar day verifies that same question; the next check is scheduled three days later as a practical trial rule. Hints, errors and knowledge-card use block new evidence for that question that day, including another group/entry. Previous valid verified-day evidence is kept and labeled historical. This cannot establish knowledge-point transfer or current school achievement. New groups select up to eight oldest due questions in the chosen scope before weighted remaining questions; unfinished groups stay fixed on reload and show remaining due work.
+
+Rollback: restore the prior HTML files at the same URL and leave browser storage intact. Older code ignores the added recall fields. It also restores the previous interpretation of math streaks and lacks the stale-English-page guard; avoid concurrent old/new pages and fully reload before continuing. Preserve/export progress first as in Trial and recovery. Never clear localStorage or restore synthetic fixtures into a real learning browser.

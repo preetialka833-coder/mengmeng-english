@@ -6,7 +6,7 @@ const html=fs.readFileSync(path.join(__dirname,'../english.html'),'utf8');
 const script=html.match(/<script>([\s\S]*?)<\/script>/)[1];
 const KEY='mengmeng_v4_unit1';
 const BACKUP_KEY=KEY+'_before_review_v2',BACKUP_INFO_KEY=BACKUP_KEY+'_info';
-function createApp({state,raw,storage,now=new Date(2026,9,7,9).getTime(),failWrites=false,failWriteKeys=[],mutateWrite}={}){
+function createApp({state,raw,storage,now=new Date(2026,9,7,9).getTime(),failWrites=false,failWriteKeys=[],mutateWrite,readOverride}={}){
   const data=storage||new Map();
   if(state!==undefined)data.set(KEY,JSON.stringify(state));
   if(raw!==undefined)data.set(KEY,raw);
@@ -21,7 +21,7 @@ function createApp({state,raw,storage,now=new Date(2026,9,7,9).getTime(),failWri
   const nodes=Object.fromEntries([...html.matchAll(/id="([^"]+)"/g)].map(m=>[m[1],element(m[1])]));
   class MockDate extends Date{constructor(...args){super(...(args.length?args:[clock]));}static now(){return clock;}}
   const context={...nodes,Date:MockDate,console,Math,JSON,Map,Set,Number,String,Array,Object,
-    localStorage:{getItem:k=>data.has(k)?data.get(k):null,setItem:(k,v)=>{if(failWrites||failWriteKeys.includes(k))throw Error('quota');data.set(k,mutateWrite?mutateWrite(k,v):v);}},
+    localStorage:{getItem:k=>{const value=data.has(k)?data.get(k):null;return readOverride?readOverride(k,value):value;},setItem:(k,v)=>{if(failWrites||failWriteKeys.includes(k))throw Error('quota');data.set(k,mutateWrite?mutateWrite(k,v):v);}},
     document:{getElementById:id=>nodes[id],createElement:()=>element(),
       querySelectorAll:selector=>selector==='.screen'?['home','learn','parent','rewards'].map(id=>nodes[id]):Object.values(nodes).filter(n=>n.id.startsWith('nav-')),
       addEventListener:(name,fn)=>{listeners[name]=fn;}},

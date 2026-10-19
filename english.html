@@ -15,8 +15,10 @@
 .pattern{font-size:44px;letter-spacing:5px;text-align:center;font-weight:1000;color:#e15e9c;margin:14px 0}.answerBox{min-height:62px;border:3px solid #e7d9ee;border-radius:22px;background:#fff;padding:12px 16px;text-align:center;font-size:32px;font-weight:950}.keyboard{margin-top:16px;padding:14px;background:#fbf7ff;border:2px solid #ecdff0;border-radius:26px}.krow{display:flex;justify-content:center;gap:8px;margin:8px 0}.key{min-width:64px;height:64px;border:0;border-radius:16px;background:#fff;box-shadow:0 3px 0 #e8dceb;font-size:27px;font-weight:1000;color:#6a5a75}.key.action{min-width:110px;background:#ffe4ef;color:#c64b89}.key.ok{background:#dff7eb;color:#2e8355}
 .feedback{display:none;margin-top:12px;padding:12px;border-radius:16px;text-align:center;font-weight:900}.feedback.show{display:block}.good{background:#dff6e7;color:#2f8251}.bad{background:#ffe4e4;color:#c84f4f}.rewardStrip{display:flex;gap:8px;flex-wrap:wrap}.sticker{width:56px;height:56px;border-radius:18px;background:#f8f1f7;display:flex;align-items:center;justify-content:center;font-size:30px}.sticker.on{background:#fff0c6;border:2px solid #ffdf7d}.gift{border-radius:24px;padding:18px;background:linear-gradient(135deg,#fff1b7,#ffe1ef);border:2px solid #ffd57f;text-align:center}
 nav{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.97);border-top:1px solid #efdfeb}nav .inner{max-width:980px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr)}nav button{border:0;background:transparent;padding:13px 4px;color:#8f8397;font-weight:900}nav button.active{color:#eb64a3}
+@media(max-width:980px){.key,.key.action{min-width:0;flex:1}}
 @media(max-width:760px){.app{padding:14px 10px 98px}.hero h1{font-size:30px}.sub{font-size:16px}.choiceGrid{grid-template-columns:1fr}.key{min-width:0;flex:1;height:58px;font-size:23px}.key.action{min-width:0;flex:1;font-size:18px}.key.ok{font-size:22px}.cn,.en{font-size:34px}}
-</style></head><body><div data-build="2026.10.08-r2" style="max-width:980px;margin:8px auto;padding:0 18px;color:#74657e;font:13px system-ui,sans-serif">试用修复版 · 2026.10.08-r2</div><div style="max-width:980px;margin:10px auto 0;padding:0 18px"><a href="./index.html?v=20261008r2" style="text-decoration:none"><button style="border:2px solid #f0deeb;background:white;border-radius:16px;padding:10px 14px;font-weight:900;color:#5b4d67">← 返回学习平台</button></a></div><div class="app">
+</style></head><body><div data-build="2026.10.19-review1" style="max-width:980px;margin:8px auto;padding:0 18px;color:#74657e;font:13px system-ui,sans-serif">试用修复版 · 2026.10.19-review1</div><div style="max-width:980px;margin:10px auto 0;padding:0 18px"><a href="./index.html?v=20261019review1" style="text-decoration:none"><button style="border:2px solid #f0deeb;background:white;border-radius:16px;padding:10px 14px;font-weight:900;color:#5b4d67">← 返回学习平台</button></a></div><div class="app">
+<div id="progressConflictNotice" hidden role="alert" class="tip" style="margin:12px 0">另一页面已更新进度，或存储暂时无法核对。本页已停止保存，请重新载入后继续。<button class="btn soft" onclick="location.reload()">重新载入最新进度</button></div>
 <section id="home" class="screen active"><div class="hero"><span class="badge">希沃学习机固定网址版 · V5.1</span><h1>萌萌英语花园 🌸</h1><div class="sub">每天一点点：先复习到期内容，再学少量新内容。答错就多练一次，按自己的进度来。</div></div>
 <div class="stats"><div class="stat"><b id="dayNum">1</b><span>成长路线</span></div><div class="stat"><b id="todayCount">0</b><span>今天总任务</span></div><div class="stat"><b id="reviewCount">0</b><span>今日复习</span></div></div>
 <div class="card"><h2>今天只做这一点</h2><div class="progress"><i id="unitProgress"></i></div><p class="sub" id="plan"></p><details class="small" style="margin-bottom:16px"><summary>今天为什么这样安排？</summary><p>先做最早到期的复习，每天最多 8 项。没有积压时，再按单词、短语、句子的顺序学最多 4 项新内容。每天按这台设备的日期安排，刷新或重进都会接着做。<br>首次学会后隔天复习；以后隔天独立写对，间隔逐步延长到 3、7、14、30 天。这是可调整的练习安排。<br>答错后先改对，约 10 分钟后再试；每项每天最多两次短复习，再错就明天继续。看过答案后的改正和当天短复习，都不算隔天独立写对。</p></details><div class="row"><button class="btn primary" onclick="startToday()">开始今天学习</button><button class="btn soft" onclick="show('rewards')">看看奖励</button></div></div>
@@ -55,8 +57,10 @@ const STAGES=["先认识","再认识一次","三选一","缺 1 个字母","缺 2
 let S={}, storageWarning="", queue=[], idx=0, stage=0, current=null, typed="";
 let answerPending=false, transitionTimer=null, sessionToken=0;
 let initialRaw=null, initialReadOK=false, initialBackupRequired=false;
+let expectedRaw=null, progressConflict=false;
+let progressCodeKind="";
 try{
-  initialRaw=localStorage.getItem(KEY);initialReadOK=true;
+  initialRaw=localStorage.getItem(KEY);expectedRaw=initialRaw;initialReadOK=true;
   let parsed;
   try{parsed=JSON.parse(initialRaw===null?"{}":initialRaw);}
   catch(e){initialBackupRequired=initialRaw!==null;ensureOriginalBackup(initialRaw,"before-upgrade");throw e;}
@@ -119,12 +123,33 @@ function normalizeState(){
   if(!m.doneDays||typeof m.doneDays!=="object"||Array.isArray(m.doneDays))m.doneDays={};
   if(m.graduated===undefined)m.graduated=false;
 }
+// Optimistic stale-page protection, not an atomic cross-tab transaction.
+// Every active-key write uses this baseline; backups remain immutable snapshots.
+function freezeProgress(){
+  progressConflict=true;cancelTransition();stopLessonAudio();
+  const notice=document.getElementById("progressConflictNotice");
+  if(notice)notice.hidden=false;
+  return false;
+}
+function progressCurrent(){
+  if(progressConflict)return false;
+  if(!initialReadOK)return true; // Existing memory-only recovery mode never writes.
+  try{if(localStorage.getItem(KEY)!==expectedRaw)return freezeProgress();}
+  catch(e){return freezeProgress();}
+  return true;
+}
 function persist(){
   // Never overwrite unreadable original data with an empty replacement.
   if(storageWarning||!initialReadOK)return;
-  if(!ensureOriginalBackup())return;
-  try{localStorage.setItem(KEY,JSON.stringify(S));}
-  catch(e){storageWarning="浏览器暂时不能保存进度，请在妈妈页生成进度码备份。";}
+  if(!progressCurrent()||!ensureOriginalBackup()||!progressCurrent())return;
+  try{
+    const raw=JSON.stringify(S);
+    localStorage.setItem(KEY,raw);
+    // Detect a changed/failed readback without accepting an unverified baseline.
+    if(localStorage.getItem(KEY)!==raw){freezeProgress();return;}
+    expectedRaw=raw;
+  }
+  catch(e){storageWarning="暂时无法确认本次进度是否已保存，请保留本页并生成进度码备份。";}
 }
 function save(){persist();refresh();}
 function st(k,e){
@@ -252,11 +277,13 @@ function addRetest(entry){
 function cancelTransition(){if(transitionTimer!==null)clearTimeout(transitionTimer);transitionTimer=null;answerPending=false;sessionToken++;}
 function activeEntry(){return current?ensureDailyPlan().entries[idx]:null;}
 function activeDayOK(){
+  if(!progressCurrent())return false;
   if(S.meta.dailyPlan&&S.meta.dailyPlan.day===localDay())return true;
   startToday();return false;
 }
-function startToday(){cancelTransition();ensureDailyPlan();presentNext();}
+function startToday(){if(!progressCurrent())return;cancelTransition();ensureDailyPlan();presentNext();}
 function presentNext(){
+  if(!progressCurrent())return;
   const p=ensureDailyPlan();
   queue=p.entries.map(e=>({...itemFor(e.key),_review:e.mode!=="new",_mode:e.mode}));
   idx=p.entries.findIndex(e=>!e.done&&(!e.readyAt||e.readyAt<=Date.now()));
@@ -291,7 +318,13 @@ function renderChoices(){
   });
 }
 function mask(w,s){let ch=[...w],L=[];ch.forEach((c,i)=>/[A-Za-z]/.test(c)&&L.push(i));let n=L.length,h=s===3?1:s===4?2:s===5?3:n,p=[];let pick=r=>{let t=(n-1)*r,a=L.map((pos,i)=>({pos,d:Math.abs(i-t)})).filter(x=>!p.includes(x.pos)).sort((a,b)=>a.d-b.d);if(a[0])p.push(a[0].pos);};if(h===1)pick(.5);else if(h===2){pick(.33);pick(.67);}else if(h===3){pick(.22);pick(.5);pick(.78);}else p=[...L];let set=new Set(p);return ch.map((c,i)=>set.has(i)?"_":c).join("");}
-function renderPattern(){if(stage===6){pattern.textContent="🎧 听音，完整写出来";spellTip.textContent="这次不看英文。";}else{pattern.textContent=mask(current.en,stage);spellTip.textContent=stage===3?"从中间缺 1 个字母。":stage===4?"从不同位置缺 2 个字母。":"前、中、后都会缺字母。";}}
+function renderPattern(){
+  const kind={word:"单词",phrase:"短语",sentence:"句子"}[current.kind];
+  pattern.textContent=stage===6?"看中文，写英文":mask(current.en,stage);
+  spellTip.textContent=(stage===6?"从头到尾输入完整"+kind+"。":"看上方字形提示，输入完整"+kind+"，不是只填缺少的字母。")+
+    (/\bsb\b|\bsth\b/.test(current.en)?" sb / sth 按课本缩写输入；sb 读 somebody，sth 读 something。保留空格和 /。":"") ;
+}
+
 function tap(c){if(!current||answerPending||!activeDayOK())return;typed+=c;answerBox.textContent=typed;activeEntry().typed=typed;persist();}
 function backspace(){if(!current||answerPending||!activeDayOK())return;typed=typed.slice(0,-1);answerBox.textContent=typed;activeEntry().typed=typed;persist();}
 function submitAnswer(){
@@ -313,12 +346,14 @@ function submitAnswer(){
   }
 }
 function completeStage(delay=0){
+  if(!progressCurrent())return;
   const entry=activeEntry();
   if(stage===6){entry.done=true;addRetest(entry);}else entry.stage=stage+1;
   settlePlan(ensureDailyPlan());
   entry.typed="";
   // Persist the next position before animation, including a reload during feedback.
   save();
+  if(progressConflict)return;
   if(delay){
     answerPending=true;const token=sessionToken;
     transitionTimer=setTimeout(()=>{if(token!==sessionToken)return;transitionTimer=null;answerPending=false;presentNext();},delay);
@@ -338,10 +373,12 @@ function settlePlan(p){
   }
 }
 function finishDay(){
+  if(!progressCurrent())return;
   const p=ensureDailyPlan(),base=p.entries.filter(e=>e.mode!=="retest"),waiting=p.entries.filter(e=>!e.done);
   settlePlan(p);
   const earned=!!p.rewardNotice,graduated=!!p.graduationNotice;
   p.rewardNotice=false;p.graduationNotice=false;save();
+  if(progressConflict)return;
   if(graduated){alert("🎉 每项都在隔天独立写对过，Unit 1 毕业！100 元礼物券解锁啦！");show("rewards");return;}
   if(waiting.length){
     const minutes=Math.max(1,Math.ceil((Math.min(...waiting.map(e=>e.readyAt))-Date.now())/60000));
@@ -453,6 +490,7 @@ refreshDeviceVoices();
 if(window.speechSynthesis&&typeof window.speechSynthesis.addEventListener==="function")window.speechSynthesis.addEventListener("voiceschanged",refreshDeviceVoices);
 window.addEventListener("pagehide",()=>stopLessonAudio(false));
 function show(id){
+  if(!progressCurrent())return;
   if(id!=="learn")stopLessonAudio();
   // Leaving during a feedback animation must not reopen the lesson later.
   if(id!=="learn")cancelTransition();
@@ -463,12 +501,12 @@ function show(id){
 function renderRewards(){stickers.innerHTML="";for(let i=0;i<14;i++){let d=document.createElement("div");d.className="sticker"+(i<S.meta.stickers?" on":"");d.textContent=i<S.meta.stickers?["🌸","⭐","🎀","🐰","🌈"][i%5]:"♡";stickers.appendChild(d);}giftIcon.textContent=S.meta.graduated?"🎁":"🔒";giftText.textContent=S.meta.graduated?"已解锁！由妈妈确认兑换 100 元礼物。":"每项都在隔天独立写对后解锁，分散在每天复习中完成。原已解锁奖励保留。";}
 function renderParent(){
   let a=allItems(),w=a.filter(x=>st(x.kind,x.en).wrong>=2).sort((a,b)=>st(b.kind,b.en).wrong-st(a.kind,a.en).wrong),p=a.filter(x=>st(x.kind,x.en).passed).length,r=a.filter(x=>st(x.kind,x.en).independentRecallDay).length;
-  summary.textContent="已完整写出 "+p+" / "+a.length+" 项 · 隔天独立写对 "+r+" 项 · 路线第 "+S.meta.day+" 格 · 贴纸 "+S.meta.stickers+" 张";
+  summary.textContent="已完整写出 "+p+" / "+a.length+" 项 · 曾隔天独立写对 "+r+" 项 · 路线第 "+S.meta.day+" 格 · 贴纸 "+S.meta.stickers+" 张";
   weak.innerHTML=w.length?w.slice(0,12).map(x=>"<div style='padding:8px 0'><b>"+x.cn+"</b> "+x.en+" · 错 "+st(x.kind,x.en).wrong+" 次</div>").join(""):"目前没有明显顽固项。";
 }
 function encodeState(o){return btoa(unescape(encodeURIComponent(JSON.stringify(o))));}
 function decodeState(c){return JSON.parse(decodeURIComponent(escape(atob(c.trim()))));}
-function exportProgress(){progressCode.textContent=encodeState(S);backupStatus.textContent="当前进度码，包含本次已完成的学习。请复制后单独保存。";}
+function exportProgress(){if(!progressCurrent())return;progressCode.textContent=encodeState(S);progressCodeKind="current";backupStatus.textContent="本页进度码，包含本页已经完成的学习。请复制后单独保存；有存储警告时请核对保存结果。";}
 function exportOriginalBackup(){
   try{
     let raw=localStorage.getItem(BACKUP_KEY),info=null;
@@ -482,31 +520,57 @@ function exportOriginalBackup(){
       ensureOriginalBackup(raw,"before-upgrade");
     }
     progressCode.textContent=btoa(unescape(encodeURIComponent(raw)));
+    progressCodeKind="original";
     backupStatus.textContent=(info&&info.origin==="before-import"?"首次导入前":"升级前")+"原始备份码，保留原来的全部内容。生成此码不会恢复或覆盖当前进度；有效旧进度码可粘贴到下方恢复。";
   }catch(e){
     // An unverified stored snapshot must not be presented as a safe backup.
-    if(initialRaw!==null){progressCode.textContent=btoa(unescape(encodeURIComponent(initialRaw)));backupStatus.textContent="自动备份未能验证。这是打开本页时的原始进度码，请先复制保存；当前进度没有被恢复或覆盖。";}
+    if(initialRaw!==null){progressCode.textContent=btoa(unescape(encodeURIComponent(initialRaw)));progressCodeKind="original";backupStatus.textContent="自动备份未能验证。这是打开本页时的原始进度码，请先复制保存；当前进度没有被恢复或覆盖。";}
     else alert("原始备份暂时无法读取，请先生成当前进度码保存。");
   }
 }
-async function copyProgress(){if(progressCode.textContent==="还没有生成")exportProgress();try{await navigator.clipboard.writeText(progressCode.textContent);alert("已复制");}catch(e){alert("请长按手动复制");}}
-function importProgress(){
+async function copyProgress(){
+  if(progressCodeKind!=="original"){
+    if(!progressCurrent())return;
+    exportProgress(); // The current code must include learning done since its last export.
+    if(progressConflict||progressCodeKind!=="current")return;
+  }
+  if(!progressCode.textContent||progressCode.textContent==="还没有生成")return;
+  const copiedKind=progressCodeKind,copiedCode=progressCode.textContent;
   try{
-    const r=decodeState(importCode.value);
+    await navigator.clipboard.writeText(copiedCode);
+    if(copiedKind!=="original"&&(!progressCurrent()||copiedCode!==encodeState(S))){alert("进度已变化，剪贴板可能仍是旧码。请重新载入后生成最新进度码。");return;}
+    alert("已复制");
+  }catch(e){alert("请长按手动复制");}
+}
+function importProgress(){
+  if(!progressCurrent())return;
+  let r;
+  try{
+    r=decodeState(importCode.value);
     if(!r||!r.meta||!validState(r))throw Error("state");
-    const beforeImport=localStorage.getItem(KEY);
+  }catch(e){alert("进度码无效，现有进度没有改变");return;}
+  try{
+    const recovering=!initialReadOK,beforeImport=localStorage.getItem(KEY);
+    if(!progressCurrent())return;
     if(!ensureOriginalBackup(beforeImport,"before-import")){
       refresh();alert("原始进度未能安全备份，本次没有导入，也没有覆盖旧进度。请先导出备份码。");return;
     }
+    // Recovery from an unreadable startup has no trusted baseline yet. Establish
+    // one only after snapshot verification and a second unchanged-source read.
+    if(localStorage.getItem(KEY)!==beforeImport){freezeProgress();return;}
+    if(!recovering&&!progressCurrent())return;
+    if(recovering){expectedRaw=beforeImport;initialRaw=beforeImport;initialBackupRequired=beforeImport!==null;}
     initialReadOK=true;
-    cancelTransition();current=null;queue=[];S=r;storageWarning="";migrateReviewData();save();alert(storageWarning?"进度已载入本页，但暂时未能保存。原始备份仍保留，请先生成当前进度码保存。":"进度已恢复");show("home");
-  }catch(e){alert("进度码无效，现有进度没有改变");}
+    cancelTransition();current=null;queue=[];S=r;storageWarning="";migrateReviewData();save();if(progressConflict)return;alert(storageWarning?"进度已载入本页，但暂时无法确认是否已保存。原始备份仍保留，请先生成本页进度码保存。":"进度已恢复");show("home");
+  }catch(e){freezeProgress();alert("存储暂时无法核对，无法确认导入结果。请重新载入后检查进度；原始备份仍可单独导出。");}
 }
 function setDayPrompt(){
+  if(!progressCurrent())return;
   const v=prompt("当前应该是路线第几格（1–14）？只调整路线显示，不增加今天的新学。",S.meta.day),n=Number(v);
-  if(Number.isInteger(n)&&n>=1&&n<=14){S.meta.day=n;save();show("home");}
+  if(progressCurrent()&&Number.isInteger(n)&&n>=1&&n<=14){S.meta.day=n;save();show("home");}
 }
 function refresh(){
+  if(!progressCurrent())return;
   const p=ensureDailyPlan(),base=p.entries.filter(e=>e.mode!=="retest"),rc=base.filter(e=>e.mode==="review").length,nc=base.filter(e=>e.mode==="new").length;
   const done=base.filter(e=>e.done).length,waiting=p.entries.filter(e=>e.mode==="retest"&&!e.done);
   const learned=allItems().filter(x=>st(x.kind,x.en).passed).length;
@@ -516,7 +580,7 @@ function refresh(){
   unitProgress.style.width=(learned/allItems().length*100)+"%";
   const dueNote=p.backlog?"还有 "+p.backlog+" 项到期内容留到后续日子；今天暂停新学。":"新学按单词、短语、句子的顺序补齐。";
   plan.textContent=p.day+" · 复习 "+rc+" 项 + 新学 "+nc+" 项，已完成 "+done+" / "+base.length+" 项。\n"+
-    dueNote+"\n"+(storageWarning?"本次安排暂未保存。":"今天的安排已保存，重进或刷新会接着做。")+
+    dueNote+"\n"+(storageWarning?"本次安排的保存结果暂无法确认。":"今天的安排已保存，重进或刷新会接着做。")+
     (waiting.length?(ready?" 有 "+ready+" 项短复习现在可以做，点开始继续。":" 还有 "+waiting.length+" 项短复习，约 "+minutes+" 分钟后点开始。") : "")+(storageWarning?" "+storageWarning:"");
   route.innerHTML="";for(let i=1;i<=14;i++){let d=document.createElement("div");d.className="day"+(S.meta.doneDays["d"+i]?" done":"")+(i===S.meta.day?" today":"");d.textContent=i;route.appendChild(d);}
 }
@@ -528,6 +592,8 @@ document.addEventListener("keydown",e=>{
     else if(e.key.length===1&&/^[a-zA-Z \/／\-'’‘.,!?]$/.test(e.key)){e.preventDefault();tap(e.key.toLowerCase());}
   }
 });
-window.addEventListener("focus",()=>{if(home.classList.contains("active"))refresh();});
+window.addEventListener("storage",event=>{if(event.key===KEY||event.key===null)progressCurrent();});
+window.addEventListener("focus",()=>{if(progressCurrent()&&home.classList.contains("active"))refresh();});
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")progressCurrent();});
 migrateReviewData();refresh();
 </script></body></html>

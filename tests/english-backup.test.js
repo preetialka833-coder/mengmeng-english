@@ -50,7 +50,7 @@ test('failed read-back verification stays non-destructive on subsequent reload',
 test('active-write failure after a verified snapshot does not lose original or backup',()=>{
   const a=createApp({raw:legacyRaw,failWriteKeys:[KEY]});
   assert.equal(a.storage.get(KEY),legacyRaw);assert.equal(a.storage.get(BACKUP_KEY),legacyRaw);
-  assert.ok(a.storage.has(BACKUP_INFO_KEY));assert.match(a.nodes.plan.textContent,/不能保存进度/);
+  assert.ok(a.storage.has(BACKUP_INFO_KEY));assert.match(a.nodes.plan.textContent,/无法确认.*是否已保存/);
   a.run('exportOriginalBackup()');assert.equal(decodedCode(a),legacyRaw);
   const b=createApp({storage:a.storage});assert.equal(b.storage.get(BACKUP_KEY),legacyRaw);
   assert.equal(b.run('S.meta.graduated'),true);assert.equal(b.run('S.meta.stickers'),7);
