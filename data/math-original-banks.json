@@ -1,0 +1,1483 @@
+{
+  "source": "按已核对目录标题创作的通用热身，非教材原题、非已确认课内题型",
+  "publicationYear": null,
+  "units": [
+    {
+      "unit": 1,
+      "title": "认识更大的数",
+      "startPage": 2,
+      "status": "existing",
+      "questions": 36
+    },
+    {
+      "unit": 2,
+      "title": "线与角",
+      "startPage": 23,
+      "status": "existing",
+      "questions": 36
+    },
+    {
+      "unit": 3,
+      "title": "整数乘法（二）",
+      "startPage": 39,
+      "status": "original-warmup",
+      "questions": 12
+    },
+    {
+      "unit": 4,
+      "title": "我们生活的空间（二）",
+      "startPage": 58,
+      "status": "original-companion",
+      "questions": 6
+    },
+    {
+      "unit": 5,
+      "title": "运算律",
+      "startPage": 63,
+      "status": "original-warmup",
+      "questions": 8
+    },
+    {
+      "unit": 6,
+      "title": "图形的奥秘",
+      "startPage": 79,
+      "status": "original-companion",
+      "questions": 8
+    },
+    {
+      "unit": 7,
+      "title": "运用数量关系解决问题",
+      "startPage": 85,
+      "status": "original-warmup",
+      "questions": 12
+    },
+    {
+      "unit": 8,
+      "title": "数据的表示和分析（一）",
+      "startPage": 94,
+      "status": "original-warmup",
+      "questions": 12
+    }
+  ],
+  "pending": [],
+  "scopeNotes": {
+    "3": "整数相乘通用热身；具体计算位数和方法待核。",
+    "4": "观察的范围、天安门广场：明确视线、位置与路线条件的原创图题。",
+    "5": "等值算式观察；课内运算律逐项范围和措辞待核。",
+    "6": "切开立体图形、搭建立体大楼、翻滚正方体：明确切法、分层方向、初始朝向与翻滚方向的原创图题。",
+    "7": "购物、平均分和数量比较通用原创题；不声称对应课内情境或公式。",
+    "8": "文字记录读数、合计和比较；教材采用何种图表和统计概念待核。"
+  },
+  "banks": {
+    "3": [
+      {
+        "id": "u3_01",
+        "k": "整数相乘",
+        "d": 1,
+        "t": "text",
+        "q": "23 × 4 = ?（填数字即可）",
+        "a": "92",
+        "alts": [],
+        "h": [
+          "可把一个乘数拆成容易算的两部分。",
+          "分别相乘，再把两部分的积合起来。",
+          "计算结果是 92。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "23*4",
+          "expected": 92
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u3_02",
+        "k": "整数相乘",
+        "d": 2,
+        "t": "text",
+        "q": "34 × 12 = ?（填数字即可）",
+        "a": "408",
+        "alts": [],
+        "h": [
+          "可把一个乘数拆成容易算的两部分。",
+          "分别相乘，再把两部分的积合起来。",
+          "计算结果是 408。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "34*12",
+          "expected": 408
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u3_03",
+        "k": "整数相乘",
+        "d": 2,
+        "t": "text",
+        "q": "120 × 30 = ?（填数字即可）",
+        "a": "3600",
+        "alts": [],
+        "h": [
+          "可把一个乘数拆成容易算的两部分。",
+          "分别相乘，再把两部分的积合起来。",
+          "计算结果是 3600。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "120*30",
+          "expected": 3600
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u3_04",
+        "k": "整数相乘",
+        "d": 1,
+        "t": "text",
+        "q": "205 × 6 = ?（填数字即可）",
+        "a": "1230",
+        "alts": [],
+        "h": [
+          "可把一个乘数拆成容易算的两部分。",
+          "分别相乘，再把两部分的积合起来。",
+          "计算结果是 1230。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "205*6",
+          "expected": 1230
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u3_05",
+        "k": "整数相乘",
+        "d": 2,
+        "t": "text",
+        "q": "42 × 15 = ?（填数字即可）",
+        "a": "630",
+        "alts": [],
+        "h": [
+          "可把一个乘数拆成容易算的两部分。",
+          "分别相乘，再把两部分的积合起来。",
+          "计算结果是 630。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "42*15",
+          "expected": 630
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u3_06",
+        "k": "整数相乘",
+        "d": 2,
+        "t": "text",
+        "q": "80 × 25 = ?（填数字即可）",
+        "a": "2000",
+        "alts": [],
+        "h": [
+          "可把一个乘数拆成容易算的两部分。",
+          "分别相乘，再把两部分的积合起来。",
+          "计算结果是 2000。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "80*25",
+          "expected": 2000
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u3_07",
+        "k": "整数相乘",
+        "d": 2,
+        "t": "text",
+        "q": "101 × 25 = ?（填数字即可）",
+        "a": "2525",
+        "alts": [],
+        "h": [
+          "可把一个乘数拆成容易算的两部分。",
+          "分别相乘，再把两部分的积合起来。",
+          "计算结果是 2525。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "101*25",
+          "expected": 2525
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u3_08",
+        "k": "整数相乘",
+        "d": 2,
+        "t": "text",
+        "q": "54 × 20 = ?（填数字即可）",
+        "a": "1080",
+        "alts": [],
+        "h": [
+          "可把一个乘数拆成容易算的两部分。",
+          "分别相乘，再把两部分的积合起来。",
+          "计算结果是 1080。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "54*20",
+          "expected": 1080
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u3_09",
+        "k": "数量相乘",
+        "d": 2,
+        "t": "text",
+        "q": "每盒有24支铅笔，14盒共有多少支？（填数字即可）",
+        "a": "336",
+        "alts": [
+          "336支"
+        ],
+        "h": [
+          "每盒数量相同，可以用乘法。",
+          "先算10盒，再算4盒，最后合起来。",
+          "计算结果是 336支。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "24*14",
+          "expected": 336
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u3_10",
+        "k": "数量相乘",
+        "d": 2,
+        "t": "text",
+        "q": "每袋有32颗珠子，18袋共有多少颗？（填数字即可）",
+        "a": "576",
+        "alts": [
+          "576颗"
+        ],
+        "h": [
+          "用每袋颗数乘袋数。",
+          "可以先算20袋，再减去2袋。",
+          "计算结果是 576颗。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "32*18",
+          "expected": 576
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u3_11",
+        "k": "数量相乘",
+        "d": 2,
+        "t": "text",
+        "q": "每包有125张彩纸，8包共有多少张？（填数字即可）",
+        "a": "1000",
+        "alts": [
+          "1000张"
+        ],
+        "h": [
+          "总张数由8个相同的125组成。",
+          "先算125×4，再乘2。",
+          "计算结果是 1000张。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "125*8",
+          "expected": 1000
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u3_12",
+        "k": "数量相乘",
+        "d": 2,
+        "t": "text",
+        "q": "每排放25把椅子，16排共放多少把？（填数字即可）",
+        "a": "400",
+        "alts": [
+          "400把"
+        ],
+        "h": [
+          "每排相同，用乘法求总数。",
+          "16可以拆成4×4，先算25×4。",
+          "计算结果是 400把。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "25*16",
+          "expected": 400
+        },
+        "origin": "原创通用热身；不是教材原题"
+      }
+    ],
+    "4": [
+      {
+        "id": "u4_01",
+        "k": "观察的范围",
+        "d": 1,
+        "t": "text",
+        "q": "侧视图中，墙位于观察点与目标之间，墙到两侧的水平距离相等。沿图中的红色直线看，视线能越过墙顶看到目标吗？能填1，不能填2。",
+        "a": "2",
+        "alts": [],
+        "h": [
+          "视线沿直线传播，不会绕过墙。",
+          "墙到观察点和目标的水平距离相等。比较红色直线经过墙所在位置时的高度与墙顶高度。",
+          "答案：2。视线在墙处高2格，低于墙顶3格，被挡住。"
+        ],
+        "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 290\" role=\"img\" aria-label=\"侧视图：观察点高2格，墙高3格，目标高2格；墙在中间\" style=\"display:block;width:100%;max-width:620px;margin:12px auto;background:#fffdf5;border:1px solid #ddd;border-radius:14px\"><g font-family=\"system-ui,sans-serif\" font-size=\"17\" fill=\"#24334b\" stroke-width=\"3\"><line x1=\"40\" y1=\"240\" x2=\"480\" y2=\"240\" stroke=\"#59687b\" /><line x1=\"260\" y1=\"240\" x2=\"260\" y2=\"156\" stroke=\"#a67a52\" /><line x1=\"60\" y1=\"184\" x2=\"460\" y2=\"184\" stroke=\"#df6252\" stroke-dasharray=\"7 5\"/><circle cx=\"60\" cy=\"184\" r=\"6\" fill=\"#4578b8\"/><circle cx=\"460\" cy=\"184\" r=\"6\" fill=\"#4578b8\"/><text x=\"25\" y=\"170\" stroke=\"none\">眼高2格</text><text x=\"230\" y=\"145\" stroke=\"none\">墙高3格</text><text x=\"384\" y=\"168\" stroke=\"none\">目标高2格</text><text x=\"72\" y=\"274\" stroke=\"none\">观察点 ← 等距200 → 墙 ← 等距200 → 目标</text></g></svg>",
+        "audit": {
+          "model": {
+            "type": "sight",
+            "eye": 2,
+            "target": 2,
+            "wall": 3,
+            "xEye": 0,
+            "xWall": 200,
+            "xTarget": 400,
+            "explanation": "视线在墙处高2格，低于墙顶3格，被挡住。"
+          },
+          "expected": "2"
+        },
+        "origin": "原创配套练习，按已核实的第4、6单元小节范围设计，非教材原题",
+        "diagramCaption": "侧视图：观察点高2格，墙高3格，目标高2格；墙在中间"
+      },
+      {
+        "id": "u4_02",
+        "k": "观察的范围",
+        "d": 1,
+        "t": "text",
+        "q": "侧视图中，墙位于观察点与目标之间，墙到两侧的水平距离相等。沿图中的红色直线看，视线能越过墙顶看到目标吗？能填1，不能填2。",
+        "a": "1",
+        "alts": [],
+        "h": [
+          "视线沿直线传播，不会绕过墙。",
+          "墙到观察点和目标的水平距离相等。比较红色直线经过墙所在位置时的高度与墙顶高度。",
+          "答案：1。视线在墙处高4格，高于墙顶3格，能看到。"
+        ],
+        "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 290\" role=\"img\" aria-label=\"侧视图：观察点高6格，墙高3格，目标高2格；墙在中间\" style=\"display:block;width:100%;max-width:620px;margin:12px auto;background:#fffdf5;border:1px solid #ddd;border-radius:14px\"><g font-family=\"system-ui,sans-serif\" font-size=\"17\" fill=\"#24334b\" stroke-width=\"3\"><line x1=\"40\" y1=\"240\" x2=\"480\" y2=\"240\" stroke=\"#59687b\" /><line x1=\"260\" y1=\"240\" x2=\"260\" y2=\"156\" stroke=\"#a67a52\" /><line x1=\"60\" y1=\"72\" x2=\"460\" y2=\"184\" stroke=\"#df6252\" stroke-dasharray=\"7 5\"/><circle cx=\"60\" cy=\"72\" r=\"6\" fill=\"#4578b8\"/><circle cx=\"460\" cy=\"184\" r=\"6\" fill=\"#4578b8\"/><text x=\"25\" y=\"58\" stroke=\"none\">眼高6格</text><text x=\"230\" y=\"145\" stroke=\"none\">墙高3格</text><text x=\"384\" y=\"168\" stroke=\"none\">目标高2格</text><text x=\"72\" y=\"274\" stroke=\"none\">观察点 ← 等距200 → 墙 ← 等距200 → 目标</text></g></svg>",
+        "audit": {
+          "model": {
+            "type": "sight",
+            "eye": 6,
+            "target": 2,
+            "wall": 3,
+            "xEye": 0,
+            "xWall": 200,
+            "xTarget": 400,
+            "explanation": "视线在墙处高4格，高于墙顶3格，能看到。"
+          },
+          "expected": "1"
+        },
+        "origin": "原创配套练习，按已核实的第4、6单元小节范围设计，非教材原题",
+        "diagramCaption": "侧视图：观察点高6格，墙高3格，目标高2格；墙在中间"
+      },
+      {
+        "id": "u4_03",
+        "k": "观察的范围",
+        "d": 1,
+        "t": "text",
+        "q": "同一盏灯、两根等高杆，灯和杆在同一侧视平面。图中哪根杆的影子更长？甲填1，乙填2。",
+        "a": "2",
+        "alts": [],
+        "h": [
+          "比较地面上背着灯延伸的彩色影子。",
+          "路灯高度不变，两根杆同样高。比较图中两段彩色影子的长度。",
+          "答案：2。甲影长1.5格，乙影长3格；本图乙影更长，不把结论扩展到不同灯高或杆高。"
+        ],
+        "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 290\" role=\"img\" aria-label=\"同侧面：灯高6格，两根杆都高2格，离灯分别3格和6格；杆影画在背灯一侧\" style=\"display:block;width:100%;max-width:620px;margin:12px auto;background:#fffdf5;border:1px solid #ddd;border-radius:14px\"><g font-family=\"system-ui,sans-serif\" font-size=\"17\" fill=\"#24334b\" stroke-width=\"3\"><line x1=\"45\" y1=\"245\" x2=\"495\" y2=\"245\" stroke=\"#59687b\" /><line x1=\"60\" y1=\"245\" x2=\"60\" y2=\"65\" stroke=\"#59687b\" /><line x1=\"180\" y1=\"245\" x2=\"180\" y2=\"185\" stroke=\"#59687b\" /><line x1=\"300\" y1=\"245\" x2=\"300\" y2=\"185\" stroke=\"#59687b\" /><line x1=\"60\" y1=\"65\" x2=\"240\" y2=\"245\" stroke=\"#ddab32\" /><line x1=\"60\" y1=\"65\" x2=\"420\" y2=\"245\" stroke=\"#e2614f\" /><line x1=\"180\" y1=\"249\" x2=\"240\" y2=\"249\" stroke=\"#ddab32\" /><line x1=\"300\" y1=\"257\" x2=\"420\" y2=\"257\" stroke=\"#e2614f\" /><text x=\"20\" y=\"45\" stroke=\"none\">灯高6格</text><text x=\"144\" y=\"176\" stroke=\"none\">甲杆2格</text><text x=\"285\" y=\"176\" stroke=\"none\">乙杆2格</text><text x=\"78\" y=\"283\" stroke=\"none\">离灯3格：甲   离灯6格：乙（同一侧）</text></g></svg>",
+        "audit": {
+          "model": {
+            "type": "shadow",
+            "lamp": 6,
+            "pole": 2,
+            "distances": [
+              3,
+              6
+            ],
+            "explanation": "甲影长1.5格，乙影长3格；本图乙影更长，不把结论扩展到不同灯高或杆高。"
+          },
+          "expected": "2"
+        },
+        "origin": "原创配套练习，按已核实的第4、6单元小节范围设计，非教材原题",
+        "diagramCaption": "同侧面：灯高6格，两根杆都高2格，离灯分别3格和6格；杆影画在背灯一侧"
+      },
+      {
+        "id": "u4_04",
+        "k": "天安门广场",
+        "d": 1,
+        "t": "text",
+        "q": "看同一排树①、房②、椅③，三者相互不遮挡。从A点按图中箭头方向看，画面最左边是哪一个？只填编号。",
+        "a": "1",
+        "alts": [],
+        "h": [
+          "左右要以观察者面向的方向来判断。",
+          "A面向北，左手指向西。",
+          "答案：1。A面向北，画面从左到右是①②③。"
+        ],
+        "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 290\" role=\"img\" aria-label=\"原创平面图：西边树1、中间房2、东边椅3；A在南边向北看，B在北边向南看\" style=\"display:block;width:100%;max-width:620px;margin:12px auto;background:#fffdf5;border:1px solid #ddd;border-radius:14px\"><g font-family=\"system-ui,sans-serif\" font-size=\"17\" fill=\"#24334b\" stroke-width=\"3\"><text x=\"20\" y=\"25\" stroke=\"none\">北 ↑（平面图）</text><text x=\"110\" y=\"130\" stroke=\"none\">树①</text><text x=\"250\" y=\"130\" stroke=\"none\">房②</text><text x=\"393\" y=\"130\" stroke=\"none\">椅③</text><circle cx=\"265\" cy=\"240\" r=\"6\" fill=\"#4578b8\"/><text x=\"245\" y=\"273\" stroke=\"none\">A ↑向北看</text><circle cx=\"265\" cy=\"45\" r=\"6\" fill=\"#4578b8\"/><text x=\"246\" y=\"24\" stroke=\"none\">B ↓向南看</text><line x1=\"265\" y1=\"222\" x2=\"265\" y2=\"167\" stroke=\"#50846b\" /><line x1=\"265\" y1=\"60\" x2=\"265\" y2=\"96\" stroke=\"#50846b\" /><text x=\"18\" y=\"197\" stroke=\"none\">西</text><text x=\"479\" y=\"197\" stroke=\"none\">东</text></g></svg>",
+        "audit": {
+          "model": {
+            "type": "view-order",
+            "viewer": "A",
+            "objects": [
+              {
+                "id": 1,
+                "x": -1
+              },
+              {
+                "id": 2,
+                "x": 0
+              },
+              {
+                "id": 3,
+                "x": 1
+              }
+            ],
+            "facing": "north",
+            "explanation": "A面向北，画面从左到右是①②③。"
+          },
+          "expected": "1"
+        },
+        "origin": "原创配套练习，按已核实的第4、6单元小节范围设计，非教材原题",
+        "diagramCaption": "原创平面图：西边树1、中间房2、东边椅3；A在南边向北看，B在北边向南看"
+      },
+      {
+        "id": "u4_05",
+        "k": "天安门广场",
+        "d": 1,
+        "t": "text",
+        "q": "看同一排树①、房②、椅③，三者相互不遮挡。从B点按图中箭头方向看，画面最左边是哪一个？只填编号。",
+        "a": "3",
+        "alts": [],
+        "h": [
+          "左右要以观察者面向的方向来判断。",
+          "B面向南，左手指向东。",
+          "答案：3。B面向南，画面从左到右是③②①。"
+        ],
+        "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 290\" role=\"img\" aria-label=\"原创平面图：西边树1、中间房2、东边椅3；A在南边向北看，B在北边向南看\" style=\"display:block;width:100%;max-width:620px;margin:12px auto;background:#fffdf5;border:1px solid #ddd;border-radius:14px\"><g font-family=\"system-ui,sans-serif\" font-size=\"17\" fill=\"#24334b\" stroke-width=\"3\"><text x=\"20\" y=\"25\" stroke=\"none\">北 ↑（平面图）</text><text x=\"110\" y=\"130\" stroke=\"none\">树①</text><text x=\"250\" y=\"130\" stroke=\"none\">房②</text><text x=\"393\" y=\"130\" stroke=\"none\">椅③</text><circle cx=\"265\" cy=\"240\" r=\"6\" fill=\"#4578b8\"/><text x=\"245\" y=\"273\" stroke=\"none\">A ↑向北看</text><circle cx=\"265\" cy=\"45\" r=\"6\" fill=\"#4578b8\"/><text x=\"246\" y=\"24\" stroke=\"none\">B ↓向南看</text><line x1=\"265\" y1=\"222\" x2=\"265\" y2=\"167\" stroke=\"#50846b\" /><line x1=\"265\" y1=\"60\" x2=\"265\" y2=\"96\" stroke=\"#50846b\" /><text x=\"18\" y=\"197\" stroke=\"none\">西</text><text x=\"479\" y=\"197\" stroke=\"none\">东</text></g></svg>",
+        "audit": {
+          "model": {
+            "type": "view-order",
+            "viewer": "B",
+            "objects": [
+              {
+                "id": 1,
+                "x": -1
+              },
+              {
+                "id": 2,
+                "x": 0
+              },
+              {
+                "id": 3,
+                "x": 1
+              }
+            ],
+            "facing": "south",
+            "explanation": "B面向南，画面从左到右是③②①。"
+          },
+          "expected": "3"
+        },
+        "origin": "原创配套练习，按已核实的第4、6单元小节范围设计，非教材原题",
+        "diagramCaption": "原创平面图：西边树1、中间房2、东边椅3；A在南边向北看，B在北边向南看"
+      },
+      {
+        "id": "u4_06",
+        "k": "天安门广场",
+        "d": 1,
+        "t": "text",
+        "q": "同一座塔，沿A→B→C直线走远，始终面向塔，镜头设置不变。下方三张小画面按塔的可见高度示意。依次匹配A、B、C，只填三个画面编号（如123）。",
+        "a": "312",
+        "alts": [],
+        "h": [
+          "位置越远，在同样画框中塔看起来越小。",
+          "先把最大的一张配给A，再配B和C。",
+          "答案：312。A最近配③，B配①，C最远配②，顺序312。"
+        ],
+        "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 290\" role=\"img\" aria-label=\"路线A距塔4米、B8米、C12米；图①中等、②最小、③最大\" style=\"display:block;width:100%;max-width:620px;margin:12px auto;background:#fffdf5;border:1px solid #ddd;border-radius:14px\"><g font-family=\"system-ui,sans-serif\" font-size=\"17\" fill=\"#24334b\" stroke-width=\"3\"><text x=\"20\" y=\"25\" stroke=\"none\">沿直线从A走向C，始终面向同一座塔</text><line x1=\"60\" y1=\"60\" x2=\"60\" y2=\"130\" stroke=\"#59687b\" /><text x=\"20\" y=\"54\" stroke=\"none\">塔</text><line x1=\"80\" y1=\"130\" x2=\"470\" y2=\"130\" stroke=\"#59687b\" /><text x=\"150\" y=\"120\" stroke=\"none\">A</text><text x=\"290\" y=\"120\" stroke=\"none\">B</text><text x=\"435\" y=\"120\" stroke=\"none\">C →</text><text x=\"115\" y=\"160\" stroke=\"none\">距塔4米</text><text x=\"255\" y=\"160\" stroke=\"none\">8米</text><text x=\"400\" y=\"160\" stroke=\"none\">12米</text><rect x=\"80\" y=\"223\" width=\"28\" height=\"42\" fill=\"#b2c7e8\" stroke=\"#516d9d\"/><text x=\"65\" y=\"285\" stroke=\"none\">①</text><rect x=\"230\" y=\"237\" width=\"28\" height=\"28\" fill=\"#b2c7e8\" stroke=\"#516d9d\"/><text x=\"215\" y=\"285\" stroke=\"none\">②</text><rect x=\"380\" y=\"181\" width=\"28\" height=\"84\" fill=\"#b2c7e8\" stroke=\"#516d9d\"/><text x=\"365\" y=\"285\" stroke=\"none\">③</text></g></svg>",
+        "audit": {
+          "model": {
+            "type": "route",
+            "distances": [
+              4,
+              8,
+              12
+            ],
+            "pictureHeights": [
+              42,
+              28,
+              84
+            ],
+            "explanation": "A最近配③，B配①，C最远配②，顺序312。"
+          },
+          "expected": "312"
+        },
+        "origin": "原创配套练习，按已核实的第4、6单元小节范围设计，非教材原题",
+        "diagramCaption": "路线A距塔4米、B8米、C12米；图①中等、②最小、③最大"
+      }
+    ],
+    "5": [
+      {
+        "id": "u5_01",
+        "k": "等值算式观察",
+        "d": 2,
+        "t": "text",
+        "q": "37 + 25 = 25 + □，□里填几？（填数字即可）",
+        "a": "37",
+        "alts": [],
+        "h": [
+          "先算等号左边。",
+          "右边已经有25，想想还需要加几。",
+          "计算结果是 37。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "(37+25)-25",
+          "expected": 37
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u5_02",
+        "k": "等值算式观察",
+        "d": 2,
+        "t": "text",
+        "q": "8 × 19 = 19 × □，□里填几？（填数字即可）",
+        "a": "8",
+        "alts": [],
+        "h": [
+          "先看两边相同的乘数。",
+          "也可算出左边的积，再除以19核对。",
+          "计算结果是 8。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "(8*19)//19",
+          "expected": 8
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u5_03",
+        "k": "等值算式观察",
+        "d": 2,
+        "t": "text",
+        "q": "(24 + 16) + 14 = 24 + (16 + □)，□里填几？（填数字即可）",
+        "a": "14",
+        "alts": [],
+        "h": [
+          "两边都有24和16。",
+          "比较剩余的那个加数。",
+          "计算结果是 14。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "(24+16+14)-(24+16)",
+          "expected": 14
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u5_04",
+        "k": "等值算式观察",
+        "d": 2,
+        "t": "text",
+        "q": "(5 × 7) × 4 = 5 × (7 × □)，□里填几？（填数字即可）",
+        "a": "4",
+        "alts": [],
+        "h": [
+          "先找到两边已经相同的乘数。",
+          "保持三个乘数不变，只改变先算哪一步。",
+          "计算结果是 4。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "(5*7*4)//(5*7)",
+          "expected": 4
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u5_05",
+        "k": "等值算式观察",
+        "d": 2,
+        "t": "text",
+        "q": "125 × (8 × 3) = ?（填数字即可）",
+        "a": "3000",
+        "alts": [],
+        "h": [
+          "可以先把125与8相乘。",
+          "先得到1000，再与3相乘。",
+          "计算结果是 3000。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "125*(8*3)",
+          "expected": 3000
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u5_06",
+        "k": "等值算式观察",
+        "d": 2,
+        "t": "text",
+        "q": "25 + 48 + 75 = ?（填数字即可）",
+        "a": "148",
+        "alts": [],
+        "h": [
+          "找两个相加容易算的数。",
+          "25和75合起来是100，别漏掉48。",
+          "计算结果是 148。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "25+48+75",
+          "expected": 148
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u5_07",
+        "k": "等值算式观察",
+        "d": 2,
+        "t": "text",
+        "q": "25 × 4 × 17 = ?（填数字即可）",
+        "a": "1700",
+        "alts": [],
+        "h": [
+          "先找能凑成整百的乘法。",
+          "先算25×4，再乘17。",
+          "计算结果是 1700。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "25*4*17",
+          "expected": 1700
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u5_08",
+        "k": "等值算式观察",
+        "d": 2,
+        "t": "text",
+        "q": "46 × 5 + 54 × 5 = ?（填数字即可）",
+        "a": "500",
+        "alts": [],
+        "h": [
+          "两个积里都有5。",
+          "可先合计46和54，再乘5；也可分别计算核对。",
+          "计算结果是 500。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "46*5+54*5",
+          "expected": 500
+        },
+        "origin": "原创通用热身；不是教材原题"
+      }
+    ],
+    "6": [
+      {
+        "id": "u6_01",
+        "k": "切开立体图形",
+        "d": 1,
+        "t": "text",
+        "q": "图中涂色的切面，实际是什么平面图形？圆形填1，长方形填2。示意图中的圆因观察角度画成椭圆。",
+        "a": "1",
+        "alts": [],
+        "h": [
+          "先看切面的方向，不按立体图外轮廓猜。",
+          "切面和圆柱底面平行。",
+          "答案：1。与底面平行切圆柱，切面是圆形。"
+        ],
+        "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 290\" role=\"img\" aria-label=\"圆柱沿平行底面的水平面切开，阴影为切面\" style=\"display:block;width:100%;max-width:620px;margin:12px auto;background:#fffdf5;border:1px solid #ddd;border-radius:14px\"><g font-family=\"system-ui,sans-serif\" font-size=\"17\" fill=\"#24334b\" stroke-width=\"3\"><path d=\"M150 70 L150 220 A100 27 0 0 0 350 220 L350 70\" fill=\"#e0eafa\" stroke=\"#567496\"/><ellipse cx=\"250\" cy=\"70\" rx=\"100\" ry=\"27\" fill=\"#f4f7fc\" stroke=\"#567496\"/><ellipse cx=\"250\" cy=\"145\" rx=\"100\" ry=\"27\" fill=\"#eab978\" fill-opacity=\".8\" stroke=\"#bb7727\"/><text x=\"100\" y=\"275\" stroke=\"none\">切面与圆柱的底面平行</text></g></svg>",
+        "audit": {
+          "model": {
+            "type": "cut",
+            "solid": "cylinder",
+            "direction": "parallel-base",
+            "explanation": "与底面平行切圆柱，切面是圆形。"
+          },
+          "expected": "1"
+        },
+        "origin": "原创配套练习，按已核实的第4、6单元小节范围设计，非教材原题",
+        "diagramCaption": "圆柱沿平行底面的水平面切开，阴影为切面"
+      },
+      {
+        "id": "u6_02",
+        "k": "切开立体图形",
+        "d": 1,
+        "t": "text",
+        "q": "图中涂色的切面，实际是什么平面图形？圆形填1，长方形填2。示意图是立体图的投影，画出的轮廓不等于实际切面形状，请结合切割方向判断。",
+        "a": "2",
+        "alts": [],
+        "h": [
+          "先看切面的方向，不按立体图外轮廓猜。",
+          "切面沿中心轴竖直通过圆柱。",
+          "答案：2。切面经过中心轴并与底面垂直。图中可以投影为平行四边形，实际截面为长方形。"
+        ],
+        "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 290\" role=\"img\" aria-label=\"圆柱沿经过中心轴的竖直面切开，阴影为切面\" style=\"display:block;width:100%;max-width:620px;margin:12px auto;background:#fffdf5;border:1px solid #ddd;border-radius:14px\"><g font-family=\"system-ui,sans-serif\" font-size=\"17\" fill=\"#24334b\" stroke-width=\"3\"><path d=\"M150 70 L150 220 A100 27 0 0 0 350 220 L350 70\" fill=\"#e0eafa\" stroke=\"#567496\"/><ellipse cx=\"250\" cy=\"70\" rx=\"100\" ry=\"27\" fill=\"#f4f7fc\" stroke=\"#567496\"/><ellipse cx=\"250\" cy=\"220\" rx=\"100\" ry=\"27\" fill=\"none\" stroke=\"#567496\"/><polygon data-cut-plane=\"axis\" points=\"179.28932188134524,50.90811690796322 320.71067811865476,89.09188309203678 320.71067811865476,239.09188309203677 179.28932188134524,200.90811690796323\" fill=\"#eab978\" fill-opacity=\".8\" stroke=\"#bb7727\"/><line x1=\"250\" y1=\"55\" x2=\"250\" y2=\"238\" stroke=\"#a65336\" stroke-dasharray=\"7 5\"/><text x=\"95\" y=\"275\" stroke=\"none\">切面经过中心轴，并与底面垂直</text></g></svg>",
+        "audit": {
+          "model": {
+            "type": "cut",
+            "solid": "cylinder",
+            "direction": "axis",
+            "explanation": "沿轴竖切圆柱，切面是长方形。",
+            "projection": {
+              "cx": 250,
+              "topCy": 70,
+              "bottomCy": 220,
+              "rx": 100,
+              "ry": 27,
+              "vertices": [
+                [
+                  179.28932188134524,
+                  50.90811690796322
+                ],
+                [
+                  320.71067811865476,
+                  89.09188309203678
+                ],
+                [
+                  320.71067811865476,
+                  239.09188309203677
+                ],
+                [
+                  179.28932188134524,
+                  200.90811690796323
+                ]
+              ]
+            }
+          },
+          "expected": "2"
+        },
+        "origin": "原创配套练习，按已核实的第4、6单元小节范围设计，非教材原题",
+        "diagramCaption": "圆柱沿经过中心轴的竖直面切开，阴影为切面"
+      },
+      {
+        "id": "u6_03",
+        "k": "切开立体图形",
+        "d": 1,
+        "t": "text",
+        "q": "图示圆锥从尖端向底部，分别沿A、B两处与底面平行切开。哪处圆形切面较大？A填1，B填2。",
+        "a": "2",
+        "alts": [],
+        "h": [
+          "比较同一圆锥的两个切割位置。",
+          "B更靠近底部；图中的切割方向相同。",
+          "答案：2。在同一圆锥中，平行底面且更靠近底部的B切面更大。"
+        ],
+        "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 290\" role=\"img\" aria-label=\"同一圆锥：A距尖端2格，B距尖端4格，二者切面都平行底面\" style=\"display:block;width:100%;max-width:620px;margin:12px auto;background:#fffdf5;border:1px solid #ddd;border-radius:14px\"><g font-family=\"system-ui,sans-serif\" font-size=\"17\" fill=\"#24334b\" stroke-width=\"3\"><path d=\"M260 30 L120 235 A140 30 0 0 0 400 235 Z\" fill=\"#e0eafa\" stroke=\"#567496\"/><ellipse cx=\"260\" cy=\"110\" rx=\"55\" ry=\"12\" fill=\"#eab978\" stroke=\"#bb7727\"/><ellipse cx=\"260\" cy=\"190\" rx=\"110\" ry=\"24\" fill=\"#d79565\" stroke=\"#bb7727\"/><text x=\"330\" y=\"109\" stroke=\"none\">A：2格</text><text x=\"385\" y=\"188\" stroke=\"none\">B：4格</text><text x=\"35\" y=\"280\" stroke=\"none\">同一圆锥，两切面均平行底面</text></g></svg>",
+        "audit": {
+          "model": {
+            "type": "cone-cuts",
+            "depths": [
+              2,
+              4
+            ],
+            "explanation": "在同一圆锥中，平行底面且更靠近底部的B切面更大。"
+          },
+          "expected": "2"
+        },
+        "origin": "原创配套练习，按已核实的第4、6单元小节范围设计，非教材原题",
+        "diagramCaption": "同一圆锥：A距尖端2格，B距尖端4格，二者切面都平行底面"
+      },
+      {
+        "id": "u6_04",
+        "k": "搭建立体大楼",
+        "d": 1,
+        "t": "text",
+        "q": "按图中的两层0/1图纸搭小楼，一共需要多少块正方体？只填数字。",
+        "a": "8",
+        "alts": [],
+        "h": [
+          "逐层数1，每个1只代表一块。",
+          "底层的方块即使被上层盖住，也必须计入。",
+          "答案：8。两层的1合计8个，需要8块。"
+        ],
+        "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 290\" role=\"img\" aria-label=\"0/1分层图纸，第一层在底部；每个1是一块正方体\" style=\"display:block;width:100%;max-width:620px;margin:12px auto;background:#fffdf5;border:1px solid #ddd;border-radius:14px\"><g font-family=\"system-ui,sans-serif\" font-size=\"17\" fill=\"#24334b\" stroke-width=\"3\"><text x=\"15\" y=\"25\" stroke=\"none\">分层图纸：1放一块，0不放；同列上下对应</text><text x=\"15\" y=\"275\" stroke=\"none\">每层上边为后方、下边为前方；只按图纸搭，无额外方块</text><text x=\"35\" y=\"55\" stroke=\"none\">第1层（底层） 后</text><rect x=\"35\" y=\"75\" width=\"50\" height=\"62\" fill=\"#c3d9f2\" stroke=\"#6b7e95\"/><text x=\"53\" y=\"113\" stroke=\"none\">1</text><rect x=\"87\" y=\"75\" width=\"50\" height=\"62\" fill=\"#c3d9f2\" stroke=\"#6b7e95\"/><text x=\"105\" y=\"113\" stroke=\"none\">1</text><rect x=\"139\" y=\"75\" width=\"50\" height=\"62\" fill=\"#c3d9f2\" stroke=\"#6b7e95\"/><text x=\"157\" y=\"113\" stroke=\"none\">1</text><rect x=\"35\" y=\"141\" width=\"50\" height=\"62\" fill=\"#c3d9f2\" stroke=\"#6b7e95\"/><text x=\"53\" y=\"179\" stroke=\"none\">1</text><rect x=\"87\" y=\"141\" width=\"50\" height=\"62\" fill=\"#c3d9f2\" stroke=\"#6b7e95\"/><text x=\"105\" y=\"179\" stroke=\"none\">1</text><rect x=\"139\" y=\"141\" width=\"50\" height=\"62\" fill=\"#c3d9f2\" stroke=\"#6b7e95\"/><text x=\"157\" y=\"179\" stroke=\"none\">1</text><text x=\"35\" y=\"235\" stroke=\"none\">前 ↓</text><text x=\"275\" y=\"55\" stroke=\"none\">第2层（上层） 后</text><rect x=\"275\" y=\"75\" width=\"50\" height=\"62\" fill=\"#c3d9f2\" stroke=\"#6b7e95\"/><text x=\"293\" y=\"113\" stroke=\"none\">1</text><rect x=\"327\" y=\"75\" width=\"50\" height=\"62\" fill=\"#fff\" stroke=\"#6b7e95\"/><text x=\"345\" y=\"113\" stroke=\"none\">0</text><rect x=\"379\" y=\"75\" width=\"50\" height=\"62\" fill=\"#fff\" stroke=\"#6b7e95\"/><text x=\"397\" y=\"113\" stroke=\"none\">0</text><rect x=\"275\" y=\"141\" width=\"50\" height=\"62\" fill=\"#fff\" stroke=\"#6b7e95\"/><text x=\"293\" y=\"179\" stroke=\"none\">0</text><rect x=\"327\" y=\"141\" width=\"50\" height=\"62\" fill=\"#c3d9f2\" stroke=\"#6b7e95\"/><text x=\"345\" y=\"179\" stroke=\"none\">1</text><rect x=\"379\" y=\"141\" width=\"50\" height=\"62\" fill=\"#fff\" stroke=\"#6b7e95\"/><text x=\"397\" y=\"179\" stroke=\"none\">0</text><text x=\"275\" y=\"235\" stroke=\"none\">前 ↓</text></g></svg>",
+        "audit": {
+          "model": {
+            "type": "layers-count",
+            "layers": [
+              [
+                [
+                  1,
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  1,
+                  1
+                ]
+              ],
+              [
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0
+                ]
+              ]
+            ],
+            "explanation": "两层的1合计8个，需要8块。"
+          },
+          "expected": "8"
+        },
+        "origin": "原创配套练习，按已核实的第4、6单元小节范围设计，非教材原题",
+        "diagramCaption": "0/1分层图纸，第一层在底部；每个1是一块正方体"
+      },
+      {
+        "id": "u6_05",
+        "k": "搭建立体大楼",
+        "d": 1,
+        "t": "text",
+        "q": "按图中的两层0/1图纸搭小楼，一共需要多少块正方体？只填数字。",
+        "a": "5",
+        "alts": [],
+        "h": [
+          "逐层数1，每个1只代表一块。",
+          "底层的方块即使被上层盖住，也必须计入。",
+          "答案：5。两层的1合计5个，需要5块。"
+        ],
+        "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 290\" role=\"img\" aria-label=\"0/1分层图纸，第一层在底部；每个1是一块正方体\" style=\"display:block;width:100%;max-width:620px;margin:12px auto;background:#fffdf5;border:1px solid #ddd;border-radius:14px\"><g font-family=\"system-ui,sans-serif\" font-size=\"17\" fill=\"#24334b\" stroke-width=\"3\"><text x=\"15\" y=\"25\" stroke=\"none\">分层图纸：1放一块，0不放；同列上下对应</text><text x=\"15\" y=\"275\" stroke=\"none\">每层上边为后方、下边为前方；只按图纸搭，无额外方块</text><text x=\"35\" y=\"55\" stroke=\"none\">第1层（底层） 后</text><rect x=\"35\" y=\"75\" width=\"50\" height=\"62\" fill=\"#c3d9f2\" stroke=\"#6b7e95\"/><text x=\"53\" y=\"113\" stroke=\"none\">1</text><rect x=\"87\" y=\"75\" width=\"50\" height=\"62\" fill=\"#c3d9f2\" stroke=\"#6b7e95\"/><text x=\"105\" y=\"113\" stroke=\"none\">1</text><rect x=\"35\" y=\"141\" width=\"50\" height=\"62\" fill=\"#c3d9f2\" stroke=\"#6b7e95\"/><text x=\"53\" y=\"179\" stroke=\"none\">1</text><rect x=\"87\" y=\"141\" width=\"50\" height=\"62\" fill=\"#c3d9f2\" stroke=\"#6b7e95\"/><text x=\"105\" y=\"179\" stroke=\"none\">1</text><text x=\"35\" y=\"235\" stroke=\"none\">前 ↓</text><text x=\"275\" y=\"55\" stroke=\"none\">第2层（上层） 后</text><rect x=\"275\" y=\"75\" width=\"50\" height=\"62\" fill=\"#fff\" stroke=\"#6b7e95\"/><text x=\"293\" y=\"113\" stroke=\"none\">0</text><rect x=\"327\" y=\"75\" width=\"50\" height=\"62\" fill=\"#c3d9f2\" stroke=\"#6b7e95\"/><text x=\"345\" y=\"113\" stroke=\"none\">1</text><rect x=\"275\" y=\"141\" width=\"50\" height=\"62\" fill=\"#fff\" stroke=\"#6b7e95\"/><text x=\"293\" y=\"179\" stroke=\"none\">0</text><rect x=\"327\" y=\"141\" width=\"50\" height=\"62\" fill=\"#fff\" stroke=\"#6b7e95\"/><text x=\"345\" y=\"179\" stroke=\"none\">0</text><text x=\"275\" y=\"235\" stroke=\"none\">前 ↓</text></g></svg>",
+        "audit": {
+          "model": {
+            "type": "layers-count",
+            "layers": [
+              [
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  1
+                ]
+              ],
+              [
+                [
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0
+                ]
+              ]
+            ],
+            "explanation": "两层的1合计5个，需要5块。"
+          },
+          "expected": "5"
+        },
+        "origin": "原创配套练习，按已核实的第4、6单元小节范围设计，非教材原题",
+        "diagramCaption": "0/1分层图纸，第一层在底部；每个1是一块正方体"
+      },
+      {
+        "id": "u6_06",
+        "k": "搭建立体大楼",
+        "d": 1,
+        "t": "text",
+        "q": "左图为底层图纸。右图给出第二层的搭法：后左和前左各放1块，其余不放。第二层按“后左、后右、前左、前右”顺序写0/1，只填四位数字。",
+        "a": "1010",
+        "alts": [],
+        "h": [
+          "先看方向：每层图纸上面是后、下面是前。",
+          "第二层左边两格各1，右边两格各0。",
+          "答案：1010。第二层后排是10，前排是10，按顺序合并为1010。"
+        ],
+        "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 290\" role=\"img\" aria-label=\"0/1分层图纸，第一层在底部；每个1是一块正方体\" style=\"display:block;width:100%;max-width:620px;margin:12px auto;background:#fffdf5;border:1px solid #ddd;border-radius:14px\"><g font-family=\"system-ui,sans-serif\" font-size=\"17\" fill=\"#24334b\" stroke-width=\"3\"><text x=\"15\" y=\"25\" stroke=\"none\">分层图纸：1放一块，0不放；同列上下对应</text><text x=\"15\" y=\"275\" stroke=\"none\">每层上边为后方、下边为前方；只按图纸搭，无额外方块</text><text x=\"35\" y=\"55\" stroke=\"none\">第1层（底层） 后</text><rect x=\"35\" y=\"75\" width=\"50\" height=\"62\" fill=\"#c3d9f2\" stroke=\"#6b7e95\"/><text x=\"53\" y=\"113\" stroke=\"none\">1</text><rect x=\"87\" y=\"75\" width=\"50\" height=\"62\" fill=\"#c3d9f2\" stroke=\"#6b7e95\"/><text x=\"105\" y=\"113\" stroke=\"none\">1</text><rect x=\"35\" y=\"141\" width=\"50\" height=\"62\" fill=\"#c3d9f2\" stroke=\"#6b7e95\"/><text x=\"53\" y=\"179\" stroke=\"none\">1</text><rect x=\"87\" y=\"141\" width=\"50\" height=\"62\" fill=\"#c3d9f2\" stroke=\"#6b7e95\"/><text x=\"105\" y=\"179\" stroke=\"none\">1</text><text x=\"35\" y=\"235\" stroke=\"none\">前 ↓</text><text x=\"275\" y=\"55\" stroke=\"none\">第2层（上层） 后</text><rect x=\"275\" y=\"75\" width=\"50\" height=\"62\" fill=\"#c3d9f2\" stroke=\"#6b7e95\"/><text x=\"293\" y=\"113\" stroke=\"none\">1</text><rect x=\"327\" y=\"75\" width=\"50\" height=\"62\" fill=\"#fff\" stroke=\"#6b7e95\"/><text x=\"345\" y=\"113\" stroke=\"none\">0</text><rect x=\"275\" y=\"141\" width=\"50\" height=\"62\" fill=\"#c3d9f2\" stroke=\"#6b7e95\"/><text x=\"293\" y=\"179\" stroke=\"none\">1</text><rect x=\"327\" y=\"141\" width=\"50\" height=\"62\" fill=\"#fff\" stroke=\"#6b7e95\"/><text x=\"345\" y=\"179\" stroke=\"none\">0</text><text x=\"275\" y=\"235\" stroke=\"none\">前 ↓</text></g></svg>",
+        "audit": {
+          "model": {
+            "type": "layers-code",
+            "layers": [
+              [
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  1
+                ]
+              ],
+              [
+                [
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  0
+                ]
+              ]
+            ],
+            "explanation": "第二层后排是10，前排是10，按顺序合并为1010。"
+          },
+          "expected": "1010"
+        },
+        "origin": "原创配套练习，按已核实的第4、6单元小节范围设计，非教材原题",
+        "diagramCaption": "0/1分层图纸，第一层在底部；每个1是一块正方体"
+      },
+      {
+        "id": "u6_07",
+        "k": "翻滚正方体",
+        "d": 1,
+        "t": "text",
+        "q": "蓝色面初始朝上，向右一直翻滚。蓝色面第一次接触地面在第2格。第10格时，蓝面是否接触地面？是填1，否填2。",
+        "a": "1",
+        "alts": [],
+        "h": [
+          "按图中方向每翻一次，跟踪蓝色面。",
+          "接触地面的位置每隔4格重复：2、6……",
+          "答案：1。蓝面接地位置为2、6、10……，第10格接地。"
+        ],
+        "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 290\" role=\"img\" aria-label=\"正方体蓝色面初始朝上，沿数字带始终向右翻滚；起点记0\" style=\"display:block;width:100%;max-width:620px;margin:12px auto;background:#fffdf5;border:1px solid #ddd;border-radius:14px\"><g font-family=\"system-ui,sans-serif\" font-size=\"17\" fill=\"#24334b\" stroke-width=\"3\"><rect x=\"35\" y=\"55\" width=\"85\" height=\"85\" fill=\"#f4f2e9\" stroke=\"#59687b\"/><line x1=\"35\" y1=\"55\" x2=\"120\" y2=\"55\" stroke=\"#2e79d6\" /><text x=\"155\" y=\"85\" stroke=\"none\">蓝面初始朝上</text><text x=\"155\" y=\"120\" stroke=\"none\">始终向右翻滚 →</text><rect x=\"25\" y=\"185\" width=\"54\" height=\"50\" fill=\"#f8f6ee\" stroke=\"#8a929d\"/><text x=\"43\" y=\"217\" stroke=\"none\">0</text><rect x=\"79\" y=\"185\" width=\"54\" height=\"50\" fill=\"#f8f6ee\" stroke=\"#8a929d\"/><text x=\"97\" y=\"217\" stroke=\"none\">1</text><rect x=\"133\" y=\"185\" width=\"54\" height=\"50\" fill=\"#f8f6ee\" stroke=\"#8a929d\"/><text x=\"151\" y=\"217\" stroke=\"none\">2</text><rect x=\"187\" y=\"185\" width=\"54\" height=\"50\" fill=\"#f8f6ee\" stroke=\"#8a929d\"/><text x=\"205\" y=\"217\" stroke=\"none\">3</text><rect x=\"241\" y=\"185\" width=\"54\" height=\"50\" fill=\"#f8f6ee\" stroke=\"#8a929d\"/><text x=\"259\" y=\"217\" stroke=\"none\">4</text><rect x=\"295\" y=\"185\" width=\"54\" height=\"50\" fill=\"#f8f6ee\" stroke=\"#8a929d\"/><text x=\"313\" y=\"217\" stroke=\"none\">5</text><rect x=\"349\" y=\"185\" width=\"54\" height=\"50\" fill=\"#f8f6ee\" stroke=\"#8a929d\"/><text x=\"367\" y=\"217\" stroke=\"none\">6</text><rect x=\"403\" y=\"185\" width=\"54\" height=\"50\" fill=\"#f8f6ee\" stroke=\"#8a929d\"/><text x=\"421\" y=\"217\" stroke=\"none\">7</text><rect x=\"457\" y=\"185\" width=\"54\" height=\"50\" fill=\"#f8f6ee\" stroke=\"#8a929d\"/><text x=\"475\" y=\"217\" stroke=\"none\">8</text><text x=\"25\" y=\"273\" stroke=\"none\">0为起点：每翻一次向右一格；不转弯，不抬起改方向</text></g></svg>",
+        "audit": {
+          "model": {
+            "type": "roll-contact",
+            "initial": "top",
+            "step": 10,
+            "explanation": "蓝面接地位置为2、6、10……，第10格接地。"
+          },
+          "expected": "1"
+        },
+        "origin": "原创配套练习，按已核实的第4、6单元小节范围设计，非教材原题",
+        "diagramCaption": "正方体蓝色面初始朝上，沿数字带始终向右翻滚；起点记0"
+      },
+      {
+        "id": "u6_08",
+        "k": "翻滚正方体",
+        "d": 1,
+        "t": "text",
+        "q": "蓝色面初始朝右，向右一直翻滚。蓝面第1格接地。超过第7格之后，蓝面下一次接地在第几格？只填数字。",
+        "a": "9",
+        "alts": [],
+        "h": [
+          "先根据明示的初始朝向，找四次翻滚的循环。",
+          "蓝面接地在1、5……；必须大于7。",
+          "答案：9。蓝面接地位置为1、5、9……，大于7的下一处是9。"
+        ],
+        "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 290\" role=\"img\" aria-label=\"正方体蓝色面初始朝右，沿数字带始终向右翻滚；起点记0\" style=\"display:block;width:100%;max-width:620px;margin:12px auto;background:#fffdf5;border:1px solid #ddd;border-radius:14px\"><g font-family=\"system-ui,sans-serif\" font-size=\"17\" fill=\"#24334b\" stroke-width=\"3\"><rect x=\"35\" y=\"55\" width=\"85\" height=\"85\" fill=\"#f4f2e9\" stroke=\"#59687b\"/><line x1=\"120\" y1=\"55\" x2=\"120\" y2=\"140\" stroke=\"#2e79d6\" /><text x=\"155\" y=\"85\" stroke=\"none\">蓝面初始朝右</text><text x=\"155\" y=\"120\" stroke=\"none\">始终向右翻滚 →</text><rect x=\"25\" y=\"185\" width=\"54\" height=\"50\" fill=\"#f8f6ee\" stroke=\"#8a929d\"/><text x=\"43\" y=\"217\" stroke=\"none\">0</text><rect x=\"79\" y=\"185\" width=\"54\" height=\"50\" fill=\"#f8f6ee\" stroke=\"#8a929d\"/><text x=\"97\" y=\"217\" stroke=\"none\">1</text><rect x=\"133\" y=\"185\" width=\"54\" height=\"50\" fill=\"#f8f6ee\" stroke=\"#8a929d\"/><text x=\"151\" y=\"217\" stroke=\"none\">2</text><rect x=\"187\" y=\"185\" width=\"54\" height=\"50\" fill=\"#f8f6ee\" stroke=\"#8a929d\"/><text x=\"205\" y=\"217\" stroke=\"none\">3</text><rect x=\"241\" y=\"185\" width=\"54\" height=\"50\" fill=\"#f8f6ee\" stroke=\"#8a929d\"/><text x=\"259\" y=\"217\" stroke=\"none\">4</text><rect x=\"295\" y=\"185\" width=\"54\" height=\"50\" fill=\"#f8f6ee\" stroke=\"#8a929d\"/><text x=\"313\" y=\"217\" stroke=\"none\">5</text><rect x=\"349\" y=\"185\" width=\"54\" height=\"50\" fill=\"#f8f6ee\" stroke=\"#8a929d\"/><text x=\"367\" y=\"217\" stroke=\"none\">6</text><rect x=\"403\" y=\"185\" width=\"54\" height=\"50\" fill=\"#f8f6ee\" stroke=\"#8a929d\"/><text x=\"421\" y=\"217\" stroke=\"none\">7</text><rect x=\"457\" y=\"185\" width=\"54\" height=\"50\" fill=\"#f8f6ee\" stroke=\"#8a929d\"/><text x=\"475\" y=\"217\" stroke=\"none\">8</text><text x=\"25\" y=\"273\" stroke=\"none\">0为起点：每翻一次向右一格；不转弯，不抬起改方向</text></g></svg>",
+        "audit": {
+          "model": {
+            "type": "roll-next",
+            "initial": "right",
+            "after": 7,
+            "explanation": "蓝面接地位置为1、5、9……，大于7的下一处是9。"
+          },
+          "expected": "9"
+        },
+        "origin": "原创配套练习，按已核实的第4、6单元小节范围设计，非教材原题",
+        "diagramCaption": "正方体蓝色面初始朝右，沿数字带始终向右翻滚；起点记0"
+      }
+    ],
+    "7": [
+      {
+        "id": "u7_01",
+        "k": "购物热身",
+        "d": 1,
+        "t": "text",
+        "q": "一本本子7元，买8本共多少元？（填数字即可）",
+        "a": "56",
+        "alts": [
+          "56元"
+        ],
+        "h": [
+          "每本价格相同。",
+          "把7元重复8次，可用7×8。",
+          "计算结果是 56元。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "7*8",
+          "expected": 56
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u7_02",
+        "k": "购物热身",
+        "d": 1,
+        "t": "text",
+        "q": "一盒彩笔24元，买5盒共多少元？（填数字即可）",
+        "a": "120",
+        "alts": [
+          "120元"
+        ],
+        "h": [
+          "要求5份相同价格的合计。",
+          "可以先算20×5，再算4×5。",
+          "计算结果是 120元。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "24*5",
+          "expected": 120
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u7_03",
+        "k": "购物热身",
+        "d": 1,
+        "t": "text",
+        "q": "每箱18瓶水，3箱一共有多少瓶？（填数字即可）",
+        "a": "54",
+        "alts": [
+          "54瓶"
+        ],
+        "h": [
+          "一箱有18瓶，共3份。",
+          "18×3可以拆成10×3加8×3。",
+          "计算结果是 54瓶。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "18*3",
+          "expected": 54
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u7_04",
+        "k": "购物热身",
+        "d": 1,
+        "t": "text",
+        "q": "每袋12块饼干，6袋一共有多少块？（填数字即可）",
+        "a": "72",
+        "alts": [
+          "72块"
+        ],
+        "h": [
+          "每袋数量相同。",
+          "先算10×6，再算2×6。",
+          "计算结果是 72块。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "12*6",
+          "expected": 72
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u7_05",
+        "k": "分组热身",
+        "d": 1,
+        "t": "text",
+        "q": "84颗珠子平均分给7组，每组多少颗？（填数字即可）",
+        "a": "12",
+        "alts": [
+          "12颗"
+        ],
+        "h": [
+          "总数平均分成相同的7份。",
+          "找一个数乘7得到84。",
+          "计算结果是 12颗。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "84//7",
+          "expected": 12
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u7_06",
+        "k": "分组热身",
+        "d": 1,
+        "t": "text",
+        "q": "96本书，每8本装一袋，可以装多少袋？（填数字即可）",
+        "a": "12",
+        "alts": [
+          "12袋"
+        ],
+        "h": [
+          "已知总数和每袋数量。",
+          "想一想8乘几等于96。",
+          "计算结果是 12袋。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "96//8",
+          "expected": 12
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u7_07",
+        "k": "分组热身",
+        "d": 1,
+        "t": "text",
+        "q": "56元全部用来买每本7元的本子，可以买多少本？（填数字即可）",
+        "a": "8",
+        "alts": [
+          "8本"
+        ],
+        "h": [
+          "每拿出7元就能买一本。",
+          "用总钱数除以每本价格。",
+          "计算结果是 8本。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "56//7",
+          "expected": 8
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u7_08",
+        "k": "分组热身",
+        "d": 1,
+        "t": "text",
+        "q": "48把椅子，每排摆6把，一共摆多少排？（填数字即可）",
+        "a": "8",
+        "alts": [
+          "8排"
+        ],
+        "h": [
+          "把48按每6个一组来分。",
+          "用48除以6核对。",
+          "计算结果是 8排。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "48//6",
+          "expected": 8
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u7_09",
+        "k": "数量比较",
+        "d": 1,
+        "t": "text",
+        "q": "甲有35本书，乙比甲多12本，乙有多少本？（填数字即可）",
+        "a": "47",
+        "alts": [
+          "47本"
+        ],
+        "h": [
+          "先找出谁的数量更多。",
+          "乙在35本的基础上还多12本。",
+          "计算结果是 47本。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "35+12",
+          "expected": 47
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u7_10",
+        "k": "数量比较",
+        "d": 1,
+        "t": "text",
+        "q": "原有85本书，借出27本，又还回14本，现在有多少本？（填数字即可）",
+        "a": "72",
+        "alts": [
+          "72本"
+        ],
+        "h": [
+          "借出让数量减少，还回让数量增加。",
+          "先减27，再加14。",
+          "计算结果是 72本。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "85-27+14",
+          "expected": 72
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u7_11",
+        "k": "数量比较",
+        "d": 1,
+        "t": "text",
+        "q": "甲做24朵纸花，乙做的数量是甲的3倍，乙做多少朵？（填数字即可）",
+        "a": "72",
+        "alts": [
+          "72朵"
+        ],
+        "h": [
+          "3倍表示3个相同的24。",
+          "用24乘3，不是24加3。",
+          "计算结果是 72朵。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "24*3",
+          "expected": 72
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u7_12",
+        "k": "数量比较",
+        "d": 1,
+        "t": "text",
+        "q": "计划做90张贺卡，已经做了53张，还差多少张？（填数字即可）",
+        "a": "37",
+        "alts": [
+          "37张"
+        ],
+        "h": [
+          "总数由已做和还差两部分组成。",
+          "从计划总数里减去已做数量。",
+          "计算结果是 37张。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "90-53",
+          "expected": 37
+        },
+        "origin": "原创通用热身；不是教材原题"
+      }
+    ],
+    "8": [
+      {
+        "id": "u8_01",
+        "k": "读数与合计",
+        "d": 1,
+        "t": "text",
+        "q": "三个小组种树记录：一组12棵，二组18棵，三组15棵。\n三个小组合计多少棵？（填数字即可）",
+        "a": "45",
+        "alts": [
+          "45棵"
+        ],
+        "h": [
+          "把三个组的数量相加。",
+          "先算12+18，再加15。",
+          "计算结果是 45棵。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "12+18+15",
+          "expected": 45
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u8_02",
+        "k": "读数与合计",
+        "d": 1,
+        "t": "text",
+        "q": "三个小组种树记录：一组12棵，二组18棵，三组15棵。\n最多的一组种了多少棵？（填数字即可）",
+        "a": "18",
+        "alts": [
+          "18棵"
+        ],
+        "h": [
+          "逐一比较三个数量。",
+          "找出三个数中最大的数。",
+          "计算结果是 18棵。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "max(12,18,15)",
+          "expected": 18
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u8_03",
+        "k": "读数与合计",
+        "d": 1,
+        "t": "text",
+        "q": "三个小组种树记录：一组12棵，二组18棵，三组15棵。\n二组比一组多种多少棵？（填数字即可）",
+        "a": "6",
+        "alts": [
+          "6棵"
+        ],
+        "h": [
+          "比较的是二组和一组。",
+          "用较大数量减较小数量。",
+          "计算结果是 6棵。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "18-12",
+          "expected": 6
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u8_04",
+        "k": "读数与合计",
+        "d": 1,
+        "t": "text",
+        "q": "三个小组种树记录：一组12棵，二组18棵，三组15棵。\n三组比一组多种多少棵？（填数字即可）",
+        "a": "3",
+        "alts": [
+          "3棵"
+        ],
+        "h": [
+          "不要把第三个组的序号当成数量。",
+          "用15减去12。",
+          "计算结果是 3棵。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "15-12",
+          "expected": 3
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u8_05",
+        "k": "读数与比较",
+        "d": 1,
+        "t": "text",
+        "q": "阅读记录：周一14页，周二20页，周三16页。\n三天合计阅读多少页？（填数字即可）",
+        "a": "50",
+        "alts": [
+          "50页"
+        ],
+        "h": [
+          "每天页数是不同部分。",
+          "把14、20、16合计。",
+          "计算结果是 50页。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "14+20+16",
+          "expected": 50
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u8_06",
+        "k": "读数与比较",
+        "d": 1,
+        "t": "text",
+        "q": "阅读记录：周一14页，周二20页，周三16页。\n最多的一天读了多少页？（填数字即可）",
+        "a": "20",
+        "alts": [
+          "20页"
+        ],
+        "h": [
+          "先比较三天的页数。",
+          "找最大页数，不是把三天相加。",
+          "计算结果是 20页。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "max(14,20,16)",
+          "expected": 20
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u8_07",
+        "k": "读数与比较",
+        "d": 1,
+        "t": "text",
+        "q": "阅读记录：周一14页，周二20页，周三16页。\n周二和周三合计多少页？（填数字即可）",
+        "a": "36",
+        "alts": [
+          "36页"
+        ],
+        "h": [
+          "题目只问其中两天。",
+          "从记录取20和16相加。",
+          "计算结果是 36页。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "20+16",
+          "expected": 36
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u8_08",
+        "k": "读数与比较",
+        "d": 1,
+        "t": "text",
+        "q": "阅读记录：周一14页，周二20页，周三16页。\n周三比周二少读多少页？（填数字即可）",
+        "a": "4",
+        "alts": [
+          "4页"
+        ],
+        "h": [
+          "先确定两天分别读了多少。",
+          "较大数减较小数。",
+          "计算结果是 4页。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "20-16",
+          "expected": 4
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u8_09",
+        "k": "根据记录回答",
+        "d": 1,
+        "t": "text",
+        "q": "活动选择记录：跳绳9人，踢毽子12人，跑步15人；每人只选一项。\n参加三项活动的一共有多少人？（填数字即可）",
+        "a": "36",
+        "alts": [
+          "36人"
+        ],
+        "h": [
+          "每人只选一项，不会重复计算。",
+          "把9、12、15三部分相加。",
+          "计算结果是 36人。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "9+12+15",
+          "expected": 36
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u8_10",
+        "k": "根据记录回答",
+        "d": 1,
+        "t": "text",
+        "q": "活动选择记录：跳绳9人，踢毽子12人，跑步15人；每人只选一项。\n人数最多的活动有多少人？（填数字即可）",
+        "a": "15",
+        "alts": [
+          "15人"
+        ],
+        "h": [
+          "比较三个活动的人数。",
+          "选择最大的人数。",
+          "计算结果是 15人。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "max(9,12,15)",
+          "expected": 15
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u8_11",
+        "k": "根据记录回答",
+        "d": 1,
+        "t": "text",
+        "q": "活动选择记录：跳绳9人，踢毽子12人，跑步15人；每人只选一项。\n跑步比跳绳多多少人？（填数字即可）",
+        "a": "6",
+        "alts": [
+          "6人"
+        ],
+        "h": [
+          "只取跑步和跳绳的数据。",
+          "用15减9。",
+          "计算结果是 6人。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "15-9",
+          "expected": 6
+        },
+        "origin": "原创通用热身；不是教材原题"
+      },
+      {
+        "id": "u8_12",
+        "k": "根据记录回答",
+        "d": 1,
+        "t": "text",
+        "q": "活动选择记录：跳绳9人，踢毽子12人，跑步15人；每人只选一项。\n踢毽子和跑步合计多少人？（填数字即可）",
+        "a": "27",
+        "alts": [
+          "27人"
+        ],
+        "h": [
+          "题目没有要求跳绳人数。",
+          "只把12和15合计。",
+          "计算结果是 27人。请把每一步和题意对应起来。"
+        ],
+        "audit": {
+          "expression": "12+15",
+          "expected": 27
+        },
+        "origin": "原创通用热身；不是教材原题"
+      }
+    ]
+  },
+  "officialScopeVerified": true,
+  "officialReferenceEdition": "2026年7月第1版（官方来源；不据此断言用户实体书印次）",
+  "scopeEvidence": "2026-10-20 主线程已实际核对官方教材第58–62、79–84页；工程按已核实说明创作图题，未声称亲自查看课本页图。"
+}

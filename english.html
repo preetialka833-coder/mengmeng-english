@@ -6,6 +6,7 @@
 <style>
 :root{--ink:#5b4d67;--muted:#8c8193;--line:#f0deeb;--pink:#ff8fbd;--purple:#9687ff;--mint:#d7f7ec}
 *{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);background:linear-gradient(180deg,#fff8fc,#f7f6ff 65%,#fffdf8)}button,textarea{font:inherit}
+.unitLinks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.unitLinks a{padding:12px;border:2px solid var(--line);border-radius:14px;color:var(--ink);text-decoration:none;font-weight:800}.unitLinks a[aria-current]{background:#fff0c6}.unitLinks a{overflow-wrap:anywhere}@media(max-width:600px){.unitLinks{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .app{max-width:980px;margin:auto;min-height:100vh;padding:22px 20px 110px}.screen{display:none}.screen.active{display:block}
 .hero,.card{background:#fff;border:2px solid #f6e2ef;border-radius:30px;box-shadow:0 12px 30px rgba(160,120,175,.08)}.hero{padding:24px;background:linear-gradient(135deg,#ffe5f1,#f0ecff);position:relative}.hero h1{font-size:38px;margin:6px 0}.sub{font-size:18px;line-height:1.7;color:var(--muted)}.badge{display:inline-block;padding:8px 14px;border-radius:999px;background:#fff;border:1px solid #ffd2e3;color:#e45c9d;font-weight:900}
 .card{padding:24px;margin-top:16px}h2{font-size:26px;margin:0 0 12px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}.stat{background:#fff;border:2px solid #f4e2ef;border-radius:22px;padding:16px;text-align:center}.stat b{font-size:30px;display:block}.stat span,.small{font-size:14px;color:var(--muted)}
@@ -17,11 +18,12 @@
 nav{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.97);border-top:1px solid #efdfeb}nav .inner{max-width:980px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr)}nav button{border:0;background:transparent;padding:13px 4px;color:#8f8397;font-weight:900}nav button.active{color:#eb64a3}
 @media(max-width:980px){.key,.key.action{min-width:0;flex:1}}
 @media(max-width:760px){.app{padding:14px 10px 98px}.hero h1{font-size:30px}.sub{font-size:16px}.choiceGrid{grid-template-columns:1fr}.key{min-width:0;flex:1;height:58px;font-size:23px}.key.action{min-width:0;flex:1;font-size:18px}.key.ok{font-size:22px}.cn,.en{font-size:34px}}
-</style></head><body><div data-build="2026.10.19-review1" style="max-width:980px;margin:8px auto;padding:0 18px;color:#74657e;font:13px system-ui,sans-serif">试用修复版 · 2026.10.19-review1</div><div style="max-width:980px;margin:10px auto 0;padding:0 18px"><a href="./index.html?v=20261019review1" style="text-decoration:none"><button style="border:2px solid #f0deeb;background:white;border-radius:16px;padding:10px 14px;font-weight:900;color:#5b4d67">← 返回学习平台</button></a></div><div class="app">
+</style></head><body><div data-build="2026.10.20-units-candidate5" style="max-width:980px;margin:8px auto;padding:0 18px;color:#74657e;font:13px system-ui,sans-serif">试用修复版 · 2026.10.20-units-candidate5</div><div style="max-width:980px;margin:10px auto 0;padding:0 18px"><a href="./index.html?v=20261020unitscandidate5" style="text-decoration:none"><button style="border:2px solid #f0deeb;background:white;border-radius:16px;padding:10px 14px;font-weight:900;color:#5b4d67">← 返回学习平台</button></a></div><div class="app">
 <div id="progressConflictNotice" hidden role="alert" class="tip" style="margin:12px 0">另一页面已更新进度，或存储暂时无法核对。本页已停止保存，请重新载入后继续。<button class="btn soft" onclick="location.reload()">重新载入最新进度</button></div>
+<section class="card" aria-label="英语单元"><h2>选择英语单元</h2><div class="unitLinks"><a aria-current="page" href="./english.html?v=20261020unitscandidate5">Unit 1 · 49项（1项待核）</a><a href="./english-unit2.html?v=20261020unitscandidate5">Unit 2 · 56项（1项待核）</a><a href="./english-unit3.html?v=20261020unitscandidate5">Unit 3 · 47项</a><a href="./english-unit4.html?v=20261020unitscandidate5">Unit 4 · 40项</a><a href="./english-unit5.html?v=20261020unitscandidate5">Unit 5 · 44项</a><a href="./english-unit6.html?v=20261020unitscandidate5">Unit 6 · 43项</a></div><p class="small">单元分别保存练习进度；请按学校实际进度选择。清单共279项，当前277项可练，2项待核。原始记录保留。</p></section>
 <section id="home" class="screen active"><div class="hero"><span class="badge">希沃学习机固定网址版 · V5.1</span><h1>萌萌英语花园 🌸</h1><div class="sub">每天一点点：先复习到期内容，再学少量新内容。答错就多练一次，按自己的进度来。</div></div>
 <div class="stats"><div class="stat"><b id="dayNum">1</b><span>成长路线</span></div><div class="stat"><b id="todayCount">0</b><span>今天总任务</span></div><div class="stat"><b id="reviewCount">0</b><span>今日复习</span></div></div>
-<div class="card"><h2>今天只做这一点</h2><div class="progress"><i id="unitProgress"></i></div><p class="sub" id="plan"></p><details class="small" style="margin-bottom:16px"><summary>今天为什么这样安排？</summary><p>先做最早到期的复习，每天最多 8 项。没有积压时，再按单词、短语、句子的顺序学最多 4 项新内容。每天按这台设备的日期安排，刷新或重进都会接着做。<br>首次学会后隔天复习；以后隔天独立写对，间隔逐步延长到 3、7、14、30 天。这是可调整的练习安排。<br>答错后先改对，约 10 分钟后再试；每项每天最多两次短复习，再错就明天继续。看过答案后的改正和当天短复习，都不算隔天独立写对。</p></details><div class="row"><button class="btn primary" onclick="startToday()">开始今天学习</button><button class="btn soft" onclick="show('rewards')">看看奖励</button></div></div>
+<div class="card"><h2>今天只做这一点</h2><p class="small">1句原稿表达待老师确认，已暂停练习；旧记录、原答案和奖励保留。不会把跳过该句当作答对或新解锁奖励。</p><div class="progress"><i id="unitProgress"></i></div><p class="sub" id="plan"></p><details class="small" style="margin-bottom:16px"><summary>今天为什么这样安排？</summary><p>先做最早到期的复习，每天最多 8 项。没有积压时，再按单词、短语、句子的顺序学最多 4 项新内容。每天按这台设备的日期安排，刷新或重进都会接着做。<br>首次学会后隔天复习；以后隔天独立写对，间隔逐步延长到 3、7、14、30 天。这是可调整的练习安排。<br>答错后先改对，约 10 分钟后再试；每项每天最多两次短复习，再错就明天继续。看过答案后的改正和当天短复习，都不算隔天独立写对。</p></details><div class="row"><button class="btn primary" onclick="startToday()">开始今天学习</button><button class="btn soft" onclick="show('rewards')">看看奖励</button></div></div>
 <div class="card"><div class="tip">💾 固定网址以后，请一直用同一台希沃、同一个浏览器打开。进度会自动保存在这里；妈妈页还能备份进度码。</div></div>
 <div class="card"><h2>14 格成长路线</h2><div class="route" id="route"></div><p class="small">依次学习单词、短语和重点句。每天主任务完成点亮一格，隔天继续；复习较多时可以慢一点。毕业听写分散在到期复习中完成，不用一天重写全部内容。</p></div></section>
 
@@ -48,6 +50,8 @@ nav{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.97);bord
 </div>
 <nav><div class="inner"><button id="nav-home" class="active" onclick="show('home')">🏠<br>今天</button><button id="nav-learn" onclick="startToday()">🌸<br>学习</button><button id="nav-rewards" onclick="show('rewards')">🎀<br>奖励</button><button id="nav-parent" onclick="show('parent')">👩‍👧<br>妈妈</button></div></nav>
 <script>
+const UNIT=1;
+const HELD_KEYS=new Set(["sentence|I keep running for five months."]);
 const D={"words":[["体育运动","sport","⚽"],["跳","jump","🐰"],["高高地","high","🎈"],["远","far","🌈"],["乒乓球运动","ping-pong","🏓"],["排球（运动）","volleyball","🏐"],["穿过；越过","across","➡️"],["希望","hope","🌟"],["失去","lose","😿"],["因为","because","💭"],["癌（症）","cancer","🎗️"],["其他的","other","🧩"],["钱","money","🪙"],["困难的","hard","⛰️"],["亲切的；友好的","kind","💗"],["持续；继续","keep","🔁"],["一个月","month","🗓️"],["生病的","ill","🤒"],["（不）再","anymore","🚫"],["年；年度","year","📅"],["纪念；记住","remember","🧠"],["失败","fail","🌧️"],["给予","give","🎁"],["决不；永不","never","🙅‍♀️"],["努力；尝试","try","💪"],["明星；最出色者","star","⭐"],["才能；能力","ability","✨"],["运动员；选手","player","🏅"]],"phrases":[["做运动","play sports"],["跳得高","jump high"],["起初","at first"],["跑得快","run fast"],["打乒乓球","play ping-pong"],["因为某人/某事物","because of sb/sth"],["坚持跑步","keep running"],["放弃","give up"],["尽最大努力","try your best"],["努力奋斗","work hard"],["穿过；跑着穿过","run across"],["对于某人来说是困难的","be hard for sb"],["喜欢做某事","like doing sth"],["停止做某事","stop doing sth"]],"sentences":[["我会跑步和游泳。","I can run and swim."],["那你呢？","What about you?"],["大明能做什么？","What can Daming do?"],["你会游泳吗？","Can you swim?"],["不，我不会。但我可以学。","No, I can't. But I can learn."],["这对我来说很难。","It's hard for me."],["我持续跑了5个月。","I keep running for five months."]]}; const U={words:D.words.map(x=>({cn:x[0],en:x[1],icon:x[2]})),phrases:D.phrases.map(x=>({cn:x[0],en:x[1],icon:"🎀"})),sentences:D.sentences.map(x=>({cn:x[0],en:x[1],icon:"💬"}))};
 const KEY="mengmeng_v4_unit1";
 const BACKUP_KEY=KEY+"_before_review_v2", BACKUP_INFO_KEY=BACKUP_KEY+"_info";
@@ -113,7 +117,8 @@ function validDay(value){return typeof value==="string"&&/^\d{4}-\d{2}-\d{2}$/.t
 function dayTime(day){const [y,m,d]=day.split("-").map(Number);return new Date(y,m-1,d).getTime();}
 function addDays(day,n){const d=new Date(dayTime(day));d.setDate(d.getDate()+n);return localDay(d);}
 function itemKey(x){return x.kind+"|"+x.en;}
-function allItems(){return[...U.words.map(x=>({...x,kind:"word"})),...U.phrases.map(x=>({...x,kind:"phrase"})),...U.sentences.map(x=>({...x,kind:"sentence"}))];}
+function sourceItems(){return[...U.words.map(x=>({...x,kind:"word"})),...U.phrases.map(x=>({...x,kind:"phrase"})),...U.sentences.map(x=>({...x,kind:"sentence"}))];}
+function allItems(){return sourceItems().filter(x=>!HELD_KEYS.has(itemKey(x)));}
 function itemFor(key){return allItems().find(x=>itemKey(x)===key);}
 function normalizeState(){
   if(!S.meta||typeof S.meta!=="object"||Array.isArray(S.meta))S.meta={};
@@ -164,7 +169,7 @@ function st(k,e){
 function norm(value){
   return String(value||"").normalize("NFKC").trim().toLowerCase()
     .replace(/[’‘]/g,"'").replace(/[‐‑–—]/g,"-")
-    .replace(/\s*\/\s*/g,"/").replace(/[.,!?，。！？]/g," ")
+    .replace(/[“”"]/g,"").replace(/\s*\/\s*/g,"/").replace(/[.,!?，。！？]/g," ")
     .replace(/\s+/g," ").trim();
 }
 function answersMatch(answer,expected){return norm(answer)===norm(expected);}
@@ -187,7 +192,7 @@ function dueReviews(day=localDay()){
 }
 function objectRecord(value){return !!value&&typeof value==="object"&&!Array.isArray(value);}
 function validPlan(p){
-  const keys=new Set(allItems().map(itemKey)),baseKeys=new Set(),retestCounts={},modeCounts={new:0,review:0};
+  const keys=new Set(sourceItems().map(itemKey)),baseKeys=new Set(),retestCounts={},modeCounts={new:0,review:0};
   return objectRecord(p)&&p.version===2&&validDay(p.day)&&Number.isInteger(p.routeDay)&&p.routeDay>=1&&p.routeDay<=14&&
     Array.isArray(p.entries)&&p.entries.length<=36&&p.entries.every(e=>{
       if(!objectRecord(e)||!keys.has(e.key)||!["new","review","retest"].includes(e.mode)||!Number.isInteger(e.stage)||e.stage<0||e.stage>6||typeof e.done!=="boolean"||typeof e.typed!=="string"||typeof e.assisted!=="boolean"||!Number.isFinite(e.readyAt)||e.readyAt<0)return false;
@@ -208,7 +213,7 @@ function validState(value){
     if(m.graduated!==undefined&&typeof m.graduated!=="boolean")return false;
     if(m.dailyPlan!==undefined&&!validPlan(m.dailyPlan))return false;
   }
-  return allItems().every(x=>{
+  return sourceItems().every(x=>{
     const r=value[itemKey(x)];if(r===undefined)return true;if(!objectRecord(r))return false;
     for(const name of ["seen","wrong","passed","due","reviewStep","lastReview","relearnAt"]){if(r[name]!==undefined&&(!Number.isFinite(r[name])||r[name]<0))return false;}
     for(const name of ["dueDay","learnedDay","independentRecallDay","lastRecallDay","lastFailedDay"]){if(r[name]!==undefined&&!validDay(r[name]))return false;}
@@ -234,7 +239,7 @@ function ensureDailyPlan(){
   persist();
   return S.meta.dailyPlan;
 }
-function todaysItems(){return ensureDailyPlan().entries.filter(e=>e.mode==="new").map(e=>itemFor(e.key));}
+function todaysItems(){return ensureDailyPlan().entries.filter(e=>e.mode==="new"&&!HELD_KEYS.has(e.key)).map(e=>itemFor(e.key));}
 function setDue(s,days){s.dueDay=addDays(localDay(),days);s.due=dayTime(s.dueDay);}
 function scheduleReview(s,correct,mode="new",assisted=false){
   const today=localDay(),now=Date.now();
@@ -286,7 +291,7 @@ function presentNext(){
   if(!progressCurrent())return;
   const p=ensureDailyPlan();
   queue=p.entries.map(e=>({...itemFor(e.key),_review:e.mode!=="new",_mode:e.mode}));
-  idx=p.entries.findIndex(e=>!e.done&&(!e.readyAt||e.readyAt<=Date.now()));
+  idx=p.entries.findIndex(e=>!HELD_KEYS.has(e.key)&&!e.done&&(!e.readyAt||e.readyAt<=Date.now()));
   if(idx<0){current=null;finishDay();return;}
   current=queue[idx];stage=p.entries[idx].stage;typed=p.entries[idx].typed||"";
   show("learn");renderLesson();
@@ -361,20 +366,21 @@ function completeStage(delay=0){
 }
 function advance(){if(!current||answerPending||!activeDayOK())return;if(stage<=1)completeStage();}
 function settlePlan(p){
-  const base=p.entries.filter(e=>e.mode!=="retest");
-  if(base.length&&base.every(e=>e.done)&&!p.baseCompleted){
+  const base=p.entries.filter(e=>e.mode!=="retest"&&!HELD_KEYS.has(e.key));
+  if(!p.entries.some(e=>HELD_KEYS.has(e.key))&&base.length&&base.every(e=>e.done)&&!p.baseCompleted){
     p.baseCompleted=true;
     const key="d"+p.routeDay;
     if(!S.meta.doneDays[key]){S.meta.doneDays[key]=true;S.meta.stickers++;p.rewardNotice=true;}
     p.rewarded=true;
   }
-  if(!S.meta.graduated&&allItems().every(x=>!!st(x.kind,x.en).independentRecallDay)){
+  const graduationItems=UNIT===1?sourceItems():allItems();
+  if(!S.meta.graduated&&graduationItems.every(x=>!!S[itemKey(x)]?.independentRecallDay)){
     S.meta.graduated=true;p.graduationNotice=true;
   }
 }
 function finishDay(){
   if(!progressCurrent())return;
-  const p=ensureDailyPlan(),base=p.entries.filter(e=>e.mode!=="retest"),waiting=p.entries.filter(e=>!e.done);
+  const p=ensureDailyPlan(),base=p.entries.filter(e=>e.mode!=="retest"&&!HELD_KEYS.has(e.key)),waiting=p.entries.filter(e=>!e.done&&!HELD_KEYS.has(e.key));
   settlePlan(p);
   const earned=!!p.rewardNotice,graduated=!!p.graduationNotice;
   p.rewardNotice=false;p.graduationNotice=false;save();
@@ -410,6 +416,7 @@ function stopLessonAudio(reset=true){
   if(reset)setAudioStatus("ready","点听音按钮播放英语录音。");
 }
 function recordedAudioFor(item){
+  if(UNIT!==1)return null;
   const group={word:"words",phrase:"phrases",sentence:"sentences"}[item.kind];
   const index=group?D[group].findIndex(row=>row[1]===item.en):-1;
   return index<0?null:"./audio/english/"+group+"-"+String(index+1).padStart(2,"0")+".mp3";
@@ -418,6 +425,7 @@ function spokenAudioText(text){
   return text.replace(/\bsb\s*\/\s*sth\b/gi,"somebody or something").replace(/\bsb\b/gi,"somebody").replace(/\bsth\b/gi,"something").replace(/\bDaming\b/g,"Dah Ming");
 }
 function speakCurrent(){
+  if(UNIT!==1){speakWithDevice();return;}
   if(!current)return;
   stopLessonAudio(false);
   const request=audioRequest,source=recordedAudioFor(current);
@@ -506,7 +514,19 @@ function renderParent(){
 }
 function encodeState(o){return btoa(unescape(encodeURIComponent(JSON.stringify(o))));}
 function decodeState(c){return JSON.parse(decodeURIComponent(escape(atob(c.trim()))));}
-function exportProgress(){if(!progressCurrent())return;progressCode.textContent=encodeState(S);progressCodeKind="current";backupStatus.textContent="本页进度码，包含本页已经完成的学习。请复制后单独保存；有存储警告时请核对保存结果。";}
+function progressEnvelope(raw){return encodeState({format:"mengmeng-progress",version:1,unit:UNIT,raw});}
+function currentProgressCode(){return progressEnvelope(JSON.stringify(S));}
+function readProgressCode(code){
+ const decoded=decodeState(code);
+ if(objectRecord(decoded)&&decoded.format==="mengmeng-progress"){
+   if(decoded.version!==1||decoded.unit!==UNIT||typeof decoded.raw!=="string")throw Error("unit");
+   return JSON.parse(decoded.raw);
+ }
+ // Only Unit 1 existed before the unit-tagged format. Historical Unit 1 backups remain usable.
+ if(UNIT!==1)throw Error("legacy-unit");
+ return decoded;
+}
+function exportProgress(){if(!progressCurrent())return;progressCode.textContent=currentProgressCode();progressCodeKind="current";backupStatus.textContent="Unit 1 专用进度码，包含本页已经完成的学习。请复制后单独保存；有存储警告时请核对保存结果。";}
 function exportOriginalBackup(){
   try{
     let raw=localStorage.getItem(BACKUP_KEY),info=null;
@@ -519,12 +539,12 @@ function exportOriginalBackup(){
       if(raw===null){alert("这台设备最初没有旧进度，目前没有升级前备份码。");return;}
       ensureOriginalBackup(raw,"before-upgrade");
     }
-    progressCode.textContent=btoa(unescape(encodeURIComponent(raw)));
+    progressCode.textContent=progressEnvelope(raw);
     progressCodeKind="original";
     backupStatus.textContent=(info&&info.origin==="before-import"?"首次导入前":"升级前")+"原始备份码，保留原来的全部内容。生成此码不会恢复或覆盖当前进度；有效旧进度码可粘贴到下方恢复。";
   }catch(e){
     // An unverified stored snapshot must not be presented as a safe backup.
-    if(initialRaw!==null){progressCode.textContent=btoa(unescape(encodeURIComponent(initialRaw)));progressCodeKind="original";backupStatus.textContent="自动备份未能验证。这是打开本页时的原始进度码，请先复制保存；当前进度没有被恢复或覆盖。";}
+    if(initialRaw!==null){progressCode.textContent=progressEnvelope(initialRaw);progressCodeKind="original";backupStatus.textContent="自动备份未能验证。这是打开本页时的原始进度码，请先复制保存；当前进度没有被恢复或覆盖。";}
     else alert("原始备份暂时无法读取，请先生成当前进度码保存。");
   }
 }
@@ -538,7 +558,7 @@ async function copyProgress(){
   const copiedKind=progressCodeKind,copiedCode=progressCode.textContent;
   try{
     await navigator.clipboard.writeText(copiedCode);
-    if(copiedKind!=="original"&&(!progressCurrent()||copiedCode!==encodeState(S))){alert("进度已变化，剪贴板可能仍是旧码。请重新载入后生成最新进度码。");return;}
+    if(copiedKind!=="original"&&(!progressCurrent()||copiedCode!==currentProgressCode())){alert("进度已变化，剪贴板可能仍是旧码。请重新载入后生成最新进度码。");return;}
     alert("已复制");
   }catch(e){alert("请长按手动复制");}
 }
@@ -546,9 +566,9 @@ function importProgress(){
   if(!progressCurrent())return;
   let r;
   try{
-    r=decodeState(importCode.value);
+    r=readProgressCode(importCode.value);
     if(!r||!r.meta||!validState(r))throw Error("state");
-  }catch(e){alert("进度码无效，现有进度没有改变");return;}
+  }catch(e){alert("进度码无效或不属于本单元，现有进度没有改变");return;}
   try{
     const recovering=!initialReadOK,beforeImport=localStorage.getItem(KEY);
     if(!progressCurrent())return;
@@ -571,8 +591,8 @@ function setDayPrompt(){
 }
 function refresh(){
   if(!progressCurrent())return;
-  const p=ensureDailyPlan(),base=p.entries.filter(e=>e.mode!=="retest"),rc=base.filter(e=>e.mode==="review").length,nc=base.filter(e=>e.mode==="new").length;
-  const done=base.filter(e=>e.done).length,waiting=p.entries.filter(e=>e.mode==="retest"&&!e.done);
+  const p=ensureDailyPlan(),base=p.entries.filter(e=>e.mode!=="retest"&&!HELD_KEYS.has(e.key)),rc=base.filter(e=>e.mode==="review").length,nc=base.filter(e=>e.mode==="new").length;
+  const done=base.filter(e=>e.done).length,waiting=p.entries.filter(e=>e.mode==="retest"&&!e.done&&!HELD_KEYS.has(e.key));
   const learned=allItems().filter(x=>st(x.kind,x.en).passed).length;
   const ready=waiting.filter(e=>e.readyAt<=Date.now()).length;
   const minutes=waiting.length?Math.max(1,Math.ceil((Math.min(...waiting.map(e=>e.readyAt))-Date.now())/60000)):0;

@@ -39,7 +39,7 @@ function createApp({state,raw,storage,now=new Date(2026,9,7,9).getTime(),failWri
 }
 function learnedFixture(now=new Date(2026,9,7,9).getTime()){
   const a=createApp({now}),state={meta:{day:14,stickers:13,doneDays:{},graduated:false}};
-  for(const x of a.json('allItems()'))state[x.kind+'|'+x.en]={seen:1,wrong:0,passed:1,reviewStep:1,lastReview:new Date(2026,8,1,9).getTime(),learnedDay:'2026-09-01',dueDay:'2050-01-01',due:new Date(2050,0,1).getTime()};
+  for(const x of a.json('sourceItems()'))state[x.kind+'|'+x.en]={seen:1,wrong:0,passed:1,reviewStep:1,lastReview:new Date(2026,8,1,9).getTime(),learnedDay:'2026-09-01',dueDay:'2050-01-01',due:new Date(2050,0,1).getTime()};
   return state;
 }
 function submit(app,text){app.context.testAnswer=text;app.run('typed=testAnswer;activeEntry().typed=typed;submitAnswer()');}

@@ -30,7 +30,7 @@ const localGB={lang:'en-GB',localService:true,name:'Local GB'};
 
 test('all 49 exact lessons map to present MP3s and manifest hashes',()=>{
   const a=app(),manifest=JSON.parse(fs.readFileSync(path.join(root,'audio/english/manifest.json')));
-  const items=a.json('allItems()');assert.equal(manifest.tracks.length,49);assert.equal(items.length,49);
+  const items=a.json('sourceItems()');assert.equal(manifest.tracks.length,49);assert.equal(items.length,49);
   for(const item of items){
     const track=manifest.tracks.find(t=>t.text===item.en);assert.ok(track,item.en);
     a.context.audioItem=item;

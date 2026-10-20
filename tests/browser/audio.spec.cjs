@@ -39,12 +39,12 @@ test('all 49 manifest mappings load and actually advance playback without a spee
   page.on('response',response=>{if(response.url().includes('/audio/english/')&&response.url().endsWith('.mp3'))responses.push({url:response.url(),status:response.status()});});
   await startWithoutSpeech(page);
   const before=await page.evaluate(()=>localStorage.getItem('mengmeng_v4_unit1'));
-  const items=await page.evaluate(()=>allItems().map(item=>({text:item.en,file:recordedAudioFor(item)})));
+  const items=await page.evaluate(()=>sourceItems().map(item=>({text:item.en,file:recordedAudioFor(item)})));
   expect(items).toHaveLength(49);
   for(let index=0;index<items.length;index++){
     const track=manifest.tracks.find(track=>track.text===items[index].text);
     expect(items[index].file).toBe(`./audio/english/${track.file}`);
-    await page.evaluate(index=>{current=allItems()[index];renderLesson();},index);
+    await page.evaluate(index=>{current=sourceItems()[index];renderLesson();},index);
     await listen(page).click();
     await expect.poll(()=>page.locator('#audioPlayer audio').evaluate(a=>a.currentTime),{timeout:10000}).toBeGreaterThan(0.04);
     const actual=await page.locator('#audioPlayer audio').evaluate(a=>({src:a.currentSrc,duration:a.duration,ready:a.readyState,error:a.error&&a.error.code}));

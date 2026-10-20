@@ -13,7 +13,7 @@ function review(app,answer){app.run('startToday()');submit(app,answer||app.run('
 
 test('the complete English script parses and starts with a bounded saved plan',()=>{
   assert.doesNotThrow(()=>new vm.Script(script));
-  const a=createApp();assert.equal(a.run('allItems().length'),49);
+  const a=createApp();assert.equal(a.run('allItems().length'),48);
   assert.equal(a.run('S.meta.dailyPlan.entries.length'),4);
   assert.equal(a.nodes.todayCount.textContent,4);
   assert.ok(a.storage.has(KEY));assert.match(html,/onclick="tap\('\/'\)"/);
@@ -111,12 +111,12 @@ test('a long-gap backlog is oldest-due-first, capped, deduplicated, and postpone
   for(const [key,value]of Object.entries(state))if(key!=='meta'){value.dueDay=n++<15?'2026-09-01':'2026-09-02';value.due=new Date(value.dueDay+'T00:00:00').getTime();}
   state['word|star'].passed=0;
   const a=createApp({state});assert.equal(a.run('S.meta.dailyPlan.entries.length'),8);
-  assert.equal(a.run('S.meta.dailyPlan.backlog'),41);assert.equal(a.run('todaysItems().length'),0);
+  assert.equal(a.run('S.meta.dailyPlan.backlog'),40);assert.equal(a.run('todaysItems().length'),0);
   const keys=a.json('S.meta.dailyPlan.entries.map(e=>e.key)');assert.equal(new Set(keys).size,8);
   a.run('startToday()');for(let i=0;i<8;i++){submit(a,a.run('current.en'));a.flush();}
   a.run('startToday()');assert.equal(a.run('current'),null);assert.equal(a.run('S.meta.dailyPlan.entries.length'),8);
   a.setNow(new Date(2026,9,8,9).getTime());a.run('startToday()');
-  assert.equal(a.run('S.meta.dailyPlan.entries.length'),8);assert.equal(a.run('S.meta.dailyPlan.backlog'),33);
+  assert.equal(a.run('S.meta.dailyPlan.entries.length'),8);assert.equal(a.run('S.meta.dailyPlan.backlog'),32);
   assert.equal(a.run('S.meta.dailyPlan.entries.some(e=>e.key==="word|sport")'),false);
 });
 
