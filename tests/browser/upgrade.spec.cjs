@@ -74,7 +74,7 @@ test('current progress clipboard code includes learning since last export',async
  const result=await page.evaluate(async()=>{
   let copied='';Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async text=>{copied=text;}}});
   exportProgress();const old=progressCode.textContent;S.meta.stickers=6;save();await copyProgress();
-  return {changed:copied!==old,stickers:decodeState(copied).meta.stickers};
+  return {changed:copied!==old,stickers:readProgressCode(copied).meta.stickers};
  });
  expect(result).toEqual({changed:true,stickers:6});
 });

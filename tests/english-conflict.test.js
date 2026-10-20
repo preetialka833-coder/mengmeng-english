@@ -74,7 +74,7 @@ test('frozen current export cannot copy stale code or placeholder; original snap
 test('current copy regenerates code after normal learning in this page',async()=>{
  const a=createApp(),copied=[];a.context.navigator.clipboard.writeText=async text=>copied.push(text);
  a.run('exportProgress()');const old=a.nodes.progressCode.textContent;a.run('startToday()');completeNew(a);
- await a.run('copyProgress()');assert.notEqual(copied[0],old);a.context.copied=copied[0];assert.equal(a.run('decodeState(copied)["word|sport"].passed'),1);
+ await a.run('copyProgress()');assert.notEqual(copied[0],old);a.context.copied=copied[0];assert.equal(a.run('readProgressCode(copied)["word|sport"].passed'),1);
 });
 test('pending clipboard completion checks its captured type/code even if export type changes',async()=>{
  const a=createApp({state:{meta:{day:1,stickers:4,doneDays:{}}}});let finish;

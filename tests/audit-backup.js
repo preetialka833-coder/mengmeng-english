@@ -6,7 +6,7 @@ const tests=[];
 function test(name,run){tests.push([name,run]);}
 const raw=' \t{\n "meta":{"day":4,"stickers":2,"doneDays":{"d1":true},"graduated":false},\n "foreign":{"unicode":"保留😀","nullEscape":"\\u0000","order":[3,2,1]}, "word|sport":{"passed":1,"seen":8,"wrong":2,"due":0}\n}\n ';
 const incoming=a=>a.run('encodeState({meta:{day:2,stickers:1,doneDays:{},graduated:false},imported:true})');
-const decoded=a=>Buffer.from(a.nodes.progressCode.textContent,'base64').toString('utf8');
+const decoded=a=>JSON.parse(Buffer.from(a.nodes.progressCode.textContent,'base64').toString('utf8')).raw;
 class ReadFailureMap extends Map {
  constructor(entries,key,at){super(entries);this.key=key;this.at=at;this.hits=0;}
  get(key){if(key===this.key&&++this.hits===this.at)throw Error('synthetic read denied');return super.get(key);}

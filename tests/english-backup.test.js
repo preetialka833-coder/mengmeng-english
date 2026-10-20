@@ -3,7 +3,7 @@ const test=require('node:test');
 const assert=require('node:assert/strict');
 const {createApp,KEY,BACKUP_KEY,BACKUP_INFO_KEY}=require('./english-harness');
 const legacyRaw='  {\n "meta": {"day": 8, "stickers": 7, "doneDays": {"d1": true}, "graduated": true, "cat": {"name": "咪咪"}},\n "word|sport": {"seen": 9, "wrong": 2, "passed": 1, "due": 0, "extra": ["保留", 42]}, "shop": {"coins": 99}\n}\n';
-function decodedCode(a){return Buffer.from(a.nodes.progressCode.textContent,'base64').toString('utf8');}
+function decodedCode(a){return JSON.parse(Buffer.from(a.nodes.progressCode.textContent,'base64').toString('utf8')).raw;}
 function incoming(a){return a.run('encodeState({meta:{day:2,stickers:1,doneDays:{},graduated:false},imported:true})');}
 
 test('exact original raw bytes are verified before any active migration write',()=>{

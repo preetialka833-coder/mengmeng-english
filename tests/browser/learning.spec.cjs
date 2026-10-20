@@ -83,12 +83,12 @@ test('English slash keyboard, physical fullwidth slash, progress and assisted co
   await page.locator('#nav-parent').click();
   await page.getByRole('button', {name: '生成进度码', exact: true}).click();
   const code = await page.locator('#progressCode').textContent();
-  const decoded = JSON.parse(Buffer.from(code, 'base64').toString('utf8'));
+  const envelope = JSON.parse(Buffer.from(code, 'base64').toString('utf8')); expect(envelope.unit).toBe(1); const decoded=JSON.parse(envelope.raw);
   expect(decoded.meta.dailyPlan.entries).toEqual(state.meta.dailyPlan.entries);
   const activeRaw = await page.evaluate(key => localStorage.getItem(key), progressKey);
   await page.getByRole('button', {name: '生成升级前备份码', exact: true}).click();
   const originalCode = await page.locator('#progressCode').textContent();
-  const original = JSON.parse(Buffer.from(originalCode, 'base64').toString('utf8'));
+  const originalEnvelope=JSON.parse(Buffer.from(originalCode, 'base64').toString('utf8'));expect(originalEnvelope.unit).toBe(1);const original=JSON.parse(originalEnvelope.raw);
   expect(original.meta.legacyFlag).toBe('keep');
   expect(original['phrase|because of sb/sth'].wrong).toBe(0);
   expect(original.meta.dailyPlan).toBeUndefined();

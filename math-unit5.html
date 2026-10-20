@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>第5单元 · 运算律</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,"Microsoft YaHei",sans-serif;color:#51465d;background:linear-gradient(180deg,#faf8ff,#fffafd)}
+.wrap{max-width:900px;margin:auto;padding:16px 14px 70px}.hero,.card{background:#fff;border:2px solid #eee3f4;border-radius:24px;padding:18px;margin-bottom:14px}.hero{background:linear-gradient(135deg,#efeaff,#ffe7f1)}
+h1{font-size:30px;margin:8px 0}h2{font-size:22px;line-height:1.55;margin:8px 0}.sub{color:#84778e;line-height:1.65}.num{display:inline-block;background:#f0ebff;color:#6a59d8;border-radius:999px;padding:5px 9px;font-weight:bold}.tag{display:inline-block;margin-left:6px;background:#fff6d9;color:#8a6e20;border-radius:999px;padding:5px 9px;font-size:13px}
+.opts{display:grid;gap:9px;margin:12px 0}.opt{display:block;width:100%;border:2px solid #e9def0;border-radius:15px;padding:13px;background:#fff;font-weight:bold;color:#51465d;text-align:left}.opt.correct{background:#e3f8eb;border-color:#75ce9a}.opt.wrong{background:#ffe7e7;border-color:#ef9999}
+.textrow{display:flex;gap:8px;margin:12px 0}.textans{flex:1;min-width:0;border:3px solid #e5dbed;border-radius:16px;padding:14px;text-align:center;font-size:21px;font-weight:bold}.checkbtn{border:0;border-radius:15px;padding:0 16px;background:#9182ff;color:#fff;font-weight:bold}
+.feedback{display:none;margin:9px 0;padding:10px;border-radius:13px;font-weight:bold;text-align:center}.feedback.good{display:block;background:#e3f8eb;color:#2f7f52}.feedback.bad{display:block;background:#ffe7e7;color:#bd4e4e}
+details{margin-top:10px;border:2px solid #eee3f4;border-radius:14px;padding:10px;background:#fff}summary{font-weight:bold}.hint{padding:10px 2px 2px;color:#8a6e20;line-height:1.6}
+.scorebar{position:sticky;top:8px;z-index:5;background:#fff;border:2px solid #e9def0;border-radius:18px;padding:10px 12px;margin-bottom:12px;display:flex;justify-content:space-between;gap:10px;font-weight:bold}
+.mastery{background:#f8f5ff;border:2px solid #e5ddff;border-radius:16px;padding:12px;margin-top:12px;line-height:1.7}
+.sectionGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.sectionCard{background:#fff;border:2px solid #eee3f4;border-radius:18px;padding:14px}.sectionCard h3{margin:0 0 7px;font-size:18px}.focusbtn{display:block;text-decoration:none;text-align:center;margin-top:10px;border-radius:13px;padding:10px;background:#f3efff;color:#6653d8;font-weight:bold}.focusNow{background:#fff3bf;border-color:#efd16f}.points{font-size:14px;line-height:1.65;color:#6f6378}@media(max-width:680px){.sectionGrid{grid-template-columns:1fr}}
+a.btn{display:block;text-decoration:none;text-align:center;border-radius:16px;padding:13px 16px;font-size:18px;font-weight:bold;background:#fff;border:2px solid #e9dff1;color:#51465d}
+@media(max-width:680px){.textrow{flex-direction:column}.checkbtn{padding:13px}.scorebar{font-size:14px}}
+
+button,input{font:inherit}button,summary{touch-action:manipulation}button,summary,a{cursor:pointer}button:disabled{cursor:default;opacity:.65}button:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid #6653d8;outline-offset:3px}.opt{font-size:18px;line-height:1.55;overflow-wrap:anywhere}.opt:disabled{opacity:1}.questionCard h2{white-space:pre-line;overflow-wrap:anywhere;line-height:1.8;font-size:24px;scroll-margin-top:80px}.questionCard{max-width:760px;margin-left:auto;margin-right:auto}.questionNav{display:flex;gap:12px;margin-top:18px}.questionNav .btn{flex:1}.next{background:#9182ff!important;color:#fff!important}.navHelp{font-size:14px;text-align:center}.assistance{font-size:14px}.knowledge>summary{font-size:18px;line-height:1.6}.knowledge[open]>summary{margin-bottom:12px}.scorebar{max-width:760px;margin-left:auto;margin-right:auto}.notice{display:block;background:#fff6da;color:#806220}.groupSummary{background:#e3f8eb;color:#286642;padding:16px;border-radius:16px;line-height:1.7}.sessionNotice{margin:0 auto 12px;max-width:760px;font-size:14px;line-height:1.6}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.wrap button.btn{display:block;text-align:center;border-radius:16px;padding:13px 16px;font-size:18px;font-weight:bold;background:#fff;border:2px solid #e9dff1;color:#51465d}.hero h1{font-size:27px}.masteryDetails{background:rgba(255,255,255,.6)}@media(max-width:680px){.hero,.card{padding:15px}.questionCard h2{font-size:21px}.questionNav .btn{font-size:16px;padding:12px 8px}.scorebar{top:0}.tag{font-size:12px}.textans{font-size:20px}}[hidden]{display:none!important}
+
+</style></head><body><div data-build="2026.10.20-units-candidate5" style="max-width:980px;margin:8px auto;padding:0 18px;color:#74657e;font:13px system-ui,sans-serif">试用修复版 · 2026.10.20-units-candidate5</div><main class="wrap">
+<section class="hero"><a class="btn" href="./math.html?v=20261020unitscandidate5">← 返回数学首页</a><h1>第5单元 · 运算律</h1>
+<div class="sub"><strong>原创通用热身 · 非教材原题</strong><br>每组最多8题，一次显示一题。错题和需要复习的题会优先出现；专项题少于8题时，练完该小节全部题目。</div>
+<details class="masteryDetails"><summary>查看隔日核验情况</summary><div id="mastery" class="mastery">正在读取掌握情况…</div></details></section>
+<details class="card scopeNote"><summary>📚 原创热身说明与帮助</summary><p>这些题目是通用原创热身，不是教材原题，也不代表学校当前进度。等值算式观察；课内运算律逐项范围和措辞待核。</p><p>目录已确认本单元标题和起始页63；未确认出版年份和课内小节。需要帮助时可打开本题三层提示。</p></details>
+<div class="scorebar"><span id="scoreText">独立答对：0 / 8</span><span id="doneText">已完成：0 / 8</span></div>
+<p id="sessionNotice" class="sub sessionNotice"></p><p id="storageNotice" class="sessionNotice notice" role="status" hidden></p>
+<div id="questions"></div>
+<div id="groupSummary" class="groupSummary" role="status" hidden></div>
+<section class="card"><button class="btn" type="button" onclick="startNewGroup()">🔄 再抽一组新题</button><a class="btn" style="margin-top:10px" href="./math.html?v=20261020unitscandidate5">返回数学首页（进度会保留）</a></section>
+</main>
+<script>
+var BANK=[{"id":"u5_01","k":"等值算式观察","d":2,"t":"text","q":"37 + 25 = 25 + □，□里填几？（填数字即可）","a":"37","alts":[],"h":["先算等号左边。","右边已经有25，想想还需要加几。","计算结果是 37。请把每一步和题意对应起来。"]},{"id":"u5_02","k":"等值算式观察","d":2,"t":"text","q":"8 × 19 = 19 × □，□里填几？（填数字即可）","a":"8","alts":[],"h":["先看两边相同的乘数。","也可算出左边的积，再除以19核对。","计算结果是 8。请把每一步和题意对应起来。"]},{"id":"u5_03","k":"等值算式观察","d":2,"t":"text","q":"(24 + 16) + 14 = 24 + (16 + □)，□里填几？（填数字即可）","a":"14","alts":[],"h":["两边都有24和16。","比较剩余的那个加数。","计算结果是 14。请把每一步和题意对应起来。"]},{"id":"u5_04","k":"等值算式观察","d":2,"t":"text","q":"(5 × 7) × 4 = 5 × (7 × □)，□里填几？（填数字即可）","a":"4","alts":[],"h":["先找到两边已经相同的乘数。","保持三个乘数不变，只改变先算哪一步。","计算结果是 4。请把每一步和题意对应起来。"]},{"id":"u5_05","k":"等值算式观察","d":2,"t":"text","q":"125 × (8 × 3) = ?（填数字即可）","a":"3000","alts":[],"h":["可以先把125与8相乘。","先得到1000，再与3相乘。","计算结果是 3000。请把每一步和题意对应起来。"]},{"id":"u5_06","k":"等值算式观察","d":2,"t":"text","q":"25 + 48 + 75 = ?（填数字即可）","a":"148","alts":[],"h":["找两个相加容易算的数。","25和75合起来是100，别漏掉48。","计算结果是 148。请把每一步和题意对应起来。"]},{"id":"u5_07","k":"等值算式观察","d":2,"t":"text","q":"25 × 4 × 17 = ?（填数字即可）","a":"1700","alts":[],"h":["先找能凑成整百的乘法。","先算25×4，再乘17。","计算结果是 1700。请把每一步和题意对应起来。"]},{"id":"u5_08","k":"等值算式观察","d":2,"t":"text","q":"46 × 5 + 54 × 5 = ?（填数字即可）","a":"500","alts":[],"h":["两个积里都有5。","可先合计46和54，再乘5；也可分别计算核对。","计算结果是 500。请把每一步和题意对应起来。"]}], SESSION=8, KEY="math-unit5_bank_stats_v1", stats={}, picked=[], done=0, score=0, tries={}, finished={};
+// Keep the original stats and reward keys. New fields distinguish verified independent work.
+var SESSION_KEY = KEY + '_session_v2_' + encodeURIComponent(queryTopic());
+var BANK_VERSION = '2026-10-original-u5-v1';
+var FOCUS = queryTopic(), current = 0, assisted = {}, hintLevels = {}, answers = {}, outcomes = {};
+var sessionId = '', storageFailed = false, statsUnreadable = false;
+if (!BANK.some(function(q){ return q.k === FOCUS; })) FOCUS = '';
+SESSION_KEY = KEY + '_session_v2_' + encodeURIComponent(FOCUS);
+function object(value) { return value && typeof value === 'object' && !Array.isArray(value); }
+function count(value) { return typeof value === 'number' && isFinite(value) && value >= 0 ? Math.floor(value) : 0; }
+function storageWarning() {
+  storageFailed = true;
+  var el = document.getElementById('storageNotice');
+  if (el) { el.hidden = false; el.textContent = '这个浏览器暂时不能保存进度或奖励。可以继续练习，但离开或刷新后可能无法接着做。'; }
+}
+function readStored(key) {
+  try { return localStorage.getItem(key); } catch(e) { storageWarning(); return null; }
+}
+function writeStored(key, value) {
+  try { localStorage.setItem(key, value); return true; } catch(e) { storageWarning(); return false; }
+}
+function load() {
+  statsUnreadable = false;
+  try {
+    var value = JSON.parse(localStorage.getItem(KEY) || '{}');
+    if (!object(value)) throw new Error('Invalid stats');
+    stats = value;
+  } catch(e) {
+    stats = {}; statsUnreadable = true;
+    var el = document.getElementById('storageNotice');
+    if (el) { el.hidden = false; el.textContent = '以前的练习记录暂时无法读取，原记录已保留。本次可以继续练习，但独立掌握记录暂不保存。'; }
+  }
+}
+function save() { if (!statsUnreadable) writeStored(KEY, JSON.stringify(stats)); }
+function st(id) {
+  var s = stats[id];
+  if (!object(s)) s = stats[id] = { ok: 0, wrong: 0, last: 0, independentStreak: 0 };
+  s.ok = count(s.ok); s.wrong = count(s.wrong); s.last = count(s.last);
+  if (!Object.prototype.hasOwnProperty.call(s, 'independentStreak')) {
+    s.legacyOk = s.ok;
+    s.independentStreak = 0; // Earlier versions did not record hint use; never infer independence.
+  }
+  s.independentStreak = count(s.independentStreak);
+  s.independentTotal = count(s.independentTotal);
+  s.assistedTotal = count(s.assistedTotal);
+  return s;
+}
+var knowledgeUsed = false;
+function mathDay(time) {
+  var d = new Date(time === undefined ? Date.now() : time);
+  return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+}
+function mathAddDay(day, n) { var a=day.split('-').map(Number), d=new Date(a[0],a[1]-1,a[2]); d.setDate(d.getDate()+n); return mathDay(d.getTime()); }
+function validMathDay(day) { return typeof day==='string' && /^\d{4}-\d{2}-\d{2}$/.test(day) && mathAddDay(day,0)===day; }
+function resetDelayed(s) { s.recallFirstDay=''; s.recallBlockedDay=mathDay(); s.recallDueDay=mathAddDay(mathDay(),1); }
+function recordDelayed(s) {
+  var today=mathDay(); if(s.recallBlockedDay===today)return;
+  if (!validMathDay(s.recallFirstDay)) { s.recallFirstDay=today; s.recallDueDay=mathAddDay(today,1); }
+  else if (s.recallFirstDay<today && validMathDay(s.recallDueDay) && s.recallDueDay<=today) {
+    s.recallVerifiedDay=today; s.recallDueDay=mathAddDay(today,3);
+  }
+}
+function knowledgeOpen() {
+  var cards=document.getElementsByClassName('knowledge');
+  for(var i=0;i<cards.length;i++)if(cards[i].open)return true;
+  return false;
+}
+function knowledgeHelp() {
+  knowledgeUsed=true;
+  picked.forEach(function(q,i){if(!finished[i]){assisted[i]=true;resetDelayed(st(q.id));}});
+  save();
+  saveSession();
+  var note=document.getElementById('assistanceNote');if(note)note.textContent=assistanceText(current);
+  renderMastery();
+}
+function recallDue(q) { var day=st(q.id).recallDueDay; return validMathDay(day)&&day<=mathDay(); }
+function dayDue(s) { return !s.last || Date.now() - s.last > 20*60*60*1000; }
+function weight(q) {
+  var s = st(q.id), w = 2 + Math.min(s.wrong, 20)*3;
+  if (s.independentStreak === 0) w += 3;
+  if (dayDue(s)) w += 2;
+  if (s.independentStreak >= 2) w -= 2;
+  return Math.max(1, w);
+}
+function queryTopic() {
+  var m = (location.search || '').match(/[?&]topic=([^&]+)/);
+  if (!m) return '';
+  try { return decodeURIComponent(m[1].replace(/\+/g, ' ')); } catch(e) { return ''; }
+}
+function choose() {
+  var pool = BANK.filter(function(q){ return !FOCUS || q.k === FOCUS; });
+  picked = pool.filter(recallDue).sort(function(a,b){return st(a.id).recallDueDay.localeCompare(st(b.id).recallDueDay)||BANK.indexOf(a)-BANK.indexOf(b);}).slice(0,SESSION);
+  pool=pool.filter(function(q){return !picked.includes(q);});
+  while (picked.length < SESSION && pool.length) {
+    var total = pool.reduce(function(sum,q){ return sum + weight(q); }, 0);
+    var draw = Math.random()*total, index = 0;
+    for (; index < pool.length - 1; index++) { draw -= weight(pool[index]); if (draw < 0) break; }
+    picked.push(pool.splice(index,1)[0]);
+  }
+}
+function newSession() {
+  knowledgeUsed=knowledgeOpen();
+  current = 0; tries = {}; finished = {}; assisted = {}; hintLevels = {}; answers = {}; outcomes = {};
+  done = 0; score = 0;
+  sessionId = Date.now().toString(36) + '-' + Math.random().toString(36).slice(2);
+  choose(); if(knowledgeUsed){picked.forEach(function(q,i){assisted[i]=true;resetDelayed(st(q.id));});save();} saveSession();
+}
+function saveSession() {
+  return writeStored(SESSION_KEY, JSON.stringify({ version: 2, bankVersion: BANK_VERSION, id: sessionId, focus: FOCUS,
+    knowledgeUsed: knowledgeUsed, ids: picked.map(function(q){ return q.id; }), current: current, tries: tries, finished: finished,
+    assisted: assisted, hintLevels: hintLevels, answers: answers, outcomes: outcomes, updatedAt: Date.now() }));
+}
+function restoreSession() {
+  var data;
+  try { data = JSON.parse(readStored(SESSION_KEY) || 'null'); } catch(e) { return false; }
+  if (!object(data) || data.version !== 2 || data.bankVersion !== BANK_VERSION || data.focus !== FOCUS ||
+      typeof data.id !== 'string' || !Array.isArray(data.ids) || !data.ids.length || data.ids.length > SESSION) return false;
+  var byId = {}, seen = {}, queue = [];
+  BANK.forEach(function(q){ byId[q.id] = q; });
+  for (var i = 0; i < data.ids.length; i++) {
+    var q = byId[data.ids[i]];
+    if (!q || seen[q.id] || (FOCUS && q.k !== FOCUS)) return false;
+    seen[q.id] = true; queue.push(q);
+  }
+  knowledgeUsed=data.knowledgeUsed===true||knowledgeOpen();
+  picked = queue; sessionId = data.id; current = Math.min(count(data.current), picked.length - 1);
+  tries = {}; finished = {}; assisted = {}; hintLevels = {}; answers = {}; outcomes = {};
+  for (var j = 0; j < picked.length; j++) {
+    tries[j] = object(data.tries) ? count(data.tries[j]) : 0;
+    var levels = object(data.hintLevels) && Array.isArray(data.hintLevels[j]) ? data.hintLevels[j] : [];
+    hintLevels[j] = [levels[0] === true, levels[1] === true, levels[2] === true];
+    assisted[j] = (!data.finished?.[j] && knowledgeUsed) || (object(data.assisted) && data.assisted[j] === true) || tries[j] > 0 || hintLevels[j].some(Boolean);
+    finished[j] = object(data.finished) && data.finished[j] === true;
+    var answer = object(data.answers) ? data.answers[j] : undefined;
+    if (picked[j].t === 'mc' && Number.isInteger(answer) && answer >= 0 && answer < picked[j].o.length) answers[j] = answer;
+    if (picked[j].t === 'text' && typeof answer === 'string') answers[j] = answer.slice(0, 100);
+    if (finished[j]) outcomes[j] = !assisted[j] && object(data.outcomes) && data.outcomes[j] === 'independent' ? 'independent' : 'assisted';
+  }
+  recount(); return true;
+}
+function recount() {
+  done = 0; score = 0;
+  picked.forEach(function(q,i){ if (finished[i]) { done++; if (outcomes[i] === 'independent') score++; } });
+}
+function esc(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+function render() {
+  var i = current, q = picked[i], out = '', j;
+  if (!q) return;
+  out += '<section class="card questionCard" aria-labelledby="questionTitle"><div><span class="num">第 ' + (i+1) + ' / ' + picked.length + ' 题</span><span class="tag">' + esc(q.k) + ' · ' + (q.d===1?'基础':q.d===2?'变式':'挑战') + '</span></div>';
+  out += '<h2 id="questionTitle" tabindex="-1">' + esc(q.q) + '</h2>';
+  if (q.t === 'mc') {
+    out += '<div class="opts">';
+    for (j=0;j<q.o.length;j++) {
+      var selected = answers[i] === j, cls = selected ? (finished[i] ? ' correct' : ' wrong') : '';
+      out += '<button type="button" class="opt' + cls + '" id="q'+i+'o'+j+'" onclick="checkMC('+i+','+j+')"' + (finished[i]?' disabled':'') + '>' + String.fromCharCode(65+j) + '. ' + esc(q.o[j]) + '</button>';
+    }
+    out += '</div>';
+  } else {
+    out += '<form class="textrow" onsubmit="checkText('+i+');return false;"><label class="sr-only" for="q'+i+'input">这道题的答案</label><input id="q'+i+'input" class="textans" type="text" maxlength="100" autocomplete="off" placeholder="输入答案" value="' + esc(answers[i] || '') + '" oninput="rememberAnswer('+i+',this.value)"' + (finished[i]?' disabled':'') + '><button type="submit" class="checkbtn"' + (finished[i]?' disabled':'') + '>检查答案</button></form>';
+  }
+  out += '<div id="fb'+i+'" class="feedback" role="status" aria-live="polite"></div><div id="assistanceNote" class="sub assistance">' + assistanceText(i) + '</div>';
+  var labels = ['🤔 提示 1 · 找思路', '🌱 提示 2 · 看关键', '🔎 查看答案／解析'];
+  for (j=0;j<3;j++) {
+    out += '<details class="questionHint" id="hint'+i+'_'+j+'"' + (hintLevels[i] && hintLevels[i][j]?' open':'') + '><summary onclick="openHint('+i+','+j+')">'+labels[j]+'</summary><div class="hint">'+esc(q.h[j])+'</div></details>';
+  }
+  out += '<nav class="questionNav" aria-label="题目翻页"><button type="button" class="btn" onclick="goQuestion(-1)"' + (i===0?' disabled':'') + '>← 上一题</button><button type="button" class="btn next" onclick="goQuestion(1)"' + (!finished[i] || i===picked.length-1?' disabled':'') + '>下一题 →</button></nav>';
+  if (!finished[i]) out += '<p class="sub navHelp">完成这题后，再继续下一题。可以慢慢想，也可以看提示。</p>';
+  out += '</section>';
+  document.getElementById('questions').innerHTML = out;
+  renderFeedback(i); updateTop(); renderMastery();
+}
+function assistanceText(i) {
+  if (finished[i]) return outcomes[i] === 'independent' ? '本题首次答对，未使用题内提示或知识卡。' : '这题在提示或订正后完成，下次再试试独立解答。';
+  return assisted[i] ? '已记为有帮助的练习；完成后照样获得奖励。' : '需要时可以看提示或知识卡；看过帮助或订正后完成仍有奖励，等待隔日再核验。';
+}
+function renderFeedback(i) {
+  var el = document.getElementById('fb'+i);
+  if (!el) return;
+  if (finished[i]) {
+    el.className = 'feedback good';
+    el.textContent = (outcomes[i]==='independent'?'✅ 独立答对！':'🌱 这题完成啦！') + (storageFailed ? ' 浏览器保存失败，本题奖励可能未记入。' : ' +' + picked[i].d + ' 金币，+1 成长值');
+  } else if (tries[i]) {
+    el.className = 'feedback bad'; el.textContent = '还不对，可以再试一次。先看清条件，需要时再打开提示。';
+  }
+}
+function openHint(i, level) {
+  if (i !== current || finished[i]) return;
+  if (!hintLevels[i]) hintLevels[i] = [false,false,false];
+  if (hintLevels[i][level]) return;
+  hintLevels[i][level] = true; assisted[i] = true;
+  var s = st(picked[i].id); s.independentStreak = 0; s.ok = 0; resetDelayed(s);
+  save(); saveSession(); renderMastery();
+  document.getElementById('assistanceNote').textContent = assistanceText(i);
+}
+function rememberAnswer(i, value) {
+  if (finished[i] || i !== current) return;
+  answers[i] = value.slice(0,100); saveSession();
+}
+function clean(value) {
+  var s = String(value);
+  if (s.normalize) s = s.normalize('NFKC');
+  return s.replace(/[,，\s]/g,'').replace(/度/g,'°');
+}
+function addRewards(q) {
+  var xp = parseInt(readStored('math_xp') || '0',10), coins = parseInt(readStored('math_coins') || '0',10);
+  writeStored('math_xp', String((isFinite(xp)?Math.max(0,xp):0)+1));
+  writeStored('math_coins', String((isFinite(coins)?Math.max(0,coins):0)+q.d));
+}
+function markWrong(i) {
+  if (finished[i] || i !== current) return;
+  tries[i] = (tries[i] || 0)+1; assisted[i] = true;
+  var s = st(picked[i].id); s.wrong++; s.ok = 0; s.independentStreak = 0; resetDelayed(s); s.last = Date.now();
+  save(); saveSession(); render();
+  if (picked[i].t === 'text') document.getElementById('q'+i+'input').focus();
+}
+function markDone(i) {
+  if (finished[i] || i !== current) return;
+  finished[i] = true;
+  var independent = !knowledgeUsed && !assisted[i] && !(tries[i] || 0);
+  outcomes[i] = independent ? 'independent' : 'assisted';
+  var s = st(picked[i].id);
+  if (independent) { s.ok++; s.independentStreak++; s.independentTotal++; recordDelayed(s); }
+  else { s.ok = 0; s.independentStreak = 0; s.assistedTotal++; resetDelayed(s); }
+  s.last = Date.now(); recount();
+  // Persist completion before rewarding so repeated clicks or a normal reload cannot award twice.
+  save(); if (saveSession()) addRewards(picked[i]); render();
+}
+function checkMC(i, j) {
+  if (finished[i] || i !== current || picked[i].t !== 'mc' || !Number.isInteger(j) || j<0 || j>=picked[i].o.length) return;
+  answers[i] = j;
+  if (j === picked[i].a) markDone(i); else markWrong(i);
+}
+function checkText(i) {
+  if (finished[i] || i !== current || picked[i].t !== 'text') return;
+  var q = picked[i], raw = document.getElementById('q'+i+'input').value, v = clean(raw);
+  if (!v) {
+    var fb = document.getElementById('fb'+i); fb.className = 'feedback notice'; fb.textContent = '先输入一个答案，再点检查。'; return;
+  }
+  answers[i] = raw.slice(0,100);
+  var ok = v === clean(q.a) || (q.alts || []).some(function(a){ return v === clean(a); });
+  if (ok) markDone(i); else markWrong(i);
+}
+function goQuestion(direction) {
+  var next = current + direction;
+  if ((direction !== 1 && direction !== -1) || next < 0 || next >= picked.length || (direction===1 && !finished[current])) return;
+  current = next; saveSession(); render();
+  var title = document.getElementById('questionTitle');
+  title.focus(); title.scrollIntoView({behavior:'smooth',block:'start'});
+}
+function startNewGroup() {
+  if (done < picked.length && !window.confirm('这一组还没做完。要换一组吗？已获得的成长值、金币和练习记录都会保留。')) return;
+  newSession(); document.getElementById('sessionNotice').textContent = '新的一组开始啦，一次专心做一题。'; render();
+  document.getElementById('questionTitle').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function updateTop() {
+  document.getElementById('scoreText').textContent = '首次答对（未用本站帮助）：' + score + ' / ' + picked.length;
+  document.getElementById('doneText').textContent = '已完成：' + done + ' / ' + picked.length;
+  var summary = document.getElementById('groupSummary');
+  summary.hidden = done !== picked.length;
+  if (done === picked.length) summary.textContent = '这一组完成啦！独立答对 '+score+' 题，在提示或订正后完成 '+(done-score)+' 题。每一题的努力都获得了奖励。';
+}
+function renderMastery() {
+  var map = {}, old = false;
+  BANK.forEach(function(q){
+    if (!map[q.k]) map[q.k] = {n:0,g:0};
+    map[q.k].n++; var s = st(q.id);
+    if (validMathDay(s.recallVerifiedDay)) map[q.k].g++;
+    if (s.legacyOk > 0) old = true;
+  });
+  var out = FOCUS ? '<b>当前专项：</b>'+esc(FOCUS)+'<br>' : '';
+  if(storageFailed)out+='<span class="sub">以下为本页结果，保存暂未确认；刷新后请核对。</span><br>';
+  out += '<b>曾通过同题隔日核验：</b> ';
+  Object.keys(map).forEach(function(key){out += esc(key)+' '+map[key].g+'/'+map[key].n+' '+(map[key].g===map[key].n?'🟢':map[key].g>0?'🟡':'⚪')+'　';});
+  out += '<br><span class="sub">同题在不同日期首次答对，且第二次已到复习日期，才计入隔日核验。当天反复答对不累计；看帮助或订正后从下一天再练。此记录只代表同题表现，不代表整个知识点已经掌握。</span>';
+  if (old) out += '<br><span class="sub">以前的练习记录和奖励已保留；旧记录未区分提示使用，隔日核验从新练习重新记录，旧次数不换算。</span>';
+  var due=BANK.filter(function(q){return (!FOCUS||q.k===FOCUS)&&recallDue(q);});
+  var queued=due.filter(function(q){return picked.some(function(p,i){return p.id===q.id&&!finished[i];});}).length;
+  out += '<br><span class="sub">当前范围到期 '+due.length+' 题，本组未完成到期 '+queued+' 题，另有 '+(due.length-queued)+' 题待下一组；新一组先排最早到期题，最多8题。本组刷新后不换题。</span>';
+  document.getElementById('mastery').innerHTML = out;
+}
+load();
+var resumed = restoreSession();
+if (!resumed) newSession();
+render();
+document.getElementById('sessionNotice').textContent = resumed ? '已接着上次这一组继续，提示和订正记录也都保留了。' : '一次专心做一题，做完再看下一题。';
+var cards = document.getElementsByClassName('sectionCard');
+for (var ci=0;ci<cards.length;ci++) if (cards[ci].getAttribute('data-topic')===FOCUS) cards[ci].className += ' focusNow';
+// Other tabs receive completed/restarted sessions without replaying rewards.
+window.addEventListener('storage',function(event){
+  if (event.key===KEY) { load(); renderMastery(); }
+  if (event.key===SESSION_KEY && restoreSession()) render();
+});
+</script></body></html>
